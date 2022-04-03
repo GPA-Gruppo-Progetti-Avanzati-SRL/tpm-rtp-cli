@@ -1,0 +1,78 @@
+package golang_test
+
+import (
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/generator/golang"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/parser"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
+	"github.com/stretchr/testify/require"
+	"io/ioutil"
+	"os"
+	"path/filepath"
+	"strings"
+	"testing"
+)
+
+func TestGoModel(t *testing.T) {
+
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+
+	schemas := []string{
+		"../../schemas/pain.013.001.07.xsd", "../../schemas/pain.014.001.07.xsd",
+	}
+
+	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
+	for _, xsdFileName := range schemas {
+		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
+		t.Log("Msg: ", msgName)
+
+		b, err := ioutil.ReadFile(xsdFileName)
+		require.NoError(t, err)
+
+		msg := registry.ISO20022Message{Name: msgName}
+		err = p.Parse(msg, b)
+		require.NoError(t, err)
+	}
+
+	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}}, p.TypeRegistry)
+	require.NoError(t, err)
+	gm.ShowInfo()
+
+}
+
+func TestGoGenerate(t *testing.T) {
+
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+
+	schemas := []string{
+		"../../schemas/pain.013.001.07.xsd", "../../schemas/pain.014.001.07.xsd",
+	}
+
+	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
+	for _, xsdFileName := range schemas {
+		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
+		t.Log("Msg: ", msgName)
+
+		b, err := ioutil.ReadFile(xsdFileName)
+		require.NoError(t, err)
+
+		msg := registry.ISO20022Message{Name: msgName}
+		err = p.Parse(msg, b)
+		require.NoError(t, err)
+	}
+
+	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}}, p.TypeRegistry)
+	require.NoError(t, err)
+
+	fld, err := util.ResolveFolder("~/iso-20022")
+	require.NoError(t, err)
+	cfg := golang.Config{
+		OutFolder:  filepath.Join(fld, "messages"),
+		FormatCode: true,
+	}
+	err = golang.Generate(&cfg, &gm)
+	require.NoError(t, err)
+
+}

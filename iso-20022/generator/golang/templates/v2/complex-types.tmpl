@@ -1,0 +1,24 @@
+// Package {{.PackageName}}
+// Do not Edit. This stuff it's been automatically generated.
+// Generated at {{.ProducedAt}}
+package {{.PackageName}}
+
+import (
+{{- if ne .PackageName "common" }}
+	"encoding/xml"
+{{ end }}
+    {{- range getComplexTypesImports .PackageName}}
+    "{{ . }}"
+    {{- end}}
+)
+
+{{ $msgName := .MsgName }}
+{{- range getComplexTypes .PackageName}}
+// {{ .Name }} {{.Comment}}
+type {{ .Name }} struct {
+{{ if eq .Name "Document" }}XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:{{ $msgName }} Document"`{{ end }}
+{{- range .Attrs}}
+{{ .Name }} {{ if .IsPtr }}*{{- end}}{{- if .Array }}[]{{- end}}{{.Type.Name}} `xml:"{{.XMLName}}{{.XMLTags}}"`
+{{- end}}
+}
+{{- end}}

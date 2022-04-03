@@ -1,0 +1,55 @@
+// Package {{.PackageName}}
+// Do not Edit. This stuff it's been automatically generated.
+// Generated at {{.ProducedAt}}
+package {{.PackageName}}
+
+{{- if ne .PackageName "common" }}
+import (
+	"bytes"
+	"encoding/xml"
+)
+{{ end }}
+
+{{- range getComplexTypes .PackageName}}
+{{ if eq .Name "Document" }}
+func (d *Document)ToXML() ([]byte, error) {
+	w := &bytes.Buffer{}
+	w.Write([]byte(xml.Header))
+
+	enc := xml.NewEncoder(w)
+	enc.Indent("", "  ")
+	err := enc.Encode(d)
+	if err != nil {
+	    return nil, err
+	}
+
+	return w.Bytes(), nil
+}
+{{ end }}
+
+// IsValid checks if {{ .Name }} is valid
+func (s {{ .Name }}) IsValid(optional bool) bool {
+
+    valid := true
+    {{- range .Attrs}}
+        {{- if .Array}}
+           {{- if not .Optional }}
+              if len(s.{{.Name}}) == 0 {
+                 valid = false
+              }
+          {{- end }}
+          for j := 0; j < len(s.{{.Name}}); j++ {
+              valid = valid && s.{{.Name}}[j].IsValid({{.Optional}})
+          }
+        {{else}}
+{{- if .IsPtr }}
+         valid = valid && ((s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})) || (s.{{ .Name }} == nil && {{.Optional}}))
+{{ else }}
+          valid = valid && s.{{ .Name }}.IsValid({{.Optional}})
+{{- end }}
+        {{- end}}
+    {{- end }}
+
+    return valid
+}
+{{- end}}

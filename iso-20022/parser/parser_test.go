@@ -1,22 +1,27 @@
 package parser_test
 
 import (
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/parser"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strings"
 	"testing"
-	"tpm-rtp-cli/iso-20022/parser"
-	"tpm-rtp-cli/iso-20022/registry"
 )
 
 func TestParser(t *testing.T) {
+
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
 	schemas := []string{
 		"../schemas/pain.013.001.07.xsd", "../schemas/pain.014.001.07.xsd",
 	}
 
-	p := parser.NewParser()
+	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
 	for _, xsdFileName := range schemas {
 		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
 		t.Log("Msg: ", msgName)
@@ -24,49 +29,14 @@ func TestParser(t *testing.T) {
 		b, err := ioutil.ReadFile(xsdFileName)
 		require.NoError(t, err)
 
-		msg := registry.ISO20022Message{Name: msgName, XSDData: b}
-		err = p.Parse(msg)
+		msg := registry.ISO20022Message{Name: msgName}
+		err = p.Parse(msg, b)
 		require.NoError(t, err)
 	}
 
-	te := p.TypeRegistry["ActiveCurrencyCode"]
-	t.Log("ActiveCurrencyCode", te.Local)
+	te := p.TypeRegistry.Types["ActiveCurrencyAndAmount"]
+	t.Log("ActiveCurrencyAndAmount", te.Local)
 
-	pkg := registry.PackageNameForMessageName("pain.013.001.07")
-	t.Log("complex elements in package -------------", pkg)
-	entries := p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeComplex, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
+	p.TypeRegistry.ShowInfo([]registry.ISO20022Message{{Name: "pain.013.001.07"}})
 
-	t.Log("simple elements in package -------------", pkg)
-	entries = p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeSimple, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
-
-	t.Log("builtin elements in package -------------", pkg)
-	entries = p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeBuiltin, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
-
-	pkg = registry.PackageNameForMessageName("common")
-	t.Log("complex elements in package -------------", pkg)
-	entries = p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeComplex, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
-
-	t.Log("simple elements in package -------------", pkg)
-	entries = p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeSimple, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
-
-	t.Log("builtin elements in package -------------", pkg)
-	entries = p.TypeRegistry.GetEntriesForPackage(registry.ElementTypeBuiltin, pkg)
-	for i, e := range entries {
-		t.Log(i, e.Local, e.RefCount)
-	}
 }
