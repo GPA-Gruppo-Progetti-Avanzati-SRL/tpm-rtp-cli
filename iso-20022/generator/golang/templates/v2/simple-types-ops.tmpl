@@ -6,35 +6,27 @@ package {{.PackageName}}
 import (
    "fmt"
    "regexp"
+   	"time"
    {{- range getSimpleTypesImports .PackageName}}
    "{{ . }}"
    {{- end}}
 )
 
 {{- range getSimpleTypes .PackageName}}
-// {{printf "%s funcs and properties -----------------\n" .Name}}
-{{- if .HasPatternRestriction }}
-var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
-{{ end }}
-{{- if .HasEnumRestriction }}
-var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum -}} {{- if $i -}}, {{- end -}} "{{ $v }}" {{- end }} }
-{{ end }}
-// IsValid checks if {{ .Name }} of type {{ .Type.Builtin }} is valid
-func (t {{ .Name }}) IsValid(optional bool) bool {
-
-     valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
-{{- if .HasEnumRestriction }}
-     valid = valid && applyEnumRestriction(fmt.Sprintf("%v" ,t), {{ .Name }}EnumRestriction)
-{{ end }}
-{{- if .HasLengthRestriction }}
-     valid = valid && applyLengthRestriction(fmt.Sprintf("%v" ,t), {{.Restrictions.Length}}, {{.Restrictions.MinLength}}, {{.Restrictions.MaxLength}})
-{{ end }}
-{{- if .HasPatternRestriction }}
-     valid = valid && applyPatternRestriction(fmt.Sprintf("%v" ,t), {{ .Name }}PatternRestriction)
-{{ end }}
-{{- if .HasDecimalRestriction }}
-     valid = valid && applyDecimalRestriction(t, {{.Restrictions.TotalDigits}}, , {{.Restrictions.Precision}})
-{{ end }}
-     return valid
-}
+/*
+ * {{.Name}} Ops
+ */
+{{printf "\n"}}
+{{- if eq .Type.Builtin.String "String" }}
+{{ template "simple-types-string-ops" . }}
+{{ end}}
+{{- if eq .Type.Builtin.String "Date" }}
+{{ template "simple-types-date-ops" . }}
+{{ end}}
+{{- if eq .Type.Builtin.String "DateTime" }}
+{{ template "simple-types-datetime-ops" . }}
+{{ end}}
+{{- if eq .Type.Builtin.String "Base64Binary" }}
+{{ template "simple-types-b64-ops" . }}
+{{ end}}
 {{ end}}

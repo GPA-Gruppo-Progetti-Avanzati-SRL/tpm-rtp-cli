@@ -167,6 +167,6 @@ func (tr *TypeRegistry) ShowInfo(inclusionList []ISO20022Message) {
 func showRegistryEntries(tr *TypeRegistry, elType ElementType, pkgName string) {
 	entries := tr.GetEntriesForPackage(elType, pkgName)
 	for i, e := range entries {
-		log.Trace().Int("i", i).Str("local", e.Local).Int("ref-count", e.RefCount).Send()
+		log.Trace().Int("i", i).Str("local", e.Local).Int("ref-count", e.RefCount).Int("num-spaces", len(e.Spaces)).Send()
 	}
 }

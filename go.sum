@@ -8,6 +8,8 @@ github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.13 h1:RdgI+YAtvO4UT3
 github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.13/go.mod h1:1jyjVYIYEEnhTuD1yYrHZb5qDujt1BmKzzfuxzYOsE4=
 github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.14 h1:0VTprwliNEGe/iXnXdSbHGxN294+mo9Xc1UGAMq2UAw=
 github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.14/go.mod h1:1jyjVYIYEEnhTuD1yYrHZb5qDujt1BmKzzfuxzYOsE4=
+github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.15 h1:YE7nHDgx96Sj2M6HSQ8nsjCIZjIw97kmS8UqmBoQC5E=
+github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.15/go.mod h1:1jyjVYIYEEnhTuD1yYrHZb5qDujt1BmKzzfuxzYOsE4=
 github.com/coreos/go-systemd/v22 v22.3.2/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

@@ -17,13 +17,14 @@ func NewModel(cfg *ModelConfig, msgs []registry.ISO20022Message, tr registry.Typ
 			return gm, err
 		}
 
-		goCommonTypedefs, err := gm.newTypeDefinitions("common", tr)
-		if err != nil {
-			return gm, err
-		}
-
-		gm.TypeDefs = append(goMsgTypeDefs, goCommonTypedefs...)
+		gm.TypeDefs = append(gm.TypeDefs, goMsgTypeDefs...)
 	}
+
+	goCommonTypedefs, err := gm.newTypeDefinitions("common", tr)
+	if err != nil {
+		return gm, err
+	}
+	gm.TypeDefs = append(gm.TypeDefs, goCommonTypedefs...)
 	return gm, nil
 }
 

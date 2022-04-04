@@ -1,0 +1,18 @@
+{{ define "simple-types-b64-ops" }}
+// IsValid checks if {{ .Name }} of type {{ .Type.Builtin }} is valid
+func (t {{ .Name }}) IsValid(optional bool) bool {
+
+     valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
+{{- if .HasLengthRestriction }}
+	if {{.Restrictions.MaxLength}} != 0 {
+		valid = valid && len(t) < {{.Restrictions.MaxLength}}
+	}
+{{ end }}
+     return valid
+}
+
+// String method for easy conversion
+func (t {{ .Name }}) String() string {
+    return string(t)
+}
+{{ end }}

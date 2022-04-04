@@ -18,24 +18,28 @@ import (
 var templates embed.FS
 
 const (
-	TmplComplexType    = "templates/%s/complex-types.tmpl"
-	TmplComplexTypeOps = "templates/%s/complex-types-ops.tmpl"
-	TmplSimpleTypes    = "templates/%s/simple-types.tmpl"
-	TmplSimpleTypeOps  = "templates/%s/simple-types-ops.tmpl"
-	RestrictionUtil    = "templates/%s/restriction-util.tmpl"
-	XsDtTypes          = "templates/%s/xsdt-types.tmpl"
-	XsDtTypesMethods   = "templates/%s/xsdt-types-methods.tmpl"
+	TmplComplexTypes           = "templates/%s/complex-types.tmpl"
+	TmplComplexTypesOps        = "templates/%s/complex-types-ops.tmpl"
+	TmplSimpleTypes            = "templates/%s/simple-types.tmpl"
+	TmplSimpleTypesOps         = "templates/%s/simple-types-ops.tmpl"
+	TmplSimpleTypesStringOps   = "templates/%s/simple-types-string-ops.tmpl"
+	TmplSimpleTypesB64Ops      = "templates/%s/simple-types-b64-ops.tmpl"
+	TmplSimpleTypesDateOps     = "templates/%s/simple-types-date-ops.tmpl"
+	TmplSimpleTypesDateTimeOps = "templates/%s/simple-types-datetime-ops.tmpl"
+	RestrictionUtil            = "templates/%s/restriction-util.tmpl"
+	XsDtTypes                  = "templates/%s/xsdt-types.tmpl"
+	XsDtTypesMethods           = "templates/%s/xsdt-types-methods.tmpl"
 )
 
 func complexTypesTmplList(version string) []string {
 	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(TmplComplexType, version))
+	s = append(s, fmt.Sprintf(TmplComplexTypes, version))
 	return s
 }
 
 func complexTypesOpsTmplList(version string) []string {
 	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(TmplComplexTypeOps, version))
+	s = append(s, fmt.Sprintf(TmplComplexTypesOps, version))
 	return s
 }
 
@@ -47,7 +51,11 @@ func simpleTypesTmplList(version string) []string {
 
 func simpleTypesOpsTmplList(version string) []string {
 	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(TmplSimpleTypeOps, version))
+	s = append(s, fmt.Sprintf(TmplSimpleTypesOps, version))
+	s = append(s, fmt.Sprintf(TmplSimpleTypesStringOps, version))
+	s = append(s, fmt.Sprintf(TmplSimpleTypesDateOps, version))
+	s = append(s, fmt.Sprintf(TmplSimpleTypesDateTimeOps, version))
+	s = append(s, fmt.Sprintf(TmplSimpleTypesB64Ops, version))
 	return s
 }
 

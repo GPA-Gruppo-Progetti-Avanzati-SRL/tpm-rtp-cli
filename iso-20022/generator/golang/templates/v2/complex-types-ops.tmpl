@@ -25,6 +25,12 @@ func (d *Document)ToXML() ([]byte, error) {
 
 	return w.Bytes(), nil
 }
+
+func NewDocumentFromXML(b []byte) (*Document, error) {
+	d := &Document{}
+	err := xml.Unmarshal(b, d)
+	return d, err
+}
 {{ end }}
 
 // IsValid checks if {{ .Name }} is valid
@@ -43,7 +49,11 @@ func (s {{ .Name }}) IsValid(optional bool) bool {
           }
         {{else}}
 {{- if .IsPtr }}
-         valid = valid && ((s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})) || (s.{{ .Name }} == nil && {{.Optional}}))
+{{- if .Optional }}
+         valid = valid && (s.{{ .Name }} == nil || (s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})))
+{{ else }}
+         valid = valid && s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})
+{{ end }}
 {{ else }}
           valid = valid && s.{{ .Name }}.IsValid({{.Optional}})
 {{- end }}

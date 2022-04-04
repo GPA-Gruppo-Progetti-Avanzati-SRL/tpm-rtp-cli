@@ -1,0 +1,63 @@
+{{ define "simple-types-string-ops" }}
+{{- if .HasPatternRestriction }}
+var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
+{{ end }}
+{{- if .HasEnumRestriction }}
+var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum -}} {{- if $i -}}, {{- end -}} "{{ $v }}" {{- end }} }
+{{ end }}
+// IsValid checks if {{ .Name }} of type {{ .Type.Builtin }} is valid
+func (t {{ .Name }}) IsValid(optional bool) bool {
+
+     valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
+{{- if .HasEnumRestriction }}
+     valid = valid && applyEnumRestriction(t.String(), {{ .Name }}EnumRestriction)
+{{ end }}
+{{- if .HasLengthRestriction }}
+     valid = valid && applyLengthRestriction(t.String(), {{.Restrictions.Length}}, {{.Restrictions.MinLength}}, {{.Restrictions.MaxLength}})
+{{ end }}
+{{- if .HasPatternRestriction }}
+     valid = valid && applyPatternRestriction(t.String(), {{ .Name }}PatternRestriction)
+{{ end }}
+{{- if .HasDecimalRestriction }}
+     valid = valid && applyDecimalRestriction(t.String(), {{.Restrictions.TotalDigits}}, , {{.Restrictions.Precision}})
+{{ end }}
+     return valid
+}
+
+// String method for easy conversion
+func (t {{ .Name }}) String() string {
+    return string(t)
+}
+
+// To{{ .Name }} method for easy conversion with application of restrictions
+func To{{ .Name }}(s string) ({{ .Name }}, error) {
+
+{{- if .HasEnumRestriction }}
+     if !applyEnumRestriction(s, {{ .Name }}EnumRestriction) {
+        return "", fmt.Errorf("cannot satisfy enum restriction for %s of type {{ .Name }}", s)
+     }
+{{ end }}
+{{- if .HasLengthRestriction }}
+     if !applyLengthRestriction(s, {{.Restrictions.Length}}, {{.Restrictions.MinLength}}, {{.Restrictions.MaxLength}}) {
+       return "", fmt.Errorf("cannot satisfy length restriction for %s of type {{ .Name }}", s)
+     }
+{{ end }}
+{{- if .HasPatternRestriction }}
+      if !applyPatternRestriction(s, {{ .Name }}PatternRestriction)  {
+      return "", fmt.Errorf("cannot satisfy pattern restriction for %s of type {{ .Name }}", s)
+      }
+{{ end }}
+
+    return {{ .Name }}(s), nil
+}
+
+// MustTo{{ .Name }} method for easy conversion with application of restrictions. Panics on error.
+func MustTo{{ .Name }}(s string) {{ .Name }} {
+    v, err := To{{ .Name }}(s)
+    if err != nil {
+    panic(err)
+    }
+
+    return v
+}
+{{ end }}

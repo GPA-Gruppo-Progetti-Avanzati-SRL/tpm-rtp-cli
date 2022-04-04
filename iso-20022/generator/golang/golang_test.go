@@ -20,15 +20,19 @@ func TestGoModel(t *testing.T) {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
 	schemas := []string{
-		"../../schemas/pain.013.001.07.xsd", "../../schemas/pain.014.001.07.xsd",
+		"~/iso-20022/schemas/pain.013.001.07.xsd", "~/iso-20022/schemas/pain.014.001.07.xsd",
 	}
 
 	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
 	for _, xsdFileName := range schemas {
+
 		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
 		t.Log("Msg: ", msgName)
 
-		b, err := ioutil.ReadFile(xsdFileName)
+		fn, ok := util.ResolvePath(xsdFileName)
+		require.True(t, ok, "could not resolve %s", xsdFileName)
+
+		b, err := ioutil.ReadFile(fn)
 		require.NoError(t, err)
 
 		msg := registry.ISO20022Message{Name: msgName}
@@ -36,10 +40,9 @@ func TestGoModel(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}}, p.TypeRegistry)
+	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}, {Name: "pain.014.001.07"}}, p.TypeRegistry)
 	require.NoError(t, err)
 	gm.ShowInfo()
-
 }
 
 func TestGoGenerate(t *testing.T) {
@@ -47,7 +50,7 @@ func TestGoGenerate(t *testing.T) {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
 	schemas := []string{
-		"../../schemas/pain.013.001.07.xsd", "../../schemas/pain.014.001.07.xsd",
+		"~/iso-20022/schemas/pain.013.001.07.xsd", "~/iso-20022/schemas/pain.014.001.07.xsd",
 	}
 
 	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
@@ -55,7 +58,10 @@ func TestGoGenerate(t *testing.T) {
 		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
 		t.Log("Msg: ", msgName)
 
-		b, err := ioutil.ReadFile(xsdFileName)
+		fn, ok := util.ResolvePath(xsdFileName)
+		require.True(t, ok, "could not resolve %s", xsdFileName)
+
+		b, err := ioutil.ReadFile(fn)
 		require.NoError(t, err)
 
 		msg := registry.ISO20022Message{Name: msgName}
@@ -63,16 +69,64 @@ func TestGoGenerate(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}}, p.TypeRegistry)
+	gm, err := golang.NewModel(
+		&golang.DefaultModelCfg,
+		[]registry.ISO20022Message{
+			{Name: "pain.013.001.07"},
+			{Name: "pain.014.001.07"},
+		},
+		p.TypeRegistry)
 	require.NoError(t, err)
 
-	fld, err := util.ResolveFolder("~/iso-20022")
-	require.NoError(t, err)
+	fld, _ := util.ResolvePath("~/iso-20022/messages")
+	require.NotEqual(t, fld, "", "could not resolve ~/iso-20022/messages path")
 	cfg := golang.Config{
-		OutFolder:  filepath.Join(fld, "messages"),
+		OutFolder:  fld, // filepath.Join(fld, "messages"),
 		FormatCode: true,
 	}
 	err = golang.Generate(&cfg, &gm)
 	require.NoError(t, err)
+}
 
+func TestGoGenerateAll(t *testing.T) {
+
+	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
+
+	schemaFolder, ok := util.ResolvePath("~/iso-20022/schemas/")
+	require.True(t, ok, "cannot resolve schema folder")
+
+	schemas, err := util.FindFiles(schemaFolder, util.WithFindFileType(util.FileTypeFile))
+	require.NoError(t, err)
+	require.NotEmpty(t, schemas, "could not find any schema")
+
+	var msgs []registry.ISO20022Message
+	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
+	for _, xsdFileName := range schemas {
+		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
+		t.Log("Msg: ", msgName)
+
+		fn, ok := util.ResolvePath(xsdFileName)
+		require.True(t, ok, "could not resolve %s", xsdFileName)
+
+		b, err := ioutil.ReadFile(fn)
+		require.NoError(t, err)
+
+		msg := registry.ISO20022Message{Name: msgName}
+		msgs = append(msgs, msg)
+
+		err = p.Parse(msg, b)
+		require.NoError(t, err)
+	}
+
+	gm, err := golang.NewModel(&golang.DefaultModelCfg, msgs, p.TypeRegistry)
+	require.NoError(t, err)
+
+	fld, _ := util.ResolvePath("~/iso-20022/messages")
+	require.NotEqual(t, fld, "", "could not resolve ~/iso-20022/messages path")
+	cfg := golang.Config{
+		OutFolder:  fld, // filepath.Join(fld, "messages"),
+		FormatCode: true,
+	}
+	err = golang.Generate(&cfg, &gm)
+	require.NoError(t, err)
 }

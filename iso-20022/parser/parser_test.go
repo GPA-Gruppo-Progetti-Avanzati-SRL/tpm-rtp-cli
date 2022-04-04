@@ -37,6 +37,6 @@ func TestParser(t *testing.T) {
 	te := p.TypeRegistry.Types["ActiveCurrencyAndAmount"]
 	t.Log("ActiveCurrencyAndAmount", te.Local)
 
-	p.TypeRegistry.ShowInfo([]registry.ISO20022Message{{Name: "pain.013.001.07"}})
+	p.TypeRegistry.ShowInfo(nil)
 
 }

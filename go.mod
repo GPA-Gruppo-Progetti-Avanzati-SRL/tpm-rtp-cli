@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	aqwari.net/xml v0.0.0-20210331023308-d9421b293817
-	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.14
+	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.15
 	github.com/rs/zerolog v1.26.1
 	github.com/stretchr/testify v1.7.1
 )
