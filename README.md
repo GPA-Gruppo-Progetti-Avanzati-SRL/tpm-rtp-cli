@@ -4,23 +4,23 @@
 This project main objective is the generation of artifacts to manipulate IS20022 messages using Golang code. 
 On the net there is stuff to generate go structs from schemas but all this stuff lacks some bells and whistles to easily use this structures. This generation is not general
 if we mean a general generation of structs from schema files (it lacks some support of builtin types that are not used in IS20022 schemas for example) but tries to offer an approach useful for the task at hand.
-For example, it doesn't generate a schme ato a single file in a single package but tries to find common types across different messages and split them in different packages.
+For example, it doesn't generate a schema to a single file in a single package but tries to find common types across different messages and split them in different packages.
 As such, you will have a package for each message and a common package where simple and complex types shared among messages are put together to simplify the creation of a message from a different one used as a source.
 More over it provides some convenience methods for setting and getting values out of the structures with some protection for arrays and nil pointers. 
 I hope you will find this stuff edible to get life easier down the road considering that:
 
 * arrays are a matter of the schema where plurality gets in the way,
 * pointers are a fact of life when generating empty structs is not an option
-* those messages can have a number of nodes ranginbg from 3000 up to 8500 (considering leaves and intermediate)
+* those messages can have a number of nodes ranging from 3000 up to 8500 (considering leaves and intermediate)
 * real cases in general set a very few number of nodes: might be in the range of 30 or 40 leaves: more intermediate nodes than leaves as to speak. As such these trees are pretty sparse.
 * the code to map some data to a message can be very much specific and the code can result very much hard-coded as to speak.
 
 ### Layout
-A brief description of the layout of the project and whate you can find where.
+A brief description of the layout of the project and what you can find where.
 
 * [iso-20022](iso-20022). In here you can find the go generated structures of some iso20022 messages. This stuff is self-consistent in that it doesn't depend on external packages beside the standard ones.
 * [cmds/tpm-rtp-cli](cmds/tpm-rtp-cli). It contains the driver of the command line utilities. At the moment the generation command is under way. It doesn't do much.
-* [cmds/generate](cmds/generate). It is the generation stuff that is used to produce the iso-20022 folder content. The output has been produced by a test case [cmds/generate/golang_test.go](cmds/generate/golang_test.go).
+* [cmds/generate](cmds/generate). It is the generation stuff that is used to produce the iso-20022 folder content. The output has been produced by a test case [cmds/generate/golang/generate_test.go](cmds/generate/golang/generate_test.go).
 
 ### iso-20022 folder Layout
 The folder contains artefacts produced by the generator and other stuff. More precisely.
