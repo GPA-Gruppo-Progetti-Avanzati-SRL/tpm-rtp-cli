@@ -4,9 +4,6 @@
 package {{.PackageName}}
 
 import (
-{{- if ne .PackageName "common" }}
-	"encoding/xml"
-{{ end }}
     {{- range getComplexTypesImports .PackageName}}
     "{{ . }}"
     {{- end}}
@@ -14,11 +11,12 @@ import (
 
 {{ $msgName := .MsgName }}
 {{- range getComplexTypes .PackageName}}
+{{ if ne .Name "Document" }}
 // {{ .Name }} {{.Comment}}
 type {{ .Name }} struct {
-{{ if eq .Name "Document" }}XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:{{ $msgName }} Document"`{{ end }}
 {{- range .Attrs}}
 {{ .Name }} {{ if .IsPtr }}*{{- end}}{{- if .Array }}[]{{- end}}{{.Type.Name}} `xml:"{{.XMLName}}{{.XMLTags}}"`
 {{- end}}
 }
+{{- end}}
 {{- end}}

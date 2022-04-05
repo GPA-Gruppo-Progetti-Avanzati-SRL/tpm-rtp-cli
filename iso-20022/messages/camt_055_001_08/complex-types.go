@@ -1,21 +1,12 @@
 // Package camt_055_001_08
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 15:30:32.624602 +0200 CEST m=+0.108817042
+// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package camt_055_001_08
 
 import (
-	"encoding/xml"
-
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
-
-// PaymentCancellationReason5 type definition
-type PaymentCancellationReason5 struct {
-	Orgtr    *common.PartyIdentification135 `xml:"Orgtr,omitempty"`
-	Rsn      *CancellationReason33Choice    `xml:"Rsn,omitempty"`
-	AddtlInf []common.Max105Text            `xml:"AddtlInf,omitempty"`
-}
 
 // UnderlyingTransaction24 type definition
 type UnderlyingTransaction24 struct {
@@ -23,23 +14,23 @@ type UnderlyingTransaction24 struct {
 	OrgnlPmtInfAndCxl []OriginalPaymentInstruction34 `xml:"OrgnlPmtInfAndCxl,omitempty"`
 }
 
-// OriginalGroupHeader15 type definition
-type OriginalGroupHeader15 struct {
-	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
-	Case         *common.Case5                `xml:"Case,omitempty"`
-	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
-	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
-	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
-	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
-	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
-}
-
 // ControlData1 type definition
 type ControlData1 struct {
 	NbOfTxs common.Max15NumericText `xml:"NbOfTxs"`
 	CtrlSum xsdt.Decimal            `xml:"CtrlSum,omitempty"`
+}
+
+// CancellationReason33Choice type definition
+type CancellationReason33Choice struct {
+	Cd    common.ExternalCancellationReason1Code `xml:"Cd,omitempty"`
+	Prtry common.Max35Text                       `xml:"Prtry,omitempty"`
+}
+
+// PaymentCancellationReason5 type definition
+type PaymentCancellationReason5 struct {
+	Orgtr    *common.PartyIdentification135 `xml:"Orgtr,omitempty"`
+	Rsn      *CancellationReason33Choice    `xml:"Rsn,omitempty"`
+	AddtlInf []common.Max105Text            `xml:"AddtlInf,omitempty"`
 }
 
 // OriginalPaymentInstruction34 type definition
@@ -55,10 +46,26 @@ type OriginalPaymentInstruction34 struct {
 	TxInf         []PaymentTransaction109            `xml:"TxInf,omitempty"`
 }
 
-// Document type definition
-type Document struct {
-	XMLName        xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.08 Document"`
-	CstmrPmtCxlReq CustomerPaymentCancellationRequestV08 `xml:"CstmrPmtCxlReq"`
+// CustomerPaymentCancellationRequestV08 type definition
+type CustomerPaymentCancellationRequestV08 struct {
+	Assgnmt     common.CaseAssignment5      `xml:"Assgnmt"`
+	Case        *common.Case5               `xml:"Case,omitempty"`
+	CtrlData    *ControlData1               `xml:"CtrlData,omitempty"`
+	Undrlyg     []UnderlyingTransaction24   `xml:"Undrlyg"`
+	SplmtryData []common.SupplementaryData1 `xml:"SplmtryData,omitempty"`
+}
+
+// OriginalGroupHeader15 type definition
+type OriginalGroupHeader15 struct {
+	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
+	Case         *common.Case5                `xml:"Case,omitempty"`
+	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
+	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
+	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
+	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
+	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
 }
 
 // PaymentTransaction109 type definition
@@ -74,19 +81,4 @@ type PaymentTransaction109 struct {
 	CxlRsnInf         []PaymentCancellationReason5              `xml:"CxlRsnInf,omitempty"`
 	OrgnlTxRef        *common.OriginalTransactionReference28    `xml:"OrgnlTxRef,omitempty"`
 	SplmtryData       []common.SupplementaryData1               `xml:"SplmtryData,omitempty"`
-}
-
-// CustomerPaymentCancellationRequestV08 type definition
-type CustomerPaymentCancellationRequestV08 struct {
-	Assgnmt     common.CaseAssignment5      `xml:"Assgnmt"`
-	Case        *common.Case5               `xml:"Case,omitempty"`
-	CtrlData    *ControlData1               `xml:"CtrlData,omitempty"`
-	Undrlyg     []UnderlyingTransaction24   `xml:"Undrlyg"`
-	SplmtryData []common.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-}
-
-// CancellationReason33Choice type definition
-type CancellationReason33Choice struct {
-	Cd    common.ExternalCancellationReason1Code `xml:"Cd,omitempty"`
-	Prtry common.Max35Text                       `xml:"Prtry,omitempty"`
 }

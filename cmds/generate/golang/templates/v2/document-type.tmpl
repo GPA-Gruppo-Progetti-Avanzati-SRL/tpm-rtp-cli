@@ -3,8 +3,43 @@
 // Generated at {{.ProducedAt}}
 package {{.PackageName}}
 
+import (
+   "encoding/xml"
+   "bytes"
+)
+
+{{ $msgName := .MsgName }}
 {{- range getComplexTypes .PackageName}}
-{{ if ne .Name "Document" }}
+{{ if eq .Name "Document" }}
+// {{ .Name }} {{.Comment}}
+type {{ .Name }} struct {
+   XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:{{ $msgName }} Document"`
+{{- range .Attrs}}
+{{ .Name }} {{ if .IsPtr }}*{{- end}}{{- if .Array }}[]{{- end}}{{.Type.Name}} `xml:"{{.XMLName}}{{.XMLTags}}"`
+{{- end}}
+}
+
+func (d *Document)ToXML() ([]byte, error) {
+	w := &bytes.Buffer{}
+	w.Write([]byte(xml.Header))
+
+	enc := xml.NewEncoder(w)
+	enc.Indent("", "  ")
+	err := enc.Encode(d)
+	if err != nil {
+	    return nil, err
+	}
+
+	return w.Bytes(), nil
+}
+
+func NewDocumentFromXML(b []byte) (*Document, error) {
+	d := &Document{}
+	err := xml.Unmarshal(b, d)
+	return d, err
+}
+
+
 // IsValid checks if {{ .Name }} is valid
 func (s {{ .Name }}) IsValid(optional bool) bool {
 

@@ -148,7 +148,6 @@ func (gm *GoModel) VisitAttr(visitor GoModelVisitor, types map[string]GoTypeDefi
 	if err != nil {
 		return err
 	}
-	// log.Trace().Msg(path)
 
 	// log.Trace().Int("depth", depth).Str("name", el.Name).Str("type", el.Type.Name).Bool("isPtr", el.IsPtr()).Bool("isArray", el.Array).Msg("attribute")
 	if el.StructType {

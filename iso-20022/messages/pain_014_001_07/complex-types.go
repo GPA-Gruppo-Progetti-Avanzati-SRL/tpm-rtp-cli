@@ -1,26 +1,51 @@
 // Package pain_014_001_07
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 15:30:32.624602 +0200 CEST m=+0.108817042
+// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pain_014_001_07
 
 import (
-	"encoding/xml"
-
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
+
+// StatusReason6Choice type definition
+type StatusReason6Choice struct {
+	Cd    common.ExternalStatusReason1Code `xml:"Cd,omitempty"`
+	Prtry common.Max35Text                 `xml:"Prtry,omitempty"`
+}
+
+// CreditorPaymentActivationRequestStatusReportV07 type definition
+type CreditorPaymentActivationRequestStatusReportV07 struct {
+	GrpHdr            GroupHeader87                  `xml:"GrpHdr"`
+	OrgnlGrpInfAndSts OriginalGroupInformation30     `xml:"OrgnlGrpInfAndSts"`
+	OrgnlPmtInfAndSts []OriginalPaymentInstruction31 `xml:"OrgnlPmtInfAndSts,omitempty"`
+	SplmtryData       []common.SupplementaryData1    `xml:"SplmtryData,omitempty"`
+}
+
+// PaymentTransaction104 type definition
+type PaymentTransaction104 struct {
+	StsId           common.Max35Text                             `xml:"StsId,omitempty"`
+	OrgnlInstrId    common.Max35Text                             `xml:"OrgnlInstrId,omitempty"`
+	OrgnlEndToEndId common.Max35Text                             `xml:"OrgnlEndToEndId,omitempty"`
+	OrgnlUETR       common.UUIDv4Identifier                      `xml:"OrgnlUETR,omitempty"`
+	TxSts           common.ExternalPaymentTransactionStatus1Code `xml:"TxSts,omitempty"`
+	StsRsnInf       []StatusReasonInformation12                  `xml:"StsRsnInf,omitempty"`
+	PmtCondSts      *PaymentConditionStatus1                     `xml:"PmtCondSts,omitempty"`
+	ChrgsInf        []common.Charges7                            `xml:"ChrgsInf,omitempty"`
+	DbtrDcsnDtTm    common.ISODateTime                           `xml:"DbtrDcsnDtTm,omitempty"`
+	AccptncDtTm     common.ISODateTime                           `xml:"AccptncDtTm,omitempty"`
+	AcctSvcrRef     common.Max35Text                             `xml:"AcctSvcrRef,omitempty"`
+	ClrSysRef       common.Max35Text                             `xml:"ClrSysRef,omitempty"`
+	OrgnlTxRef      *OriginalTransactionReference29              `xml:"OrgnlTxRef,omitempty"`
+	NclsdFile       []common.Document12                          `xml:"NclsdFile,omitempty"`
+	SplmtryData     []common.SupplementaryData1                  `xml:"SplmtryData,omitempty"`
+}
 
 // StatusReasonInformation12 type definition
 type StatusReasonInformation12 struct {
 	Orgtr    *common.PartyIdentification135 `xml:"Orgtr,omitempty"`
 	Rsn      *StatusReason6Choice           `xml:"Rsn,omitempty"`
 	AddtlInf []common.Max105Text            `xml:"AddtlInf,omitempty"`
-}
-
-// Document type definition
-type Document struct {
-	XMLName                xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:pain.014.001.07 Document"`
-	CdtrPmtActvtnReqStsRpt CreditorPaymentActivationRequestStatusReportV07 `xml:"CdtrPmtActvtnReqStsRpt"`
 }
 
 // GroupHeader87 type definition
@@ -32,17 +57,11 @@ type GroupHeader87 struct {
 	CdtrAgt  *common.BranchAndFinancialInstitutionIdentification6 `xml:"CdtrAgt,omitempty"`
 }
 
-// StatusReason6Choice type definition
-type StatusReason6Choice struct {
-	Cd    common.ExternalStatusReason1Code `xml:"Cd,omitempty"`
-	Prtry common.Max35Text                 `xml:"Prtry,omitempty"`
-}
-
-// PaymentConditionStatus1 type definition
-type PaymentConditionStatus1 struct {
-	AccptdAmt *common.ActiveCurrencyAndAmount `xml:"AccptdAmt,omitempty"`
-	GrntedPmt xsdt.Boolean                    `xml:"GrntedPmt"`
-	EarlyPmt  xsdt.Boolean                    `xml:"EarlyPmt"`
+// NumberOfTransactionsPerStatus5 type definition
+type NumberOfTransactionsPerStatus5 struct {
+	DtldNbOfTxs common.Max15NumericText                      `xml:"DtldNbOfTxs"`
+	DtldSts     common.ExternalPaymentTransactionStatus1Code `xml:"DtldSts"`
+	DtldCtrlSum xsdt.Decimal                                 `xml:"DtldCtrlSum,omitempty"`
 }
 
 // OriginalPaymentInstruction31 type definition
@@ -54,18 +73,6 @@ type OriginalPaymentInstruction31 struct {
 	StsRsnInf     []StatusReasonInformation12            `xml:"StsRsnInf,omitempty"`
 	NbOfTxsPerSts []NumberOfTransactionsPerStatus5       `xml:"NbOfTxsPerSts,omitempty"`
 	TxInfAndSts   []PaymentTransaction104                `xml:"TxInfAndSts,omitempty"`
-}
-
-// OriginalGroupInformation30 type definition
-type OriginalGroupInformation30 struct {
-	OrgnlMsgId    common.Max35Text                       `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId  common.Max35Text                       `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm  common.ISODateTime                     `xml:"OrgnlCreDtTm,omitempty"`
-	OrgnlNbOfTxs  common.Max15NumericText                `xml:"OrgnlNbOfTxs,omitempty"`
-	OrgnlCtrlSum  xsdt.Decimal                           `xml:"OrgnlCtrlSum,omitempty"`
-	GrpSts        common.ExternalPaymentGroupStatus1Code `xml:"GrpSts,omitempty"`
-	StsRsnInf     []StatusReasonInformation12            `xml:"StsRsnInf,omitempty"`
-	NbOfTxsPerSts []NumberOfTransactionsPerStatus5       `xml:"NbOfTxsPerSts,omitempty"`
 }
 
 // OriginalTransactionReference29 type definition
@@ -88,36 +95,21 @@ type OriginalTransactionReference29 struct {
 	UltmtCdtr   *common.PartyIdentification135                       `xml:"UltmtCdtr,omitempty"`
 }
 
-// PaymentTransaction104 type definition
-type PaymentTransaction104 struct {
-	StsId           common.Max35Text                             `xml:"StsId,omitempty"`
-	OrgnlInstrId    common.Max35Text                             `xml:"OrgnlInstrId,omitempty"`
-	OrgnlEndToEndId common.Max35Text                             `xml:"OrgnlEndToEndId,omitempty"`
-	OrgnlUETR       common.UUIDv4Identifier                      `xml:"OrgnlUETR,omitempty"`
-	TxSts           common.ExternalPaymentTransactionStatus1Code `xml:"TxSts,omitempty"`
-	StsRsnInf       []StatusReasonInformation12                  `xml:"StsRsnInf,omitempty"`
-	PmtCondSts      *PaymentConditionStatus1                     `xml:"PmtCondSts,omitempty"`
-	ChrgsInf        []common.Charges7                            `xml:"ChrgsInf,omitempty"`
-	DbtrDcsnDtTm    common.ISODateTime                           `xml:"DbtrDcsnDtTm,omitempty"`
-	AccptncDtTm     common.ISODateTime                           `xml:"AccptncDtTm,omitempty"`
-	AcctSvcrRef     common.Max35Text                             `xml:"AcctSvcrRef,omitempty"`
-	ClrSysRef       common.Max35Text                             `xml:"ClrSysRef,omitempty"`
-	OrgnlTxRef      *OriginalTransactionReference29              `xml:"OrgnlTxRef,omitempty"`
-	NclsdFile       []common.Document12                          `xml:"NclsdFile,omitempty"`
-	SplmtryData     []common.SupplementaryData1                  `xml:"SplmtryData,omitempty"`
+// OriginalGroupInformation30 type definition
+type OriginalGroupInformation30 struct {
+	OrgnlMsgId    common.Max35Text                       `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId  common.Max35Text                       `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm  common.ISODateTime                     `xml:"OrgnlCreDtTm,omitempty"`
+	OrgnlNbOfTxs  common.Max15NumericText                `xml:"OrgnlNbOfTxs,omitempty"`
+	OrgnlCtrlSum  xsdt.Decimal                           `xml:"OrgnlCtrlSum,omitempty"`
+	GrpSts        common.ExternalPaymentGroupStatus1Code `xml:"GrpSts,omitempty"`
+	StsRsnInf     []StatusReasonInformation12            `xml:"StsRsnInf,omitempty"`
+	NbOfTxsPerSts []NumberOfTransactionsPerStatus5       `xml:"NbOfTxsPerSts,omitempty"`
 }
 
-// NumberOfTransactionsPerStatus5 type definition
-type NumberOfTransactionsPerStatus5 struct {
-	DtldNbOfTxs common.Max15NumericText                      `xml:"DtldNbOfTxs"`
-	DtldSts     common.ExternalPaymentTransactionStatus1Code `xml:"DtldSts"`
-	DtldCtrlSum xsdt.Decimal                                 `xml:"DtldCtrlSum,omitempty"`
-}
-
-// CreditorPaymentActivationRequestStatusReportV07 type definition
-type CreditorPaymentActivationRequestStatusReportV07 struct {
-	GrpHdr            GroupHeader87                  `xml:"GrpHdr"`
-	OrgnlGrpInfAndSts OriginalGroupInformation30     `xml:"OrgnlGrpInfAndSts"`
-	OrgnlPmtInfAndSts []OriginalPaymentInstruction31 `xml:"OrgnlPmtInfAndSts,omitempty"`
-	SplmtryData       []common.SupplementaryData1    `xml:"SplmtryData,omitempty"`
+// PaymentConditionStatus1 type definition
+type PaymentConditionStatus1 struct {
+	AccptdAmt *common.ActiveCurrencyAndAmount `xml:"AccptdAmt,omitempty"`
+	GrntedPmt xsdt.Boolean                    `xml:"GrntedPmt"`
+	EarlyPmt  xsdt.Boolean                    `xml:"EarlyPmt"`
 }

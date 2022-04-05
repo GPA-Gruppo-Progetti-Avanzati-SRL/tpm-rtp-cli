@@ -81,6 +81,7 @@ func TestSimpleVisitGoModel(t *testing.T) {
 	err := theModel.VisitDocument("pain_013_001_07", sv)
 	require.NoError(t, err)
 
+	sv.ShowInfo("")
 	t.Log("number of leaves: ", sv.NumberOfLeaves)
 }
 

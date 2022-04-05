@@ -1,51 +1,30 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 15:30:32.624602 +0200 CEST m=+0.108817042
+// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pacs_028_001_03
 
-import (
-	"bytes"
-	"encoding/xml"
-)
+// IsValid checks if PaymentTransaction113 is valid
+func (s PaymentTransaction113) IsValid(optional bool) bool {
 
-func (d *Document) ToXML() ([]byte, error) {
-	w := &bytes.Buffer{}
-	w.Write([]byte(xml.Header))
+	valid := true
+	valid = valid && s.StsReqId.IsValid(true)
+	valid = valid && (s.OrgnlGrpInf == nil || (s.OrgnlGrpInf != nil && s.OrgnlGrpInf.IsValid(true)))
 
-	enc := xml.NewEncoder(w)
-	enc.Indent("", "  ")
-	err := enc.Encode(d)
-	if err != nil {
-		return nil, err
+	valid = valid && s.OrgnlInstrId.IsValid(true)
+	valid = valid && s.OrgnlEndToEndId.IsValid(true)
+	valid = valid && s.OrgnlTxId.IsValid(true)
+	valid = valid && s.OrgnlUETR.IsValid(true)
+	valid = valid && s.AccptncDtTm.IsValid(true)
+	valid = valid && s.ClrSysRef.IsValid(true)
+	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
+
+	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
+
+	valid = valid && (s.OrgnlTxRef == nil || (s.OrgnlTxRef != nil && s.OrgnlTxRef.IsValid(true)))
+
+	for j := 0; j < len(s.SplmtryData); j++ {
+		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
-
-	return w.Bytes(), nil
-}
-
-func NewDocumentFromXML(b []byte) (*Document, error) {
-	d := &Document{}
-	err := xml.Unmarshal(b, d)
-	return d, err
-}
-
-// IsValid checks if Document is valid
-func (s Document) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.FIToFIPmtStsReq.IsValid(false)
-
-	return valid
-}
-
-// IsValid checks if OriginalGroupInformation27 is valid
-func (s OriginalGroupInformation27) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
 
 	return valid
 }
@@ -70,28 +49,15 @@ func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if PaymentTransaction113 is valid
-func (s PaymentTransaction113) IsValid(optional bool) bool {
+// IsValid checks if OriginalGroupInformation27 is valid
+func (s OriginalGroupInformation27) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.StsReqId.IsValid(true)
-	valid = valid && (s.OrgnlGrpInf == nil || (s.OrgnlGrpInf != nil && s.OrgnlGrpInf.IsValid(true)))
-
-	valid = valid && s.OrgnlInstrId.IsValid(true)
-	valid = valid && s.OrgnlEndToEndId.IsValid(true)
-	valid = valid && s.OrgnlTxId.IsValid(true)
-	valid = valid && s.OrgnlUETR.IsValid(true)
-	valid = valid && s.AccptncDtTm.IsValid(true)
-	valid = valid && s.ClrSysRef.IsValid(true)
-	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
-
-	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
-
-	valid = valid && (s.OrgnlTxRef == nil || (s.OrgnlTxRef != nil && s.OrgnlTxRef.IsValid(true)))
-
-	for j := 0; j < len(s.SplmtryData); j++ {
-		valid = valid && s.SplmtryData[j].IsValid(true)
-	}
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
 
 	return valid
 }

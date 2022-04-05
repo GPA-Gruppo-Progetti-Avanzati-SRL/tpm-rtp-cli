@@ -1,0 +1,11 @@
+// Package {{.PackageName}}
+// Do not Edit. This stuff it's been automatically generated.
+// Generated at {{.ProducedAt}}
+package {{.PackageName}}
+
+{{ $tree := simpleVisit .PackageName }}
+const (
+{{- range $tree.Paths}}
+  Path_{{ .Identifier }} = "{{.Value}}"
+{{- end }}
+)

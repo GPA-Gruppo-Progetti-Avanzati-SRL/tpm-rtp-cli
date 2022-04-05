@@ -12,7 +12,10 @@ import (
 	"time"
 )
 
-const Example_Camt_055_001_08_1 = "example-document-camt_055_001_08.xml"
+const (
+	Example_Camt_055_001_08_1 = "example-document-camt_055_001_08.xml"
+	AFC                       = "AFC Poste Italiane"
+)
 
 func TestDocumentCamt_055_001_08(t *testing.T) {
 
@@ -22,7 +25,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 				Id: common.MustToMax35Text("str12345"),
 				Assgnr: common.Party40Choice{
 					Pty: &common.PartyIdentification135{
-						Nm: common.MustToMax140Text("AFC Poste Italiane"),
+						Nm: common.MustToMax140Text(AFC),
 						Id: &common.Party38Choice{
 							OrgId: &common.OrganisationIdentification29{
 								Othr: []common.GenericOrganisationIdentification1{
@@ -66,7 +69,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 									CxlRsnInf: []camt_055_001_08.PaymentCancellationReason5{
 										{
 											Orgtr: &common.PartyIdentification135{
-												Nm: common.MustToMax140Text("AFC Poste Italiane"),
+												Nm: common.MustToMax140Text(AFC),
 												Id: &common.Party38Choice{
 													OrgId: &common.OrganisationIdentification29{
 														Othr: []common.GenericOrganisationIdentification1{
@@ -112,7 +115,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 										},
 										Cdtr: &common.Party40Choice{
 											Pty: &common.PartyIdentification135{
-												Nm: common.MustToMax140Text("AFC Poste Italiane"),
+												Nm: common.MustToMax140Text(AFC),
 												Id: &common.Party38Choice{
 													OrgId: &common.OrganisationIdentification29{
 														Othr: []common.GenericOrganisationIdentification1{

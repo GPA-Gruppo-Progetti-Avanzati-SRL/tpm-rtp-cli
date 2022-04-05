@@ -1,5 +1,20 @@
 ## tpm-rtp-cli
 
+### What's that and why doing it
+This project main objective is the generation of artifacts to manipulate IS20022 messages using Golang code. 
+On the net there is stuff to generate go structs from schemas but all this stuff lacks some bells and whistles to easily use this structures. This generation is not general
+if we mean a general generation of structs from schema files (it lacks some support of builtin types that are not used in IS20022 schemas for example) but tries to offer an approach useful for the task at hand.
+For example, it doesn't generate a schme ato a single file in a single package but tries to find common types across different messages and split them in different packages.
+As such, you will have a package for each message and a common package where simple and complex types shared among messages are put together to simplify the creation of a message from a different one used as a source.
+More over it provides some convenience methods for setting and getting values out of the structures with some protection for arrays and nil pointers. 
+I hope you will find this stuff edible to get life easier down the road considering that:
+
+* arrays are a matter of the schema where plurality gets in the way,
+* pointers are a fact of life when generating empty structs is not an option
+* those messages can have a number of nodes ranginbg from 3000 up to 8500 (considering leaves and intermediate)
+* real cases in general set a very few number of nodes: might be in the range of 30 or 40 leaves: more intermediate nodes than leaves as to speak. As such these trees are pretty sparse.
+* the code to map some data to a message can be very much specific and the code can result very much hard-coded as to speak.
+
 ### Layout
 A brief description of the layout of the project and whate you can find where.
 
@@ -19,11 +34,16 @@ The folder contains artefacts produced by the generator and other stuff. More pr
 
 #### iso-20022 message folder
 The folders are named after the message in a go-frienly way (i.e. `pain.013.001.07` gets to `pain_013_001_07`). 
-Each folder contains a few files.
+Each folder contains a number of files. The size and the complexity of the messages and the size of the generated stuff has forced to distribute code on various files.
 
+* document.go, document-paths.go, document-complex-set-ops.go, document-simple-set-ops.go: they contain the document structure definition and the document level commands. They are considered below in a dedicated paragraph.
+  (note: in the repo not every file for every message have been committed due to size and amangeability).
 * complex-types.go: contains the declaration of structures not shared and specific to the message (at tleast in the context of the messages considered)
 * complex-types-ops.go: contains the methods of the structures.
+* <message-id>_test.go (where message-id stands for `pain_013_001_07` etc..): this file contains a literal sample of the document with sample values, it is meant to provide an overview of the message and to 
+extract snippet that might be used somewhere else.
 
+##### Typical layout of a structure
 The snippet below provide an example of the type of stuff that is in there (Methods and structure might change over time but pretty much this is the idea). In the snippet below it is worth of note:
 
 * Optional properties of complex types are pointers to structs.
@@ -114,6 +134,47 @@ func (s CreditTransferTransaction35) IsValid(optional bool) bool {
 }
 ```
 
+##### document files
+In here a brief explanation of what is in the document* files that are found in the message folder.
+
+* document.go: it is the structure of the document and a few methods. Previously put in the `complex-types.go` has been extracted since the Document is the root of the thing and is easier to find.
+* document-paths.go: it is a set of constants with each one constant to each different path from the root to each node (not just the leaves).
+* document-complex-set-ops.go, document-simple-set-ops.go: they contain a set function for setting each individual node of the document. These functions are methods of the Document struct and are named
+after the path of each node from the root of the document. They are two files because of size: the complex contains function where the parameter is of struct or array type whereas the simple contain
+functions that address only the leaves of the tree.
+
+These are few consts from the pain.013.001.07 stuff. What are them used for? Nothing at the moment but of course there is a plan.
+
+```
+	Path_Doc                                    = "Doc"
+	Path_Doc_CdtrPmtActvtnReq                   = "Doc.CdtrPmtActvtnReq"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr            = "Doc.CdtrPmtActvtnReq.GrpHdr"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr_MsgId      = "Doc.CdtrPmtActvtnReq.GrpHdr.MsgId"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr_CreDtTm    = "Doc.CdtrPmtActvtnReq.GrpHdr.CreDtTm"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr_NbOfTxs    = "Doc.CdtrPmtActvtnReq.GrpHdr.NbOfTxs"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr_CtrlSum    = "Doc.CdtrPmtActvtnReq.GrpHdr.CtrlSum"
+	Path_Doc_CdtrPmtActvtnReq_GrpHdr_InitgPty   = "Doc.CdtrPmtActvtnReq.GrpHdr.InitgPty"
+```
+
+Examples of functions that can be found in the document-complex-set-ops.go and document-simple-set-ops.go files. As you can note, the code takes care of handling
+pointers and arrays. We might want to set that specific node down the hierarchy without worrying of checks of `nil` arrays and `nil` pointers.
+If we didn't have pointers and arrays the stuff was a lot simpler.
+
+```
+func (d *Document) With_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+	if d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id == nil {
+		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id = &common.Party38Choice{}
+	}
+	if d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId == nil {
+		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId = &common.OrganisationIdentification29{}
+	}
+	if len(d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr) == 0 {
+		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr = append(d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr, common.GenericOrganisationIdentification1{})
+	}
+	d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
+}
+```
+
 #### iso-20022 common folder
 The folder contains declaration of simple types and complex types shared between the messages. Files have been split in declarations and methods.
 
@@ -141,7 +202,8 @@ const (
 	ChargeBearerType1CodeSLEV = "SLEV"
 )
 
-var ChargeBearerType1CodeEnumRestriction = []string{ChargeBearerType1CodeDEBT, ChargeBearerType1CodeCRED, ChargeBearerType1CodeSHAR, ChargeBearerType1CodeSLEV}
+var ChargeBearerType1CodeEnumRestriction = []string{
+     ChargeBearerType1CodeDEBT, ChargeBearerType1CodeCRED, ChargeBearerType1CodeSHAR, ChargeBearerType1CodeSLEV}
 
 // IsValid checks if ChargeBearerType1Code of type String is valid
 func (t ChargeBearerType1Code) IsValid(optional bool) bool {

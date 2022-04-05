@@ -30,6 +30,11 @@ const (
 	RestrictionUtil            = "templates/%s/restriction-util.tmpl"
 	XsDtTypes                  = "templates/%s/xsdt-types.tmpl"
 	XsDtTypesMethods           = "templates/%s/xsdt-types-methods.tmpl"
+	DocumentType               = "templates/%s/document-type.tmpl"
+	DocumentPaths              = "templates/%s/document-paths.tmpl"
+	DocumentSetComplexOps      = "templates/%s/document-complex-set-ops.tmpl"
+	DocumentSetSimpleOps       = "templates/%s/document-simple-set-ops.tmpl"
+	DocumentGetOps             = "templates/%s/document-get-ops.tmpl"
 	DocumentExample            = "templates/%s/document-example.tmpl"
 	DocumentExampleNode        = "templates/%s/document-example-node.tmpl"
 )
@@ -72,6 +77,41 @@ func documentExampleTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(DocumentExample, version))
 	s = append(s, fmt.Sprintf(DocumentExampleNode, version))
+
+	return s
+}
+
+func documentTypeTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentType, version))
+
+	return s
+}
+
+func documentSetComplexOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetComplexOps, version))
+
+	return s
+}
+
+func documentSetSimpleOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetSimpleOps, version))
+
+	return s
+}
+
+func documentGetOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentGetOps, version))
+
+	return s
+}
+
+func documentPathsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentPaths, version))
 
 	return s
 }
@@ -160,6 +200,22 @@ func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, for
 		 * document example
 		 */
 		if pkgName != "common" {
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document", "go"}, "."), documentTypeTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-paths", "go"}, "."), documentPathsTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-complex-set-ops", "go"}, "."), documentSetComplexOpsTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-simple-set-ops", "go"}, "."), documentSetSimpleOpsTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+
 			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{pkgName + "_test", "go"}, "."), documentExampleTmplList("v2"), formatCode); err != nil {
 				return err
 			}
@@ -270,6 +326,11 @@ func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 			_ = gm.VisitDocument(pkgName, v)
 			return v
 		},
+		"simpleVisit": func(pkgName string) *model.SimpleVisitor {
+			v := &model.SimpleVisitor{}
+			_ = gm.VisitDocument(pkgName, v)
+			return v
+		},
 		"mustToFunctionSignature": func(typeName string) string {
 			ndx := strings.Index(typeName, ".")
 			if ndx > 0 {
@@ -295,6 +356,9 @@ func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 				dict[key] = values[i+1]
 			}
 			return dict, nil
+		},
+		"camelize": func(s string) string {
+			return util.Camelize(s)
 		},
 	}
 
