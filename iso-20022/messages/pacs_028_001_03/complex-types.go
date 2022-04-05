@@ -1,6 +1,6 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 07:17:08.59722 +0200 CEST m=+0.095667126
+// Generated at 2022-04-05 08:09:15.042077 +0200 CEST m=+0.106838168
 package pacs_028_001_03
 
 import (
@@ -10,12 +10,26 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
 
+// Document type definition
+type Document struct {
+	XMLName         xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03 Document"`
+	FIToFIPmtStsReq FIToFIPaymentStatusRequestV03 `xml:"FIToFIPmtStsReq"`
+}
+
 // FIToFIPaymentStatusRequestV03 type definition
 type FIToFIPaymentStatusRequestV03 struct {
 	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
 	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
 	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
 	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
+}
+
+// GroupHeader91 type definition
+type GroupHeader91 struct {
+	MsgId    common.Max35Text                                     `xml:"MsgId"`
+	CreDtTm  common.ISODateTime                                   `xml:"CreDtTm"`
+	InstgAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstgAgt,omitempty"`
+	InstdAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
 }
 
 // PaymentTransaction113 type definition
@@ -41,18 +55,4 @@ type OriginalGroupInformation27 struct {
 	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
 	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
 	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
-}
-
-// GroupHeader91 type definition
-type GroupHeader91 struct {
-	MsgId    common.Max35Text                                     `xml:"MsgId"`
-	CreDtTm  common.ISODateTime                                   `xml:"CreDtTm"`
-	InstgAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstgAgt,omitempty"`
-	InstdAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
-}
-
-// Document type definition
-type Document struct {
-	XMLName         xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03 Document"`
-	FIToFIPmtStsReq FIToFIPaymentStatusRequestV03 `xml:"FIToFIPmtStsReq"`
 }

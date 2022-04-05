@@ -3,23 +3,38 @@
 var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
 {{ end }}
 {{- if .HasEnumRestriction }}
-var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum -}} {{- if $i -}}, {{- end -}} "{{ $v }}" {{- end }} }
+const (
+{{- $typeName := .Name}}
+{{- range .Restrictions.Enum }}
+   {{ $typeName }}{{ . }} = "{{ . }}"
+{{- end}}
+)
+var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum -}}
+   {{- if $i -}}, {{- end -}} {{ $typeName }}{{ $v }} {{- end }} }
 {{ end }}
+
+{{- if .HasLengthRestriction }}
+const (
+    {{ .Name }}Length = {{.Restrictions.Length}}
+    {{ .Name }}MinLength = {{.Restrictions.MinLength}}
+    {{ .Name }}MaxLength = {{.Restrictions.MaxLength}}
+)
+{{- end}}
 // IsValid checks if {{ .Name }} of type {{ .Type.Builtin }} is valid
 func (t {{ .Name }}) IsValid(optional bool) bool {
 
      valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
 {{- if .HasEnumRestriction }}
-     valid = valid && applyEnumRestriction(t.String(), {{ .Name }}EnumRestriction)
+     valid = valid && isEnumRestrictionValid(t.String(), {{ .Name }}EnumRestriction)
 {{ end }}
 {{- if .HasLengthRestriction }}
-     valid = valid && applyLengthRestriction(t.String(), {{.Restrictions.Length}}, {{.Restrictions.MinLength}}, {{.Restrictions.MaxLength}})
+     valid = valid && isLengthRestrictionValid(t.String(), {{ .Name }}Length,  {{ .Name }}MinLength, {{ .Name }}MaxLength)
 {{ end }}
 {{- if .HasPatternRestriction }}
-     valid = valid && applyPatternRestriction(t.String(), {{ .Name }}PatternRestriction)
+     valid = valid && isPatternRestrictionValid(t.String(), {{ .Name }}PatternRestriction)
 {{ end }}
 {{- if .HasDecimalRestriction }}
-     valid = valid && applyDecimalRestriction(t.String(), {{.Restrictions.TotalDigits}}, , {{.Restrictions.Precision}})
+     valid = valid && hasValidDecimalRestriction(t.String(), {{.Restrictions.TotalDigits}}, , {{.Restrictions.Precision}})
 {{ end }}
      return valid
 }
@@ -33,17 +48,17 @@ func (t {{ .Name }}) String() string {
 func To{{ .Name }}(s string) ({{ .Name }}, error) {
 
 {{- if .HasEnumRestriction }}
-     if !applyEnumRestriction(s, {{ .Name }}EnumRestriction) {
+     if !isEnumRestrictionValid(s, {{ .Name }}EnumRestriction) {
         return "", fmt.Errorf("cannot satisfy enum restriction for %s of type {{ .Name }}", s)
      }
 {{ end }}
 {{- if .HasLengthRestriction }}
-     if !applyLengthRestriction(s, {{.Restrictions.Length}}, {{.Restrictions.MinLength}}, {{.Restrictions.MaxLength}}) {
+     if !isLengthRestrictionValid(s, {{ .Name }}Length,  {{ .Name }}MinLength, {{ .Name }}MaxLength) {
        return "", fmt.Errorf("cannot satisfy length restriction for %s of type {{ .Name }}", s)
      }
 {{ end }}
 {{- if .HasPatternRestriction }}
-      if !applyPatternRestriction(s, {{ .Name }}PatternRestriction)  {
+      if !isPatternRestrictionValid(s, {{ .Name }}PatternRestriction)  {
       return "", fmt.Errorf("cannot satisfy pattern restriction for %s of type {{ .Name }}", s)
       }
 {{ end }}
@@ -59,5 +74,23 @@ func MustTo{{ .Name }}(s string) {{ .Name }} {
     }
 
     return v
+}
+
+// {{ .Name }}Example method for generation of valid sample data
+func {{ .Name }}Example() {{ .Name }} {
+
+{{- if .HasAnyRestriction }}
+{{- if .HasEnumRestriction }}
+        return {{ .Name }}(generateSampleDataWithEnumRestriction({{ .Name }}EnumRestriction))
+{{ end }}
+{{- if .HasLengthRestriction }}
+        return {{ .Name }}(generateSampleDataWithLengthRestriction({{ .Name }}Length,  {{ .Name }}MinLength, {{ .Name }}MaxLength))
+{{ end }}
+{{- if .HasPatternRestriction }}
+        return {{ .Name }}(generateSampleDataWithPatternRestriction({{ .Name }}PatternRestriction))
+{{ end }}
+{{- else }}
+    return {{ .Name }}("non-restricted-example")
+{{ end }}
 }
 {{ end }}

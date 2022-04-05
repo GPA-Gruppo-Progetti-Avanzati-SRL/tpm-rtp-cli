@@ -15,4 +15,9 @@ func (t {{ .Name }}) IsValid(optional bool) bool {
 func (t {{ .Name }}) String() string {
     return string(t)
 }
+
+// {{ .Name }}Example method for generation of valid sample data
+func {{ .Name }}Example() {{ .Name }} {
+    return {{ .Name }}(generateB64SampleData())
+}
 {{ end }}

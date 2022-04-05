@@ -1,12 +1,51 @@
 // Package pain_014_001_07
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 07:17:08.59722 +0200 CEST m=+0.095667126
+// Generated at 2022-04-05 08:09:15.042077 +0200 CEST m=+0.106838168
 package pain_014_001_07
 
 import (
 	"bytes"
 	"encoding/xml"
 )
+
+// IsValid checks if StatusReason6Choice is valid
+func (s StatusReason6Choice) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.Prtry.IsValid(true)
+
+	return valid
+}
+
+func (d *Document) ToXML() ([]byte, error) {
+	w := &bytes.Buffer{}
+	w.Write([]byte(xml.Header))
+
+	enc := xml.NewEncoder(w)
+	enc.Indent("", "  ")
+	err := enc.Encode(d)
+	if err != nil {
+		return nil, err
+	}
+
+	return w.Bytes(), nil
+}
+
+func NewDocumentFromXML(b []byte) (*Document, error) {
+	d := &Document{}
+	err := xml.Unmarshal(b, d)
+	return d, err
+}
+
+// IsValid checks if Document is valid
+func (s Document) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.CdtrPmtActvtnReqStsRpt.IsValid(false)
+
+	return valid
+}
 
 // IsValid checks if OriginalPaymentInstruction31 is valid
 func (s OriginalPaymentInstruction31) IsValid(optional bool) bool {
@@ -42,6 +81,100 @@ func (s StatusReasonInformation12) IsValid(optional bool) bool {
 	for j := 0; j < len(s.AddtlInf); j++ {
 		valid = valid && s.AddtlInf[j].IsValid(true)
 	}
+
+	return valid
+}
+
+// IsValid checks if GroupHeader87 is valid
+func (s GroupHeader87) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.MsgId.IsValid(false)
+	valid = valid && s.CreDtTm.IsValid(false)
+	valid = valid && s.InitgPty.IsValid(false)
+	valid = valid && (s.DbtrAgt == nil || (s.DbtrAgt != nil && s.DbtrAgt.IsValid(true)))
+
+	valid = valid && (s.CdtrAgt == nil || (s.CdtrAgt != nil && s.CdtrAgt.IsValid(true)))
+
+	return valid
+}
+
+// IsValid checks if OriginalGroupInformation30 is valid
+func (s OriginalGroupInformation30) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
+	valid = valid && s.GrpSts.IsValid(true)
+	for j := 0; j < len(s.StsRsnInf); j++ {
+		valid = valid && s.StsRsnInf[j].IsValid(true)
+	}
+
+	for j := 0; j < len(s.NbOfTxsPerSts); j++ {
+		valid = valid && s.NbOfTxsPerSts[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if PaymentTransaction104 is valid
+func (s PaymentTransaction104) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.StsId.IsValid(true)
+	valid = valid && s.OrgnlInstrId.IsValid(true)
+	valid = valid && s.OrgnlEndToEndId.IsValid(true)
+	valid = valid && s.OrgnlUETR.IsValid(true)
+	valid = valid && s.TxSts.IsValid(true)
+	for j := 0; j < len(s.StsRsnInf); j++ {
+		valid = valid && s.StsRsnInf[j].IsValid(true)
+	}
+
+	valid = valid && (s.PmtCondSts == nil || (s.PmtCondSts != nil && s.PmtCondSts.IsValid(true)))
+
+	for j := 0; j < len(s.ChrgsInf); j++ {
+		valid = valid && s.ChrgsInf[j].IsValid(true)
+	}
+
+	valid = valid && s.DbtrDcsnDtTm.IsValid(true)
+	valid = valid && s.AccptncDtTm.IsValid(true)
+	valid = valid && s.AcctSvcrRef.IsValid(true)
+	valid = valid && s.ClrSysRef.IsValid(true)
+	valid = valid && (s.OrgnlTxRef == nil || (s.OrgnlTxRef != nil && s.OrgnlTxRef.IsValid(true)))
+
+	for j := 0; j < len(s.NclsdFile); j++ {
+		valid = valid && s.NclsdFile[j].IsValid(true)
+	}
+
+	for j := 0; j < len(s.SplmtryData); j++ {
+		valid = valid && s.SplmtryData[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if PaymentConditionStatus1 is valid
+func (s PaymentConditionStatus1) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && (s.AccptdAmt == nil || (s.AccptdAmt != nil && s.AccptdAmt.IsValid(true)))
+
+	valid = valid && s.GrntedPmt.IsValid(false)
+	valid = valid && s.EarlyPmt.IsValid(false)
+
+	return valid
+}
+
+// IsValid checks if NumberOfTransactionsPerStatus5 is valid
+func (s NumberOfTransactionsPerStatus5) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.DtldNbOfTxs.IsValid(false)
+	valid = valid && s.DtldSts.IsValid(false)
+	valid = valid && s.DtldCtrlSum.IsValid(true)
 
 	return valid
 }
@@ -97,139 +230,6 @@ func (s CreditorPaymentActivationRequestStatusReportV07) IsValid(optional bool) 
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
-
-	return valid
-}
-
-// IsValid checks if PaymentConditionStatus1 is valid
-func (s PaymentConditionStatus1) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && (s.AccptdAmt == nil || (s.AccptdAmt != nil && s.AccptdAmt.IsValid(true)))
-
-	valid = valid && s.GrntedPmt.IsValid(false)
-	valid = valid && s.EarlyPmt.IsValid(false)
-
-	return valid
-}
-
-// IsValid checks if PaymentTransaction104 is valid
-func (s PaymentTransaction104) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.StsId.IsValid(true)
-	valid = valid && s.OrgnlInstrId.IsValid(true)
-	valid = valid && s.OrgnlEndToEndId.IsValid(true)
-	valid = valid && s.OrgnlUETR.IsValid(true)
-	valid = valid && s.TxSts.IsValid(true)
-	for j := 0; j < len(s.StsRsnInf); j++ {
-		valid = valid && s.StsRsnInf[j].IsValid(true)
-	}
-
-	valid = valid && (s.PmtCondSts == nil || (s.PmtCondSts != nil && s.PmtCondSts.IsValid(true)))
-
-	for j := 0; j < len(s.ChrgsInf); j++ {
-		valid = valid && s.ChrgsInf[j].IsValid(true)
-	}
-
-	valid = valid && s.DbtrDcsnDtTm.IsValid(true)
-	valid = valid && s.AccptncDtTm.IsValid(true)
-	valid = valid && s.AcctSvcrRef.IsValid(true)
-	valid = valid && s.ClrSysRef.IsValid(true)
-	valid = valid && (s.OrgnlTxRef == nil || (s.OrgnlTxRef != nil && s.OrgnlTxRef.IsValid(true)))
-
-	for j := 0; j < len(s.NclsdFile); j++ {
-		valid = valid && s.NclsdFile[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.SplmtryData); j++ {
-		valid = valid && s.SplmtryData[j].IsValid(true)
-	}
-
-	return valid
-}
-
-// IsValid checks if NumberOfTransactionsPerStatus5 is valid
-func (s NumberOfTransactionsPerStatus5) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.DtldNbOfTxs.IsValid(false)
-	valid = valid && s.DtldSts.IsValid(false)
-	valid = valid && s.DtldCtrlSum.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if OriginalGroupInformation30 is valid
-func (s OriginalGroupInformation30) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
-	valid = valid && s.GrpSts.IsValid(true)
-	for j := 0; j < len(s.StsRsnInf); j++ {
-		valid = valid && s.StsRsnInf[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.NbOfTxsPerSts); j++ {
-		valid = valid && s.NbOfTxsPerSts[j].IsValid(true)
-	}
-
-	return valid
-}
-
-// IsValid checks if GroupHeader87 is valid
-func (s GroupHeader87) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.MsgId.IsValid(false)
-	valid = valid && s.CreDtTm.IsValid(false)
-	valid = valid && s.InitgPty.IsValid(false)
-	valid = valid && (s.DbtrAgt == nil || (s.DbtrAgt != nil && s.DbtrAgt.IsValid(true)))
-
-	valid = valid && (s.CdtrAgt == nil || (s.CdtrAgt != nil && s.CdtrAgt.IsValid(true)))
-
-	return valid
-}
-
-// IsValid checks if StatusReason6Choice is valid
-func (s StatusReason6Choice) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.Prtry.IsValid(true)
-
-	return valid
-}
-
-func (d *Document) ToXML() ([]byte, error) {
-	w := &bytes.Buffer{}
-	w.Write([]byte(xml.Header))
-
-	enc := xml.NewEncoder(w)
-	enc.Indent("", "  ")
-	err := enc.Encode(d)
-	if err != nil {
-		return nil, err
-	}
-
-	return w.Bytes(), nil
-}
-
-func NewDocumentFromXML(b []byte) (*Document, error) {
-	d := &Document{}
-	err := xml.Unmarshal(b, d)
-	return d, err
-}
-
-// IsValid checks if Document is valid
-func (s Document) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.CdtrPmtActvtnReqStsRpt.IsValid(false)
 
 	return valid
 }

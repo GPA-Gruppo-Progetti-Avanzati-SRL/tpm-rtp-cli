@@ -104,6 +104,14 @@ func (gs GoTypeDefinition) HasDecimalRestriction() bool {
 	return false
 }
 
+func (gs GoTypeDefinition) HasAnyRestriction() bool {
+	if gs.HasDecimalRestriction() || gs.HasLengthRestriction() || gs.HasEnumRestriction() || gs.HasPatternRestriction() {
+		return true
+	}
+
+	return false
+}
+
 type GoType struct {
 	Name      string
 	Import    string

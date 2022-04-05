@@ -1,12 +1,41 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 07:17:08.59722 +0200 CEST m=+0.095667126
+// Generated at 2022-04-05 08:09:15.042077 +0200 CEST m=+0.106838168
 package pacs_028_001_03
 
 import (
 	"bytes"
 	"encoding/xml"
 )
+
+func (d *Document) ToXML() ([]byte, error) {
+	w := &bytes.Buffer{}
+	w.Write([]byte(xml.Header))
+
+	enc := xml.NewEncoder(w)
+	enc.Indent("", "  ")
+	err := enc.Encode(d)
+	if err != nil {
+		return nil, err
+	}
+
+	return w.Bytes(), nil
+}
+
+func NewDocumentFromXML(b []byte) (*Document, error) {
+	d := &Document{}
+	err := xml.Unmarshal(b, d)
+	return d, err
+}
+
+// IsValid checks if Document is valid
+func (s Document) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.FIToFIPmtStsReq.IsValid(false)
+
+	return valid
+}
 
 // IsValid checks if FIToFIPaymentStatusRequestV03 is valid
 func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
@@ -24,6 +53,19 @@ func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
+
+	return valid
+}
+
+// IsValid checks if GroupHeader91 is valid
+func (s GroupHeader91) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.MsgId.IsValid(false)
+	valid = valid && s.CreDtTm.IsValid(false)
+	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
+
+	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
 
 	return valid
 }
@@ -63,48 +105,6 @@ func (s OriginalGroupInformation27) IsValid(optional bool) bool {
 	valid = valid && s.OrgnlCreDtTm.IsValid(true)
 	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
 	valid = valid && s.OrgnlCtrlSum.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if GroupHeader91 is valid
-func (s GroupHeader91) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.MsgId.IsValid(false)
-	valid = valid && s.CreDtTm.IsValid(false)
-	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
-
-	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
-
-	return valid
-}
-
-func (d *Document) ToXML() ([]byte, error) {
-	w := &bytes.Buffer{}
-	w.Write([]byte(xml.Header))
-
-	enc := xml.NewEncoder(w)
-	enc.Indent("", "  ")
-	err := enc.Encode(d)
-	if err != nil {
-		return nil, err
-	}
-
-	return w.Bytes(), nil
-}
-
-func NewDocumentFromXML(b []byte) (*Document, error) {
-	d := &Document{}
-	err := xml.Unmarshal(b, d)
-	return d, err
-}
-
-// IsValid checks if Document is valid
-func (s Document) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.FIToFIPmtStsReq.IsValid(false)
 
 	return valid
 }

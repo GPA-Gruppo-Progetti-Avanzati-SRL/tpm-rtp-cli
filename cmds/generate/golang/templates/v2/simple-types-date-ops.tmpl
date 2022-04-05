@@ -48,4 +48,9 @@ func MustTo{{ .Name }}(tm interface{}) {{ .Name }}{
 
     return d
 }
+
+// {{ .Name }}Example method for generation of valid sample data
+func {{ .Name }}Example() {{ .Name }} {
+    return {{ .Name }}(time.Now().Format("2006-01-02"))
+}
 {{ end }}
