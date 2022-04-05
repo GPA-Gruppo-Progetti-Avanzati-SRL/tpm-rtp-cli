@@ -3,7 +3,7 @@ package golang
 import (
 	"aqwari.net/xml/xsd"
 	"fmt"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
 	"github.com/rs/zerolog/log"
 	"strings"
 )
@@ -268,4 +268,133 @@ func showTypeDefinitions(types []GoTypeDefinition) {
 			log.Trace().Str("name", a.Name).Bool("built-in", a.Type.IsBuiltin).Str("type", a.Type.Name).Interface("struct,array,opt,xml-attr", []bool{a.StructType, a.Array, a.Optional, a.XMLAttr}).Str("import", a.Type.Import).Msg("--- attr def")
 		}
 	}
+}
+
+type SimpleVisitedItem struct {
+	Name     string
+	Type     string
+	IsStruct bool
+	IsPtr    bool
+	IsArray  bool
+}
+
+func (si SimpleVisitedItem) String() string {
+	modifier := ""
+	if si.IsPtr {
+		modifier = "*"
+	}
+
+	if si.IsArray {
+		modifier = "[]"
+	}
+
+	path := fmt.Sprintf("%s %s%s", si.Name, modifier, si.Type)
+	return path
+}
+
+type SimpleVisitor struct {
+	NumberOfLeaves int
+	currentPath    []SimpleVisitedItem
+	paths          [][]SimpleVisitedItem
+}
+
+func (sv SimpleVisitor) currentPathToString() string {
+
+	var sb strings.Builder
+	for _, item := range sv.currentPath {
+		sb.WriteString("/")
+		sb.WriteString(item.String())
+	}
+
+	return sb.String()
+}
+
+func (sv *SimpleVisitor) Visit(name, aType string, isStruct, isPrt, isArray bool) (string, error) {
+	item := SimpleVisitedItem{Name: name, Type: aType, IsStruct: isStruct, IsPtr: isPrt, IsArray: isArray}
+	if !isStruct {
+		sv.NumberOfLeaves++
+	}
+	sv.currentPath = append(sv.currentPath, item)
+	sv.paths = append(sv.paths, sv.currentPath)
+	return sv.currentPathToString(), nil
+}
+
+func (sv *SimpleVisitor) Pop() (string, error) {
+
+	if len(sv.currentPath) > 0 {
+		sv.currentPath = sv.currentPath[0 : len(sv.currentPath)-1]
+	} else {
+		return "", fmt.Errorf("cannot pop from path: %s", sv.currentPathToString())
+	}
+
+	return sv.currentPathToString(), nil
+}
+
+func (gm *GoModel) VisitDocument(pkgName string, visitor GoModelVisitor) error {
+
+	var rootEntry GoTypeDefinition
+	mapsOfTypes := make(map[string]GoTypeDefinition)
+	for _, td := range gm.TypeDefs {
+
+		// The names in the map are package scoped.
+		if td.PackageName == pkgName {
+			mapsOfTypes[strings.Join([]string{td.PackageName, td.Name}, ".")] = td
+		}
+
+		if td.PackageName == "common" {
+			mapsOfTypes[strings.Join([]string{td.PackageName, td.Name}, ".")] = td
+		}
+
+		if td.PackageName == pkgName && td.Name == "Document" {
+			rootEntry = td
+		}
+	}
+
+	if rootEntry.Name == "" {
+		return fmt.Errorf("cannot find the root element %s for package %s", "Document", pkgName)
+	}
+
+	_, _ = visitor.Visit("_self", strings.Join([]string{pkgName, "Document"}, "."), true, false, false)
+
+	for _, a := range rootEntry.Attrs {
+		// The container package is passed since the attributes have a type that is already scoped or not. If it is not
+		// scoped it means that the type is in the same package as the container.... so there is the need to propagate.
+		if err := gm.VisitAttr(visitor, mapsOfTypes, rootEntry.PackageName, a); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (gm *GoModel) VisitAttr(visitor GoModelVisitor, types map[string]GoTypeDefinition, parentPackageName string, el GoAttr) error {
+
+	lookupKey := el.Type.Name
+	if strings.Index(el.Type.Name, ".") < 0 {
+		lookupKey = strings.Join([]string{parentPackageName, el.Type.Name}, ".")
+	}
+
+	path, err := visitor.Visit(el.Name, lookupKey, el.StructType, el.IsPtr(), el.Array)
+	if err != nil {
+		return err
+	}
+	log.Trace().Msg(path)
+
+	// log.Trace().Int("depth", depth).Str("name", el.Name).Str("type", el.Type.Name).Bool("isPtr", el.IsPtr()).Bool("isArray", el.Array).Msg("attribute")
+	if el.StructType {
+		// strings.Join([]string{el.Type.Name}, ".")
+		elTypeDef, ok := types[lookupKey]
+		if !ok {
+			return fmt.Errorf("cannot find the type %s of element %s", el.Type.Name, el.Name)
+		}
+
+		for _, attr := range elTypeDef.Attrs {
+			if err := gm.VisitAttr(visitor, types, elTypeDef.PackageName, attr); err != nil {
+				return err
+			}
+		}
+	}
+
+	_, err = visitor.Pop()
+	return err
 }

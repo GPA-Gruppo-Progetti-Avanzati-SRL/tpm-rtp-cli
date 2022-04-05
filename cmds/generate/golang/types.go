@@ -3,7 +3,7 @@ package golang
 import (
 	"aqwari.net/xml/xsd"
 	"fmt"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
 	"strings"
 )
 
@@ -43,6 +43,11 @@ type GoModel struct {
 	Msgs         []registry.ISO20022Message
 	TypeDefs     []GoTypeDefinition
 	TypeRegistry registry.TypeRegistry
+}
+
+type GoModelVisitor interface {
+	Visit(elName, elType string, isStruct, isPrt, isArray bool) (string, error)
+	Pop() (string, error)
 }
 
 type GoTypeDefinition struct {

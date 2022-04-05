@@ -2,9 +2,9 @@ package golang_test
 
 import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/generator/golang"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/parser"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	golang2 "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/golang"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/parser"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/stretchr/testify/require"
@@ -40,9 +40,18 @@ func TestGoModel(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	gm, err := golang.NewModel(&golang.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}, {Name: "pain.014.001.07"}}, p.TypeRegistry)
+	gm, err := golang2.NewModel(&golang2.DefaultModelCfg, []registry.ISO20022Message{{Name: "pain.013.001.07"}, {Name: "pain.014.001.07"}}, p.TypeRegistry)
 	require.NoError(t, err)
+
+	t.Log("Dumping GoModel.................")
 	gm.ShowInfo()
+
+	t.Log("Visiting GoModel.................")
+	sv := &golang2.SimpleVisitor{}
+	err = gm.VisitDocument("pain_013_001_07", sv)
+	require.NoError(t, err)
+
+	t.Log("number of leaves: ", sv.NumberOfLeaves)
 }
 
 func TestGoGenerate(t *testing.T) {
@@ -69,8 +78,8 @@ func TestGoGenerate(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	gm, err := golang.NewModel(
-		&golang.DefaultModelCfg,
+	gm, err := golang2.NewModel(
+		&golang2.DefaultModelCfg,
 		[]registry.ISO20022Message{
 			{Name: "pain.013.001.07"},
 			{Name: "pain.014.001.07"},
@@ -80,11 +89,11 @@ func TestGoGenerate(t *testing.T) {
 
 	fld, _ := util.ResolvePath("~/iso-20022/messages")
 	require.NotEqual(t, fld, "", "could not resolve ~/iso-20022/messages path")
-	cfg := golang.Config{
+	cfg := golang2.Config{
 		OutFolder:  fld, // filepath.Join(fld, "messages"),
 		FormatCode: true,
 	}
-	err = golang.Generate(&cfg, &gm)
+	err = golang2.Generate(&cfg, &gm)
 	require.NoError(t, err)
 }
 
@@ -118,15 +127,15 @@ func TestGoGenerateAll(t *testing.T) {
 		require.NoError(t, err)
 	}
 
-	gm, err := golang.NewModel(&golang.DefaultModelCfg, msgs, p.TypeRegistry)
+	gm, err := golang2.NewModel(&golang2.DefaultModelCfg, msgs, p.TypeRegistry)
 	require.NoError(t, err)
 
 	fld, _ := util.ResolvePath("~/iso-20022/messages")
 	require.NotEqual(t, fld, "", "could not resolve ~/iso-20022/messages path")
-	cfg := golang.Config{
+	cfg := golang2.Config{
 		OutFolder:  fld, // filepath.Join(fld, "messages"),
 		FormatCode: true,
 	}
-	err = golang.Generate(&cfg, &gm)
+	err = golang2.Generate(&cfg, &gm)
 	require.NoError(t, err)
 }

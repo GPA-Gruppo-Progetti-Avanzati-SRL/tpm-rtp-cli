@@ -1,8 +1,9 @@
 package parser_test
 
 import (
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/parser"
-	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/registry"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/parser"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/stretchr/testify/require"
@@ -18,7 +19,7 @@ func TestParser(t *testing.T) {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
 	schemas := []string{
-		"../schemas/pain.013.001.07.xsd", "../schemas/pain.014.001.07.xsd",
+		"~/iso-20022/schemas/pain.013.001.07.xsd", "~/iso-20022/schemas/pain.014.001.07.xsd",
 	}
 
 	p := parser.NewParser(parser.Config{Registry: registry.Config{SimpleTypesInCommonPackage: true}})
@@ -26,7 +27,10 @@ func TestParser(t *testing.T) {
 		msgName := strings.TrimSuffix(filepath.Base(xsdFileName), ".xsd")
 		t.Log("Msg: ", msgName)
 
-		b, err := ioutil.ReadFile(xsdFileName)
+		fn, ok := util.ResolvePath(xsdFileName)
+		require.True(t, ok, "could not resolve %s", xsdFileName)
+
+		b, err := ioutil.ReadFile(fn)
 		require.NoError(t, err)
 
 		msg := registry.ISO20022Message{Name: msgName}
