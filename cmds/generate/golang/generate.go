@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/golang/model"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
 	"github.com/rs/zerolog/log"
 	"os"
@@ -81,10 +82,10 @@ type GenerationContext struct {
 	MsgName     string
 	PackageName string
 	ProducedAt  time.Time
-	Model       *GoModel
+	Model       *model.GoModel
 }
 
-func Generate(cfg *Config, gm *GoModel) error {
+func Generate(cfg *Config, gm *model.GoModel) error {
 
 	err := setupOutputFolders(cfg, gm.Msgs)
 	if err != nil {
@@ -226,7 +227,7 @@ func emit(genCtx GenerationContext, outFolder string, generatedFileName string, 
 	return nil
 }
 
-func getTemplateUtilityFunctions(gm *GoModel) template.FuncMap {
+func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 
 	fMap := template.FuncMap{
 		"getComplexTypesImports": func(pkgName string) []string {
@@ -235,10 +236,10 @@ func getTemplateUtilityFunctions(gm *GoModel) template.FuncMap {
 		"getSimpleTypesImports": func(pkgName string) []string {
 			return gm.GetImports(pkgName, false)
 		},
-		"getComplexTypes": func(pkgName string) []GoTypeDefinition {
+		"getComplexTypes": func(pkgName string) []model.GoTypeDefinition {
 			return gm.GetTypes(pkgName, true)
 		},
-		"getSimpleTypes": func(pkgName string) []GoTypeDefinition {
+		"getSimpleTypes": func(pkgName string) []model.GoTypeDefinition {
 			return gm.GetTypes(pkgName, false)
 		},
 	}

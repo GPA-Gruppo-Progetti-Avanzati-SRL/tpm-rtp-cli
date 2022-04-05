@@ -1,6 +1,6 @@
 // Package pain_013_001_07
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 08:09:15.042077 +0200 CEST m=+0.106838168
+// Generated at 2022-04-05 08:23:15.82911 +0200 CEST m=+0.108518417
 package pain_013_001_07
 
 import (
@@ -8,15 +8,25 @@ import (
 	"encoding/xml"
 )
 
-// IsValid checks if RegulatoryReporting3 is valid
-func (s RegulatoryReporting3) IsValid(optional bool) bool {
+// IsValid checks if TaxInformation8 is valid
+func (s TaxInformation8) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.DbtCdtRptgInd.IsValid(true)
-	valid = valid && (s.Authrty == nil || (s.Authrty != nil && s.Authrty.IsValid(true)))
+	valid = valid && (s.Cdtr == nil || (s.Cdtr != nil && s.Cdtr.IsValid(true)))
 
-	for j := 0; j < len(s.Dtls); j++ {
-		valid = valid && s.Dtls[j].IsValid(true)
+	valid = valid && (s.Dbtr == nil || (s.Dbtr != nil && s.Dbtr.IsValid(true)))
+
+	valid = valid && s.AdmstnZone.IsValid(true)
+	valid = valid && s.RefNb.IsValid(true)
+	valid = valid && s.Mtd.IsValid(true)
+	valid = valid && (s.TtlTaxblBaseAmt == nil || (s.TtlTaxblBaseAmt != nil && s.TtlTaxblBaseAmt.IsValid(true)))
+
+	valid = valid && (s.TtlTaxAmt == nil || (s.TtlTaxAmt != nil && s.TtlTaxAmt.IsValid(true)))
+
+	valid = valid && s.Dt.IsValid(true)
+	valid = valid && s.SeqNb.IsValid(true)
+	for j := 0; j < len(s.Rcrd); j++ {
+		valid = valid && s.Rcrd[j].IsValid(true)
 	}
 
 	return valid
@@ -50,103 +60,13 @@ func (s Cheque11) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if ChequeDeliveryMethod1Choice is valid
-func (s ChequeDeliveryMethod1Choice) IsValid(optional bool) bool {
+// IsValid checks if RemittanceLocationData1 is valid
+func (s RemittanceLocationData1) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.Prtry.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if CreditorPaymentActivationRequestV07 is valid
-func (s CreditorPaymentActivationRequestV07) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.GrpHdr.IsValid(false)
-	if len(s.PmtInf) == 0 {
-		valid = false
-	}
-	for j := 0; j < len(s.PmtInf); j++ {
-		valid = valid && s.PmtInf[j].IsValid(false)
-	}
-
-	for j := 0; j < len(s.SplmtryData); j++ {
-		valid = valid && s.SplmtryData[j].IsValid(true)
-	}
-
-	return valid
-}
-
-func (d *Document) ToXML() ([]byte, error) {
-	w := &bytes.Buffer{}
-	w.Write([]byte(xml.Header))
-
-	enc := xml.NewEncoder(w)
-	enc.Indent("", "  ")
-	err := enc.Encode(d)
-	if err != nil {
-		return nil, err
-	}
-
-	return w.Bytes(), nil
-}
-
-func NewDocumentFromXML(b []byte) (*Document, error) {
-	d := &Document{}
-	err := xml.Unmarshal(b, d)
-	return d, err
-}
-
-// IsValid checks if Document is valid
-func (s Document) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.CdtrPmtActvtnReq.IsValid(false)
-
-	return valid
-}
-
-// IsValid checks if RemittanceLocation7 is valid
-func (s RemittanceLocation7) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.RmtId.IsValid(true)
-	for j := 0; j < len(s.RmtLctnDtls); j++ {
-		valid = valid && s.RmtLctnDtls[j].IsValid(true)
-	}
-
-	return valid
-}
-
-// IsValid checks if RegulatoryAuthority2 is valid
-func (s RegulatoryAuthority2) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Nm.IsValid(true)
-	valid = valid && s.Ctry.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if PaymentIdentification6 is valid
-func (s PaymentIdentification6) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.InstrId.IsValid(true)
-	valid = valid && s.EndToEndId.IsValid(false)
-	valid = valid && s.UETR.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if InstructionForCreditorAgent1 is valid
-func (s InstructionForCreditorAgent1) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.InstrInf.IsValid(true)
+	valid = valid && s.Mtd.IsValid(false)
+	valid = valid && s.ElctrncAdr.IsValid(true)
+	valid = valid && (s.PstlAdr == nil || (s.PstlAdr != nil && s.PstlAdr.IsValid(true)))
 
 	return valid
 }
@@ -181,13 +101,79 @@ func (s PaymentInstruction31) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if RemittanceLocationData1 is valid
-func (s RemittanceLocationData1) IsValid(optional bool) bool {
+// IsValid checks if InstructionForCreditorAgent1 is valid
+func (s InstructionForCreditorAgent1) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.Mtd.IsValid(false)
-	valid = valid && s.ElctrncAdr.IsValid(true)
-	valid = valid && (s.PstlAdr == nil || (s.PstlAdr != nil && s.PstlAdr.IsValid(true)))
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.InstrInf.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if GroupHeader78 is valid
+func (s GroupHeader78) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.MsgId.IsValid(false)
+	valid = valid && s.CreDtTm.IsValid(false)
+	valid = valid && s.NbOfTxs.IsValid(false)
+	valid = valid && s.CtrlSum.IsValid(true)
+	valid = valid && s.InitgPty.IsValid(false)
+
+	return valid
+}
+
+// IsValid checks if PaymentIdentification6 is valid
+func (s PaymentIdentification6) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.InstrId.IsValid(true)
+	valid = valid && s.EndToEndId.IsValid(false)
+	valid = valid && s.UETR.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if CreditorPaymentActivationRequestV07 is valid
+func (s CreditorPaymentActivationRequestV07) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.GrpHdr.IsValid(false)
+	if len(s.PmtInf) == 0 {
+		valid = false
+	}
+	for j := 0; j < len(s.PmtInf); j++ {
+		valid = valid && s.PmtInf[j].IsValid(false)
+	}
+
+	for j := 0; j < len(s.SplmtryData); j++ {
+		valid = valid && s.SplmtryData[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if ChequeDeliveryMethod1Choice is valid
+func (s ChequeDeliveryMethod1Choice) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.Prtry.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if RegulatoryReporting3 is valid
+func (s RegulatoryReporting3) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.DbtCdtRptgInd.IsValid(true)
+	valid = valid && (s.Authrty == nil || (s.Authrty != nil && s.Authrty.IsValid(true)))
+
+	for j := 0; j < len(s.Dtls); j++ {
+		valid = valid && s.Dtls[j].IsValid(true)
+	}
 
 	return valid
 }
@@ -248,6 +234,16 @@ func (s CreditTransferTransaction35) IsValid(optional bool) bool {
 	return valid
 }
 
+// IsValid checks if RegulatoryAuthority2 is valid
+func (s RegulatoryAuthority2) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Nm.IsValid(true)
+	valid = valid && s.Ctry.IsValid(true)
+
+	return valid
+}
+
 // IsValid checks if NameAndAddress16 is valid
 func (s NameAndAddress16) IsValid(optional bool) bool {
 
@@ -258,39 +254,43 @@ func (s NameAndAddress16) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if TaxInformation8 is valid
-func (s TaxInformation8) IsValid(optional bool) bool {
+// IsValid checks if RemittanceLocation7 is valid
+func (s RemittanceLocation7) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && (s.Cdtr == nil || (s.Cdtr != nil && s.Cdtr.IsValid(true)))
-
-	valid = valid && (s.Dbtr == nil || (s.Dbtr != nil && s.Dbtr.IsValid(true)))
-
-	valid = valid && s.AdmstnZone.IsValid(true)
-	valid = valid && s.RefNb.IsValid(true)
-	valid = valid && s.Mtd.IsValid(true)
-	valid = valid && (s.TtlTaxblBaseAmt == nil || (s.TtlTaxblBaseAmt != nil && s.TtlTaxblBaseAmt.IsValid(true)))
-
-	valid = valid && (s.TtlTaxAmt == nil || (s.TtlTaxAmt != nil && s.TtlTaxAmt.IsValid(true)))
-
-	valid = valid && s.Dt.IsValid(true)
-	valid = valid && s.SeqNb.IsValid(true)
-	for j := 0; j < len(s.Rcrd); j++ {
-		valid = valid && s.Rcrd[j].IsValid(true)
+	valid = valid && s.RmtId.IsValid(true)
+	for j := 0; j < len(s.RmtLctnDtls); j++ {
+		valid = valid && s.RmtLctnDtls[j].IsValid(true)
 	}
 
 	return valid
 }
 
-// IsValid checks if GroupHeader78 is valid
-func (s GroupHeader78) IsValid(optional bool) bool {
+func (d *Document) ToXML() ([]byte, error) {
+	w := &bytes.Buffer{}
+	w.Write([]byte(xml.Header))
+
+	enc := xml.NewEncoder(w)
+	enc.Indent("", "  ")
+	err := enc.Encode(d)
+	if err != nil {
+		return nil, err
+	}
+
+	return w.Bytes(), nil
+}
+
+func NewDocumentFromXML(b []byte) (*Document, error) {
+	d := &Document{}
+	err := xml.Unmarshal(b, d)
+	return d, err
+}
+
+// IsValid checks if Document is valid
+func (s Document) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.MsgId.IsValid(false)
-	valid = valid && s.CreDtTm.IsValid(false)
-	valid = valid && s.NbOfTxs.IsValid(false)
-	valid = valid && s.CtrlSum.IsValid(true)
-	valid = valid && s.InitgPty.IsValid(false)
+	valid = valid && s.CdtrPmtActvtnReq.IsValid(false)
 
 	return valid
 }

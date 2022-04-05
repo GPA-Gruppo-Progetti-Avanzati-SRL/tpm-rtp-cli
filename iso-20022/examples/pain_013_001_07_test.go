@@ -42,7 +42,7 @@ func TestDocumentPain_013_001_07(t *testing.T) {
 			PmtInf: []pain_013_001_07.PaymentInstruction31{
 				{
 					PmtInfId: common.MustToMax35Text("Fatt2022-000001-2022-03-22-11:50:45"),
-					PmtMtd:   common.MustToPaymentMethod7Code("TRF"),
+					PmtMtd:   common.MustToPaymentMethod7Code(common.PaymentMethod7CodeTRF),
 					PmtTpInf: &common.PaymentTypeInformation26{
 						SvcLvl: []common.ServiceLevel8Choice{
 							{
@@ -121,7 +121,7 @@ func TestDocumentPain_013_001_07(t *testing.T) {
 									Value: xsdt.ToDecimal(535.35),
 								},
 							},
-							ChrgBr: common.MustToChargeBearerType1Code("SLEV"),
+							ChrgBr: common.MustToChargeBearerType1Code(common.ChargeBearerType1CodeSLEV),
 							CdtrAgt: common.BranchAndFinancialInstitutionIdentification6{
 								FinInstnId: common.FinancialInstitutionIdentification18{
 									BICFI: common.MustToBICFIDec2014Identifier("BPPIITRRXXX"),

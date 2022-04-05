@@ -19,7 +19,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 	d := camt_055_001_08.Document{
 		CstmrPmtCxlReq: camt_055_001_08.CustomerPaymentCancellationRequestV08{
 			Assgnmt: common.CaseAssignment5{
-				Id: common.Max35Text("str12345"),
+				Id: common.MustToMax35Text("str12345"),
 				Assgnr: common.Party40Choice{
 					Pty: &common.PartyIdentification135{
 						Nm: common.MustToMax140Text("AFC Poste Italiane"),
@@ -27,9 +27,9 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 							OrgId: &common.OrganisationIdentification29{
 								Othr: []common.GenericOrganisationIdentification1{
 									{
-										Id: common.Max35Text("0468651441"),
+										Id: common.MustToMax35Text("0468651441"),
 										SchmeNm: &common.OrganisationIdentificationSchemeName1Choice{
-											Cd: common.ExternalOrganisationIdentification1Code("BOID"),
+											Cd: common.MustToExternalOrganisationIdentification1Code("BOID"),
 										},
 									},
 								},
@@ -40,7 +40,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 				Assgne: common.Party40Choice{
 					Agt: &common.BranchAndFinancialInstitutionIdentification6{
 						FinInstnId: common.FinancialInstitutionIdentification18{
-							BICFI: common.BICFIDec2014Identifier("BPPIITRRXXX"),
+							BICFI: common.MustToBICFIDec2014Identifier("BPPIITRRXXX"),
 						},
 					},
 				},
@@ -49,31 +49,31 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 			Undrlyg: []camt_055_001_08.UnderlyingTransaction24{
 				{
 					OrgnlGrpInfAndCxl: &camt_055_001_08.OriginalGroupHeader15{
-						GrpCxlId:     common.Max35Text("camt055-DS10-20220330"),
-						OrgnlMsgId:   common.Max35Text("pacs013-DS01-20220322"),
-						OrgnlMsgNmId: common.Max35Text("pain.013.001.07"),
+						GrpCxlId:     common.MustToMax35Text("camt055-DS10-20220330"),
+						OrgnlMsgId:   common.MustToMax35Text("pacs013-DS01-20220322"),
+						OrgnlMsgNmId: common.MustToMax35Text("pain.013.001.07"),
 						OrgnlCreDtTm: common.MustToISODateTime(time.Now()),
-						NbOfTxs:      common.Max15NumericText("1"),
+						NbOfTxs:      common.MustToMax15NumericText("1"),
 						CtrlSum:      xsdt.ToDecimal(535.25),
 					},
 					OrgnlPmtInfAndCxl: []camt_055_001_08.OriginalPaymentInstruction34{
 						{
-							OrgnlPmtInfId: common.Max35Text("Fatt2022-000001-2022-03-22-11:50:45"),
+							OrgnlPmtInfId: common.MustToMax35Text("Fatt2022-000001-2022-03-22-11:50:45"),
 							TxInf: []camt_055_001_08.PaymentTransaction109{
 								{
-									CxlId:           common.Max35Text("CancellationId1234"),
-									OrgnlEndToEndId: common.Max35Text("fatt2022-000001"),
+									CxlId:           common.MustToMax35Text("CancellationId1234"),
+									OrgnlEndToEndId: common.MustToMax35Text("fatt2022-000001"),
 									CxlRsnInf: []camt_055_001_08.PaymentCancellationReason5{
 										{
 											Orgtr: &common.PartyIdentification135{
-												Nm: common.Max140Text("AFC Poste Italiane"),
+												Nm: common.MustToMax140Text("AFC Poste Italiane"),
 												Id: &common.Party38Choice{
 													OrgId: &common.OrganisationIdentification29{
 														Othr: []common.GenericOrganisationIdentification1{
 															{
-																Id: common.Max35Text("0468651441"),
+																Id: common.MustToMax35Text("0468651441"),
 																SchmeNm: &common.OrganisationIdentificationSchemeName1Choice{
-																	Cd: common.ExternalOrganisationIdentification1Code("BOID"),
+																	Cd: common.MustToExternalOrganisationIdentification1Code("BOID"),
 																},
 															},
 														},
@@ -81,14 +81,14 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 												},
 											},
 											Rsn: &camt_055_001_08.CancellationReason33Choice{
-												Cd: common.ExternalCancellationReason1Code("errore nel precedente importo della fattura"),
+												Cd: common.MustToExternalCancellationReason1Code("errore nel precedente importo della fattura"),
 											},
 										},
 									},
 									OrgnlTxRef: &common.OriginalTransactionReference28{
 										Amt: &common.AmountType4Choice{
 											InstdAmt: &common.ActiveOrHistoricCurrencyAndAmount{
-												Ccy:   common.ActiveOrHistoricCurrencyCode("EUR"),
+												Ccy:   common.MustToActiveOrHistoricCurrencyCode("EUR"),
 												Value: xsdt.ToDecimal(535.25),
 											},
 										},
@@ -98,28 +98,28 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 										PmtTpInf: &common.PaymentTypeInformation27{
 											SvcLvl: []common.ServiceLevel8Choice{
 												{
-													Cd: common.ExternalServiceLevel1Code("SEPA"),
+													Cd: common.MustToExternalServiceLevel1Code("SEPA"),
 												},
 											},
 											LclInstrm: &common.LocalInstrument2Choice{
-												Prtry: common.Max35Text("NOTPROVIDED"),
+												Prtry: common.MustToMax35Text("NOTPROVIDED"),
 											},
 										},
 										RmtInf: &common.RemittanceInformation16{
 											Ustrd: []common.Max140Text{
-												common.Max140Text("AT41/fatt2022-000001/AT05/pagamento fattura"),
+												common.MustToMax140Text("AT41/fatt2022-000001/AT05/pagamento fattura"),
 											},
 										},
 										Cdtr: &common.Party40Choice{
 											Pty: &common.PartyIdentification135{
-												Nm: common.Max140Text("AFC Poste Italiane"),
+												Nm: common.MustToMax140Text("AFC Poste Italiane"),
 												Id: &common.Party38Choice{
 													OrgId: &common.OrganisationIdentification29{
 														Othr: []common.GenericOrganisationIdentification1{
 															{
-																Id: common.Max35Text("0468651441"),
+																Id: common.MustToMax35Text("0468651441"),
 																SchmeNm: &common.OrganisationIdentificationSchemeName1Choice{
-																	Cd: common.ExternalOrganisationIdentification1Code("BOID"),
+																	Cd: common.MustToExternalOrganisationIdentification1Code("BOID"),
 																},
 															},
 														},
@@ -129,7 +129,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 										},
 										CdtrAcct: &common.CashAccount38{
 											Id: common.AccountIdentification4Choice{
-												IBAN: common.IBAN2007Identifier("IT60X0760111101000004545561"),
+												IBAN: common.MustToIBAN2007Identifier("IT60X0760111101000004545561"),
 											},
 										},
 									},

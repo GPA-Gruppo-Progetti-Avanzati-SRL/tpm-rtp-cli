@@ -5,23 +5,23 @@ import (
 	"path/filepath"
 )
 
-type ModelConfig struct {
-	CommonPackageImport string `yaml:"common-package-import" mapstructure:"common-package-import" json:"common-package-import"`
-	XsDtPackageImport   string `yaml:"xsdt-package-import" mapstructure:"xsdt-package-import" json:"xsdt-package-import"`
-}
-
-var DefaultModelCfg = ModelConfig{
-	CommonPackageImport: "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common",
-	XsDtPackageImport:   "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt",
-}
-
-func (c *ModelConfig) PostProcess() error {
-	if c.XsDtPackageImport == "" {
-		c.XsDtPackageImport = "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
-	}
-
-	return nil
-}
+//type ModelConfig struct {
+//	CommonPackageImport string `yaml:"common-package-import" mapstructure:"common-package-import" json:"common-package-import"`
+//	XsDtPackageImport   string `yaml:"xsdt-package-import" mapstructure:"xsdt-package-import" json:"xsdt-package-import"`
+//}
+//
+//var DefaultModelCfg = ModelConfig{
+//	CommonPackageImport: "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common",
+//	XsDtPackageImport:   "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt",
+//}
+//
+//func (c *ModelConfig) PostProcess() error {
+//	if c.XsDtPackageImport == "" {
+//		c.XsDtPackageImport = "github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
+//	}
+//
+//	return nil
+//}
 
 type Config struct {
 	OutFolder  string `yaml:"out-folder" mapstructure:"out-folder" json:"out-folder"`

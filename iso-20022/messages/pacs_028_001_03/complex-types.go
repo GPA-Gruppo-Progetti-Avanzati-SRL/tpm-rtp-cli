@@ -1,6 +1,6 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 08:09:15.042077 +0200 CEST m=+0.106838168
+// Generated at 2022-04-05 08:23:15.82911 +0200 CEST m=+0.108518417
 package pacs_028_001_03
 
 import (
@@ -9,6 +9,15 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
+
+// OriginalGroupInformation27 type definition
+type OriginalGroupInformation27 struct {
+	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
+	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
+	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
+}
 
 // Document type definition
 type Document struct {
@@ -46,13 +55,4 @@ type PaymentTransaction113 struct {
 	InstdAgt        *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
 	OrgnlTxRef      *common.OriginalTransactionReference28               `xml:"OrgnlTxRef,omitempty"`
 	SplmtryData     []common.SupplementaryData1                          `xml:"SplmtryData,omitempty"`
-}
-
-// OriginalGroupInformation27 type definition
-type OriginalGroupInformation27 struct {
-	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
-	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
-	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
 }
