@@ -1,6 +1,5 @@
 // Package xsdt
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 13:48:35.245013 +0200 CEST m=+0.090926459
 package xsdt
 
 import (

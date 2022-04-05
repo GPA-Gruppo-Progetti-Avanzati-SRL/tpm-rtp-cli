@@ -1,6 +1,5 @@
 // Package pain_013_001_07_test
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pain_013_001_07_test
 
 import (

@@ -1,36 +1,35 @@
 // Package camt_055_001_08
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package camt_055_001_08
 
 import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 )
 
-func (d *Document) With_Doc_CstmrPmtCxlReq(_cstmrPmtCxlReq CustomerPaymentCancellationRequestV08) {
+func (d *Document) With_CstmrPmtCxlReq(_cstmrPmtCxlReq CustomerPaymentCancellationRequestV08) {
 	d.CstmrPmtCxlReq = _cstmrPmtCxlReq
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt(_assgnmt common.CaseAssignment5) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt(_assgnmt common.CaseAssignment5) {
 	d.CstmrPmtCxlReq.Assgnmt = _assgnmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr(_assgnr common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr(_assgnr common.Party40Choice) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr = _assgnr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty(_pty *common.PartyIdentification135) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -40,7 +39,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp(_adr
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -53,14 +52,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_PstlAdr_AdrTp_Prtr
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id(_id *common.Party38Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -70,7 +69,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId(_orgId *c
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -83,7 +82,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr(_oth
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -99,7 +98,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_OrgId_Othr_Schm
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -109,7 +108,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId(_prvtId 
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -122,7 +121,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_DtAndPlc
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -135,7 +134,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr(_ot
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -151,14 +150,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_Id_PrvtId_Othr_Sch
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty = &common.PartyIdentification135{}
 	}
@@ -168,25 +167,25 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Pty_CtctDtls_Othr(_oth
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -196,14 +195,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_ClrSysM
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -213,7 +212,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -226,14 +225,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_PstlAdr
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -243,14 +242,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_FinInstnId_Othr_Sc
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -260,7 +259,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr(_p
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -273,7 +272,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_Ad
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -289,22 +288,22 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgnr_Agt_BrnchId_PstlAdr_Ad
 	d.CstmrPmtCxlReq.Assgnmt.Assgnr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne(_assgne common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne(_assgne common.Party40Choice) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgne = _assgne
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty(_pty *common.PartyIdentification135) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -314,7 +313,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp(_adr
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -327,14 +326,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_PstlAdr_AdrTp_Prtr
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id(_id *common.Party38Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -344,7 +343,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId(_orgId *c
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -357,7 +356,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr(_oth
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -373,7 +372,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_OrgId_Othr_Schm
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -383,7 +382,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId(_prvtId 
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -396,7 +395,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_DtAndPlc
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -409,7 +408,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr(_ot
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -425,14 +424,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_Id_PrvtId_Othr_Sch
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty = &common.PartyIdentification135{}
 	}
@@ -442,25 +441,25 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Pty_CtctDtls_Othr(_oth
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -470,14 +469,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_ClrSysM
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -487,7 +486,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -500,14 +499,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_PstlAdr
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -517,14 +516,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_FinInstnId_Othr_Sc
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -534,7 +533,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr(_p
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -547,7 +546,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_Ad
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt == nil {
 		d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt = &common.BranchAndFinancialInstitutionIdentification6{}
 	}
@@ -563,25 +562,25 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Assgnmt_Assgne_Agt_BrnchId_PstlAdr_Ad
 	d.CstmrPmtCxlReq.Assgnmt.Assgne.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case(_case *common.Case5) {
+func (d *Document) With_CstmrPmtCxlReq_Case(_case *common.Case5) {
 	d.CstmrPmtCxlReq.Case = _case
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr(_cretr common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr(_cretr common.Party40Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
 	d.CstmrPmtCxlReq.Case.Cretr = _cretr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
 	d.CstmrPmtCxlReq.Case.Cretr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -591,7 +590,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr(_pstlAdr *comm
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -604,7 +603,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -620,7 +619,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_p
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -630,7 +629,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id(_id *common.Party38
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -643,7 +642,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId(_orgId *commo
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -659,7 +658,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr(_othr []
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -678,7 +677,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -691,7 +690,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId(_prvtId *com
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -707,7 +706,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBi
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -723,7 +722,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr(_othr [
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -742,7 +741,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -752,7 +751,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls(_ctctDtls *co
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -765,14 +764,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Pty_CtctDtls_Othr(_othr []
 	d.CstmrPmtCxlReq.Case.Cretr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
 	d.CstmrPmtCxlReq.Case.Cretr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -782,7 +781,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId(_finInstnId
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -792,7 +791,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -805,7 +804,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_ClrSysMmbId
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -815,7 +814,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr(_ps
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -828,7 +827,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_Adr
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -844,7 +843,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_PstlAdr_Adr
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -854,7 +853,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr(_othr 
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -867,7 +866,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_FinInstnId_Othr_SchmeN
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -877,7 +876,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId(_brnchId *comm
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -890,7 +889,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlA
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -906,7 +905,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if d.CstmrPmtCxlReq.Case == nil {
 		d.CstmrPmtCxlReq.Case = &common.Case5{}
 	}
@@ -925,22 +924,22 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_
 	d.CstmrPmtCxlReq.Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_CtrlData(_ctrlData *ControlData1) {
+func (d *Document) With_CstmrPmtCxlReq_CtrlData(_ctrlData *ControlData1) {
 	d.CstmrPmtCxlReq.CtrlData = _ctrlData
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg(_undrlyg []UnderlyingTransaction24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg(_undrlyg []UnderlyingTransaction24) {
 	d.CstmrPmtCxlReq.Undrlyg = _undrlyg
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl(_orgnlGrpInfAndCxl *OriginalGroupHeader15) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl(_orgnlGrpInfAndCxl *OriginalGroupHeader15) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl = _orgnlGrpInfAndCxl
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case(_case *common.Case5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case(_case *common.Case5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -950,7 +949,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case(_case 
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case = _case
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr(_cretr common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr(_cretr common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -963,7 +962,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr(
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr = _cretr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -976,7 +975,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -992,7 +991,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1011,7 +1010,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1033,7 +1032,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1049,7 +1048,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1068,7 +1067,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1090,7 +1089,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1115,7 +1114,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1134,7 +1133,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1156,7 +1155,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1178,7 +1177,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1203,7 +1202,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1219,7 +1218,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1238,7 +1237,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1251,7 +1250,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1267,7 +1266,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1283,7 +1282,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1302,7 +1301,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1318,7 +1317,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1337,7 +1336,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1359,7 +1358,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1375,7 +1374,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1394,7 +1393,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1410,7 +1409,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1429,7 +1428,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1451,7 +1450,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1476,7 +1475,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1486,7 +1485,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf(_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf = _cxlRsnInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1499,7 +1498,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr = _orgtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1515,7 +1514,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1534,7 +1533,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1556,7 +1555,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1572,7 +1571,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1591,7 +1590,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1613,7 +1612,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1638,7 +1637,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1657,7 +1656,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1679,7 +1678,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1701,7 +1700,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1726,7 +1725,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1742,7 +1741,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1761,7 +1760,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Orgtr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1774,14 +1773,14 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CxlRsnInf_R
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlGrpInfAndCxl.CxlRsnInf[0].Rsn = _rsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl(_orgnlPmtInfAndCxl []OriginalPaymentInstruction34) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl(_orgnlPmtInfAndCxl []OriginalPaymentInstruction34) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl = _orgnlPmtInfAndCxl
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case(_case *common.Case5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case(_case *common.Case5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1791,7 +1790,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case(_case 
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case = _case
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr(_cretr common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr(_cretr common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1804,7 +1803,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr(
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr = _cretr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1817,7 +1816,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1833,7 +1832,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1852,7 +1851,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1874,7 +1873,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1890,7 +1889,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1909,7 +1908,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1931,7 +1930,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1956,7 +1955,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1975,7 +1974,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -1997,7 +1996,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2019,7 +2018,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2044,7 +2043,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2060,7 +2059,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2079,7 +2078,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2092,7 +2091,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2108,7 +2107,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2124,7 +2123,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2143,7 +2142,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2159,7 +2158,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2178,7 +2177,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2200,7 +2199,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2216,7 +2215,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2235,7 +2234,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2251,7 +2250,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2270,7 +2269,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2292,7 +2291,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2317,7 +2316,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_Case_Cretr_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf(_orgnlGrpInf *common.OriginalGroupInformation29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf(_orgnlGrpInf *common.OriginalGroupInformation29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2327,7 +2326,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].OrgnlGrpInf = _orgnlGrpInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2337,7 +2336,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf(_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf = _cxlRsnInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2350,7 +2349,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr = _orgtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2366,7 +2365,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2385,7 +2384,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2407,7 +2406,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2423,7 +2422,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2442,7 +2441,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2464,7 +2463,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2489,7 +2488,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2508,7 +2507,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2530,7 +2529,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2552,7 +2551,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2577,7 +2576,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2593,7 +2592,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2612,7 +2611,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_O
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Orgtr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2625,7 +2624,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_CxlRsnInf_R
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].CxlRsnInf[0].Rsn = _rsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf(_txInf []PaymentTransaction109) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf(_txInf []PaymentTransaction109) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2635,7 +2634,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf(_txIn
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf = _txInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case(_case *common.Case5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case(_case *common.Case5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2648,7 +2647,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case(
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case = _case
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr(_cretr common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr(_cretr common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2664,7 +2663,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr = _cretr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2680,7 +2679,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2699,7 +2698,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2721,7 +2720,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2746,7 +2745,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2765,7 +2764,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2787,7 +2786,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2812,7 +2811,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2840,7 +2839,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2862,7 +2861,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2887,7 +2886,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2912,7 +2911,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2940,7 +2939,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2959,7 +2958,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2981,7 +2980,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -2997,7 +2996,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3016,7 +3015,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3035,7 +3034,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3057,7 +3056,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3076,7 +3075,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3098,7 +3097,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3123,7 +3122,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3142,7 +3141,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3164,7 +3163,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3183,7 +3182,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3205,7 +3204,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3230,7 +3229,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_Cretr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3258,7 +3257,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Case_
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].Case.Cretr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlInstdAmt(_orgnlInstdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlInstdAmt(_orgnlInstdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3271,7 +3270,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlInstdAmt = _orgnlInstdAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlReqdExctnDt(_orgnlReqdExctnDt *common.DateAndDateTime2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlReqdExctnDt(_orgnlReqdExctnDt *common.DateAndDateTime2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3284,7 +3283,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlReqdExctnDt = _orgnlReqdExctnDt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf(_cxlRsnInf []PaymentCancellationReason5) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3297,7 +3296,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf = _cxlRsnInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr(_orgtr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3313,7 +3312,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr = _orgtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3332,7 +3331,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3354,7 +3353,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3379,7 +3378,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3398,7 +3397,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3420,7 +3419,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3445,7 +3444,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3473,7 +3472,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3495,7 +3494,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3520,7 +3519,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3545,7 +3544,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3573,7 +3572,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3592,7 +3591,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Orgtr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3614,7 +3613,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Orgtr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRsnInf_Rsn(_rsn *CancellationReason33Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3630,7 +3629,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlRs
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].CxlRsnInf[0].Rsn = _rsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef(_orgnlTxRef *common.OriginalTransactionReference28) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef(_orgnlTxRef *common.OriginalTransactionReference28) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3643,7 +3642,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef = _orgnlTxRef
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_IntrBkSttlmAmt(_intrBkSttlmAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_IntrBkSttlmAmt(_intrBkSttlmAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3659,7 +3658,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.IntrBkSttlmAmt = _intrBkSttlmAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt(_amt *common.AmountType4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt(_amt *common.AmountType4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3675,7 +3674,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_InstdAmt(_instdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_InstdAmt(_instdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3694,7 +3693,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Amt.InstdAmt = _instdAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_EqvtAmt(_eqvtAmt *common.EquivalentAmount2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_EqvtAmt(_eqvtAmt *common.EquivalentAmount2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3713,7 +3712,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Amt.EqvtAmt = _eqvtAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_EqvtAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Amt_EqvtAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3735,7 +3734,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Amt.EqvtAmt.Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_ReqdExctnDt(_reqdExctnDt *common.DateAndDateTime2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_ReqdExctnDt(_reqdExctnDt *common.DateAndDateTime2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3751,7 +3750,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.ReqdExctnDt = _reqdExctnDt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId(_cdtrSchmeId *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId(_cdtrSchmeId *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3767,7 +3766,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId = _cdtrSchmeId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3786,7 +3785,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3808,7 +3807,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3833,7 +3832,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3852,7 +3851,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3874,7 +3873,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3899,7 +3898,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3927,7 +3926,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3949,7 +3948,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3974,7 +3973,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -3999,7 +3998,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4027,7 +4026,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4046,7 +4045,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrSchmeId_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4068,7 +4067,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrSchmeId.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf(_sttlmInf *common.SettlementInstruction7) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf(_sttlmInf *common.SettlementInstruction7) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4084,7 +4083,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf = _sttlmInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct(_sttlmAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct(_sttlmAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4103,7 +4102,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct = _sttlmAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4125,7 +4124,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4147,7 +4146,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4172,7 +4171,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4194,7 +4193,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4216,7 +4215,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_SttlmAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4241,7 +4240,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.SttlmAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ClrSys(_clrSys *common.ClearingSystemIdentification3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ClrSys(_clrSys *common.ClearingSystemIdentification3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4260,7 +4259,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ClrSys = _clrSys
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt(_instgRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt(_instgRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4279,7 +4278,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt = _instgRmbrsmntAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4301,7 +4300,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4323,7 +4322,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4348,7 +4347,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4370,7 +4369,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4395,7 +4394,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4423,7 +4422,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4445,7 +4444,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4470,7 +4469,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4492,7 +4491,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4517,7 +4516,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4545,7 +4544,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4576,7 +4575,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct(_instgRmbrsmntAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct(_instgRmbrsmntAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4595,7 +4594,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct = _instgRmbrsmntAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4617,7 +4616,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4639,7 +4638,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4664,7 +4663,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4686,7 +4685,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4708,7 +4707,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstgRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4733,7 +4732,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstgRmbrsmntAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt(_instdRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt(_instdRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4752,7 +4751,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt = _instdRmbrsmntAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4774,7 +4773,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4796,7 +4795,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4821,7 +4820,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4843,7 +4842,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4868,7 +4867,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4896,7 +4895,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4918,7 +4917,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4943,7 +4942,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4965,7 +4964,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -4990,7 +4989,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5018,7 +5017,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5049,7 +5048,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct(_instdRmbrsmntAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct(_instdRmbrsmntAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5068,7 +5067,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct = _instdRmbrsmntAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5090,7 +5089,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5112,7 +5111,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5137,7 +5136,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5159,7 +5158,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5181,7 +5180,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_InstdRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5206,7 +5205,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.InstdRmbrsmntAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt(_thrdRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt(_thrdRmbrsmntAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5225,7 +5224,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt = _thrdRmbrsmntAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5247,7 +5246,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5269,7 +5268,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5294,7 +5293,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5316,7 +5315,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5341,7 +5340,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5369,7 +5368,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5391,7 +5390,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5416,7 +5415,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5438,7 +5437,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5463,7 +5462,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5491,7 +5490,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5522,7 +5521,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct(_thrdRmbrsmntAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct(_thrdRmbrsmntAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5541,7 +5540,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct = _thrdRmbrsmntAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5563,7 +5562,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5585,7 +5584,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5610,7 +5609,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5632,7 +5631,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5654,7 +5653,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_SttlmInf_ThrdRmbrsmntAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5679,7 +5678,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.SttlmInf.ThrdRmbrsmntAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf(_pmtTpInf *common.PaymentTypeInformation27) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf(_pmtTpInf *common.PaymentTypeInformation27) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5695,7 +5694,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.PmtTpInf = _pmtTpInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_SvcLvl(_svcLvl []common.ServiceLevel8Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_SvcLvl(_svcLvl []common.ServiceLevel8Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5714,7 +5713,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.PmtTpInf.SvcLvl = _svcLvl
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_LclInstrm(_lclInstrm *common.LocalInstrument2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_LclInstrm(_lclInstrm *common.LocalInstrument2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5733,7 +5732,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.PmtTpInf.LclInstrm = _lclInstrm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_CtgyPurp(_ctgyPurp *common.CategoryPurpose1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_PmtTpInf_CtgyPurp(_ctgyPurp *common.CategoryPurpose1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5752,7 +5751,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.PmtTpInf.CtgyPurp = _ctgyPurp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf(_mndtRltdInf *common.MandateRelatedInformation14) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf(_mndtRltdInf *common.MandateRelatedInformation14) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5768,7 +5767,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf = _mndtRltdInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls(_amdmntInfDtls *common.AmendmentInformationDetails13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls(_amdmntInfDtls *common.AmendmentInformationDetails13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5787,7 +5786,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls = _amdmntInfDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId(_orgnlCdtrSchmeId *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId(_orgnlCdtrSchmeId *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5809,7 +5808,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId = _orgnlCdtrSchmeId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5834,7 +5833,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5862,7 +5861,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5893,7 +5892,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5918,7 +5917,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5946,7 +5945,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -5977,7 +5976,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6011,7 +6010,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6039,7 +6038,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6070,7 +6069,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6101,7 +6100,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6135,7 +6134,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6160,7 +6159,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrSchmeId_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6188,7 +6187,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrSchmeId.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt(_orgnlCdtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt(_orgnlCdtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6210,7 +6209,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt = _orgnlCdtrAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6235,7 +6234,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6260,7 +6259,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6288,7 +6287,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6313,7 +6312,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6341,7 +6340,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6372,7 +6371,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6397,7 +6396,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6425,7 +6424,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6450,7 +6449,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6478,7 +6477,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6509,7 +6508,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6543,7 +6542,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct(_orgnlCdtrAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct(_orgnlCdtrAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6565,7 +6564,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct = _orgnlCdtrAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6590,7 +6589,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6615,7 +6614,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6643,7 +6642,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6668,7 +6667,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6693,7 +6692,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlCdtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6721,7 +6720,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlCdtrAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr(_orgnlDbtr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr(_orgnlDbtr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6743,7 +6742,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr = _orgnlDbtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6768,7 +6767,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6796,7 +6795,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6827,7 +6826,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6852,7 +6851,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6880,7 +6879,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6911,7 +6910,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6945,7 +6944,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -6973,7 +6972,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7004,7 +7003,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7035,7 +7034,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7069,7 +7068,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7094,7 +7093,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7122,7 +7121,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct(_orgnlDbtrAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct(_orgnlDbtrAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7144,7 +7143,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct = _orgnlDbtrAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7169,7 +7168,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7194,7 +7193,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7222,7 +7221,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7247,7 +7246,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7272,7 +7271,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7300,7 +7299,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt(_orgnlDbtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt(_orgnlDbtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7322,7 +7321,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt = _orgnlDbtrAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7347,7 +7346,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7372,7 +7371,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7400,7 +7399,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7425,7 +7424,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7453,7 +7452,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7484,7 +7483,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7509,7 +7508,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7537,7 +7536,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7562,7 +7561,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7590,7 +7589,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7621,7 +7620,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7655,7 +7654,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct(_orgnlDbtrAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct(_orgnlDbtrAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7677,7 +7676,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct = _orgnlDbtrAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7702,7 +7701,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7727,7 +7726,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7755,7 +7754,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7780,7 +7779,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7805,7 +7804,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlDbtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7833,7 +7832,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlDbtrAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy(_orgnlFrqcy *common.Frequency36Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy(_orgnlFrqcy *common.Frequency36Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7855,7 +7854,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlFrqcy = _orgnlFrqcy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy_Prd(_prd *common.FrequencyPeriod1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy_Prd(_prd *common.FrequencyPeriod1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7880,7 +7879,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlFrqcy.Prd = _prd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy_PtInTm(_ptInTm *common.FrequencyAndMoment1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlFrqcy_PtInTm(_ptInTm *common.FrequencyAndMoment1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7905,7 +7904,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlFrqcy.PtInTm = _ptInTm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlRsn(_orgnlRsn *common.MandateSetupReason1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_AmdmntInfDtls_OrgnlRsn(_orgnlRsn *common.MandateSetupReason1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7927,7 +7926,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.AmdmntInfDtls.OrgnlRsn = _orgnlRsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy(_frqcy *common.Frequency36Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy(_frqcy *common.Frequency36Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7946,7 +7945,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.Frqcy = _frqcy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy_Prd(_prd *common.FrequencyPeriod1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy_Prd(_prd *common.FrequencyPeriod1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7968,7 +7967,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.Frqcy.Prd = _prd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy_PtInTm(_ptInTm *common.FrequencyAndMoment1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Frqcy_PtInTm(_ptInTm *common.FrequencyAndMoment1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -7990,7 +7989,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.Frqcy.PtInTm = _ptInTm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Rsn(_rsn *common.MandateSetupReason1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_MndtRltdInf_Rsn(_rsn *common.MandateSetupReason1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8009,7 +8008,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.MndtRltdInf.Rsn = _rsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf(_rmtInf *common.RemittanceInformation16) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf(_rmtInf *common.RemittanceInformation16) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8025,7 +8024,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf = _rmtInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd(_strd []common.StructuredRemittanceInformation16) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd(_strd []common.StructuredRemittanceInformation16) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8044,7 +8043,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd = _strd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf(_rfrdDocInf []common.ReferredDocumentInformation7) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf(_rfrdDocInf []common.ReferredDocumentInformation7) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8066,7 +8065,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf = _rfrdDocInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_Tp(_tp *common.ReferredDocumentType4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_Tp(_tp *common.ReferredDocumentType4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8091,7 +8090,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_Tp_CdOrPrtry(_cdOrPrtry common.ReferredDocumentType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_Tp_CdOrPrtry(_cdOrPrtry common.ReferredDocumentType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8119,7 +8118,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].Tp.CdOrPrtry = _cdOrPrtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls(_lineDtls []common.DocumentLineInformation1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls(_lineDtls []common.DocumentLineInformation1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8144,7 +8143,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls = _lineDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id(_id []common.DocumentLineIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id(_id []common.DocumentLineIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8172,7 +8171,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id_Tp(_tp *common.DocumentLineType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id_Tp(_tp *common.DocumentLineType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8203,7 +8202,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Id[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id_Tp_CdOrPrtry(_cdOrPrtry common.DocumentLineType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Id_Tp_CdOrPrtry(_cdOrPrtry common.DocumentLineType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8237,7 +8236,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Id[0].Tp.CdOrPrtry = _cdOrPrtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt(_amt *common.RemittanceAmount3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt(_amt *common.RemittanceAmount3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8265,7 +8264,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DuePyblAmt(_duePyblAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DuePyblAmt(_duePyblAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8296,7 +8295,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.DuePyblAmt = _duePyblAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt(_dscntApldAmt []common.DiscountAmountAndType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt(_dscntApldAmt []common.DiscountAmountAndType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8327,7 +8326,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.DscntApldAmt = _dscntApldAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt_Tp(_tp *common.DiscountAmountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt_Tp(_tp *common.DiscountAmountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8361,7 +8360,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.DscntApldAmt[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_DscntApldAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8395,7 +8394,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.DscntApldAmt[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_CdtNoteAmt(_cdtNoteAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_CdtNoteAmt(_cdtNoteAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8426,7 +8425,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.CdtNoteAmt = _cdtNoteAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt(_taxAmt []common.TaxAmountAndType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt(_taxAmt []common.TaxAmountAndType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8457,7 +8456,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.TaxAmt = _taxAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt_Tp(_tp *common.TaxAmountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt_Tp(_tp *common.TaxAmountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8491,7 +8490,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.TaxAmt[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_TaxAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8525,7 +8524,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.TaxAmt[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_AdjstmntAmtAndRsn(_adjstmntAmtAndRsn []common.DocumentAdjustment1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_AdjstmntAmtAndRsn(_adjstmntAmtAndRsn []common.DocumentAdjustment1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8556,7 +8555,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.AdjstmntAmtAndRsn = _adjstmntAmtAndRsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_AdjstmntAmtAndRsn_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_AdjstmntAmtAndRsn_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8590,7 +8589,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.AdjstmntAmtAndRsn[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocInf_LineDtls_Amt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8621,7 +8620,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocInf[0].LineDtls[0].Amt.RmtdAmt = _rmtdAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt(_rfrdDocAmt *common.RemittanceAmount2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt(_rfrdDocAmt *common.RemittanceAmount2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8643,7 +8642,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt = _rfrdDocAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DuePyblAmt(_duePyblAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DuePyblAmt(_duePyblAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8668,7 +8667,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.DuePyblAmt = _duePyblAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt(_dscntApldAmt []common.DiscountAmountAndType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt(_dscntApldAmt []common.DiscountAmountAndType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8693,7 +8692,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.DscntApldAmt = _dscntApldAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt_Tp(_tp *common.DiscountAmountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt_Tp(_tp *common.DiscountAmountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8721,7 +8720,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.DscntApldAmt[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_DscntApldAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8749,7 +8748,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.DscntApldAmt[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_CdtNoteAmt(_cdtNoteAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_CdtNoteAmt(_cdtNoteAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8774,7 +8773,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.CdtNoteAmt = _cdtNoteAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt(_taxAmt []common.TaxAmountAndType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt(_taxAmt []common.TaxAmountAndType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8799,7 +8798,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.TaxAmt = _taxAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt_Tp(_tp *common.TaxAmountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt_Tp(_tp *common.TaxAmountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8827,7 +8826,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.TaxAmt[0].Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_TaxAmt_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8855,7 +8854,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.TaxAmt[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_AdjstmntAmtAndRsn(_adjstmntAmtAndRsn []common.DocumentAdjustment1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_AdjstmntAmtAndRsn(_adjstmntAmtAndRsn []common.DocumentAdjustment1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8880,7 +8879,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.AdjstmntAmtAndRsn = _adjstmntAmtAndRsn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_AdjstmntAmtAndRsn_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_AdjstmntAmtAndRsn_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8908,7 +8907,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.AdjstmntAmtAndRsn[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_RfrdDocAmt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8933,7 +8932,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].RfrdDocAmt.RmtdAmt = _rmtdAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf(_cdtrRefInf *common.CreditorReferenceInformation2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf(_cdtrRefInf *common.CreditorReferenceInformation2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8955,7 +8954,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].CdtrRefInf = _cdtrRefInf
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf_Tp(_tp *common.CreditorReferenceType2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf_Tp(_tp *common.CreditorReferenceType2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -8980,7 +8979,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].CdtrRefInf.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf_Tp_CdOrPrtry(_cdOrPrtry common.CreditorReferenceType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_CdtrRefInf_Tp_CdOrPrtry(_cdOrPrtry common.CreditorReferenceType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9008,7 +9007,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].CdtrRefInf.Tp.CdOrPrtry = _cdOrPrtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr(_invcr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr(_invcr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9030,7 +9029,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr = _invcr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9055,7 +9054,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9083,7 +9082,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9114,7 +9113,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9139,7 +9138,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9167,7 +9166,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9198,7 +9197,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9232,7 +9231,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9260,7 +9259,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9291,7 +9290,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9322,7 +9321,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9356,7 +9355,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9381,7 +9380,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9409,7 +9408,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee(_invcee *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee(_invcee *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9431,7 +9430,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee = _invcee
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9456,7 +9455,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9484,7 +9483,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9515,7 +9514,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9540,7 +9539,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9568,7 +9567,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9599,7 +9598,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9633,7 +9632,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9661,7 +9660,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9692,7 +9691,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9723,7 +9722,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9757,7 +9756,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9782,7 +9781,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_Invcee_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9810,7 +9809,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].Invcee.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt(_taxRmt *common.TaxInformation7) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt(_taxRmt *common.TaxInformation7) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9832,7 +9831,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt = _taxRmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Cdtr(_cdtr *common.TaxParty1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Cdtr(_cdtr *common.TaxParty1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9857,7 +9856,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Cdtr = _cdtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Dbtr(_dbtr *common.TaxParty2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Dbtr(_dbtr *common.TaxParty2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9882,7 +9881,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Dbtr = _dbtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Dbtr_Authstn(_authstn *common.TaxAuthorisation1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Dbtr_Authstn(_authstn *common.TaxAuthorisation1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9910,7 +9909,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Dbtr.Authstn = _authstn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_UltmtDbtr(_ultmtDbtr *common.TaxParty2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_UltmtDbtr(_ultmtDbtr *common.TaxParty2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9935,7 +9934,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.UltmtDbtr = _ultmtDbtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_UltmtDbtr_Authstn(_authstn *common.TaxAuthorisation1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_UltmtDbtr_Authstn(_authstn *common.TaxAuthorisation1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9963,7 +9962,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.UltmtDbtr.Authstn = _authstn
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_TtlTaxblBaseAmt(_ttlTaxblBaseAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_TtlTaxblBaseAmt(_ttlTaxblBaseAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -9988,7 +9987,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.TtlTaxblBaseAmt = _ttlTaxblBaseAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_TtlTaxAmt(_ttlTaxAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_TtlTaxAmt(_ttlTaxAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10013,7 +10012,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.TtlTaxAmt = _ttlTaxAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd(_rcrd []common.TaxRecord2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd(_rcrd []common.TaxRecord2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10038,7 +10037,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd = _rcrd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_Prd(_prd *common.TaxPeriod2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_Prd(_prd *common.TaxPeriod2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10066,7 +10065,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].Prd = _prd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_Prd_FrToDt(_frToDt *common.DatePeriod2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_Prd_FrToDt(_frToDt *common.DatePeriod2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10097,7 +10096,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].Prd.FrToDt = _frToDt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt(_taxAmt *common.TaxAmount2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt(_taxAmt *common.TaxAmount2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10125,7 +10124,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt = _taxAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_TaxblBaseAmt(_taxblBaseAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_TaxblBaseAmt(_taxblBaseAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10156,7 +10155,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.TaxblBaseAmt = _taxblBaseAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_TtlAmt(_ttlAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_TtlAmt(_ttlAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10187,7 +10186,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.TtlAmt = _ttlAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls(_dtls []common.TaxRecordDetails2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls(_dtls []common.TaxRecordDetails2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10218,7 +10217,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.Dtls = _dtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Prd(_prd *common.TaxPeriod2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Prd(_prd *common.TaxPeriod2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10252,7 +10251,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.Dtls[0].Prd = _prd
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Prd_FrToDt(_frToDt *common.DatePeriod2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Prd_FrToDt(_frToDt *common.DatePeriod2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10289,7 +10288,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.Dtls[0].Prd.FrToDt = _frToDt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_TaxRmt_Rcrd_TaxAmt_Dtls_Amt(_amt common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10323,7 +10322,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].TaxRmt.Rcrd[0].TaxAmt.Dtls[0].Amt = _amt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt(_grnshmtRmt *common.Garnishment3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt(_grnshmtRmt *common.Garnishment3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10345,7 +10344,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt = _grnshmtRmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Tp(_tp common.GarnishmentType1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Tp(_tp common.GarnishmentType1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10370,7 +10369,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Tp_CdOrPrtry(_cdOrPrtry common.GarnishmentType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Tp_CdOrPrtry(_cdOrPrtry common.GarnishmentType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10395,7 +10394,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Tp.CdOrPrtry = _cdOrPrtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee(_grnshee *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee(_grnshee *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10420,7 +10419,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee = _grnshee
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10448,7 +10447,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10479,7 +10478,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10513,7 +10512,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10541,7 +10540,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10572,7 +10571,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10606,7 +10605,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10643,7 +10642,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10674,7 +10673,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10708,7 +10707,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10742,7 +10741,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10779,7 +10778,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10807,7 +10806,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_Grnshee_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10838,7 +10837,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.Grnshee.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr(_grnshmtAdmstr *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr(_grnshmtAdmstr *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10863,7 +10862,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr = _grnshmtAdmstr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10891,7 +10890,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10922,7 +10921,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10956,7 +10955,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -10984,7 +10983,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11015,7 +11014,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11049,7 +11048,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11086,7 +11085,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11117,7 +11116,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11151,7 +11150,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11185,7 +11184,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11222,7 +11221,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11250,7 +11249,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_GrnshmtAdmstr_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11281,7 +11280,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.GrnshmtAdmstr.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Strd_GrnshmtRmt_RmtdAmt(_rmtdAmt *common.ActiveOrHistoricCurrencyAndAmount) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11306,7 +11305,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.RmtInf.Strd[0].GrnshmtRmt.RmtdAmt = _rmtdAmt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr(_ultmtDbtr *common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr(_ultmtDbtr *common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11322,7 +11321,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr = _ultmtDbtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11341,7 +11340,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11363,7 +11362,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11388,7 +11387,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11416,7 +11415,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11438,7 +11437,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11463,7 +11462,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11491,7 +11490,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11522,7 +11521,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11547,7 +11546,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11575,7 +11574,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11603,7 +11602,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11634,7 +11633,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11656,7 +11655,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11681,7 +11680,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11700,7 +11699,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11722,7 +11721,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11744,7 +11743,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11769,7 +11768,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11791,7 +11790,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11816,7 +11815,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11844,7 +11843,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11866,7 +11865,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11891,7 +11890,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11913,7 +11912,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11938,7 +11937,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11966,7 +11965,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtDbtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -11997,7 +11996,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtDbtr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr(_dbtr *common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr(_dbtr *common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12013,7 +12012,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr = _dbtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12032,7 +12031,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12054,7 +12053,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12079,7 +12078,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12107,7 +12106,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12129,7 +12128,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12154,7 +12153,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12182,7 +12181,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12213,7 +12212,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12238,7 +12237,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12266,7 +12265,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12294,7 +12293,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12325,7 +12324,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12347,7 +12346,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12372,7 +12371,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12391,7 +12390,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12413,7 +12412,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12435,7 +12434,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12460,7 +12459,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12482,7 +12481,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12507,7 +12506,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12535,7 +12534,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12557,7 +12556,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12582,7 +12581,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12604,7 +12603,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12629,7 +12628,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12657,7 +12656,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12688,7 +12687,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Dbtr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct(_dbtrAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct(_dbtrAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12704,7 +12703,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct = _dbtrAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12723,7 +12722,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12742,7 +12741,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12764,7 +12763,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12783,7 +12782,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12802,7 +12801,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12824,7 +12823,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt(_dbtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt(_dbtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12840,7 +12839,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt = _dbtrAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12859,7 +12858,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12878,7 +12877,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12900,7 +12899,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12919,7 +12918,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12941,7 +12940,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12966,7 +12965,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -12985,7 +12984,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13007,7 +13006,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13026,7 +13025,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13048,7 +13047,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13073,7 +13072,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13101,7 +13100,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct(_dbtrAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct(_dbtrAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13117,7 +13116,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct = _dbtrAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13136,7 +13135,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13155,7 +13154,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13177,7 +13176,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13196,7 +13195,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13215,7 +13214,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13237,7 +13236,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.DbtrAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt(_cdtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt(_cdtrAgt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13253,7 +13252,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt = _cdtrAgt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13272,7 +13271,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13291,7 +13290,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13313,7 +13312,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13332,7 +13331,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13354,7 +13353,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13379,7 +13378,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13398,7 +13397,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13420,7 +13419,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13439,7 +13438,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13461,7 +13460,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13486,7 +13485,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13514,7 +13513,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct(_cdtrAgtAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct(_cdtrAgtAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13530,7 +13529,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct = _cdtrAgtAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13549,7 +13548,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13568,7 +13567,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13590,7 +13589,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13609,7 +13608,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13628,7 +13627,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAgtAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13650,7 +13649,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAgtAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr(_cdtr *common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr(_cdtr *common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13666,7 +13665,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr = _cdtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13685,7 +13684,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13707,7 +13706,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13732,7 +13731,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13760,7 +13759,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13782,7 +13781,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13807,7 +13806,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13835,7 +13834,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13866,7 +13865,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13891,7 +13890,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13919,7 +13918,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13947,7 +13946,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -13978,7 +13977,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14000,7 +13999,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14025,7 +14024,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14044,7 +14043,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14066,7 +14065,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14088,7 +14087,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14113,7 +14112,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14135,7 +14134,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14160,7 +14159,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14188,7 +14187,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14210,7 +14209,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14235,7 +14234,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14257,7 +14256,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14282,7 +14281,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14310,7 +14309,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14341,7 +14340,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Cdtr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct(_cdtrAcct *common.CashAccount38) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct(_cdtrAcct *common.CashAccount38) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14357,7 +14356,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct = _cdtrAcct
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id(_id common.AccountIdentification4Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id(_id common.AccountIdentification4Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14376,7 +14375,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id_Othr(_othr *common.GenericAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14395,7 +14394,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Id.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Id_Othr_SchmeNm(_schmeNm *common.AccountSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14417,7 +14416,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Id.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Tp(_tp *common.CashAccountType2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Tp(_tp *common.CashAccountType2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14436,7 +14435,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Prxy(_prxy *common.ProxyAccountIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14455,7 +14454,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Prxy = _prxy
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_CdtrAcct_Prxy_Tp(_tp *common.ProxyAccountType1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14477,7 +14476,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.CdtrAcct.Prxy.Tp = _tp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr(_ultmtCdtr *common.Party40Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr(_ultmtCdtr *common.Party40Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14493,7 +14492,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr = _ultmtCdtr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty(_pty *common.PartyIdentification135) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty(_pty *common.PartyIdentification135) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14512,7 +14511,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty = _pty
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14534,7 +14533,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14559,7 +14558,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14587,7 +14586,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id(_id *common.Party38Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id(_id *common.Party38Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14609,7 +14608,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id = _id
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId(_orgId *common.OrganisationIdentification29) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14634,7 +14633,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.OrgId = _orgId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId_Othr(_othr []common.GenericOrganisationIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14662,7 +14661,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.OrgId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14693,7 +14692,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId(_prvtId *common.PersonIdentification13) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14718,7 +14717,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.PrvtId = _prvtId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_DtAndPlcOfBirth(_dtAndPlcOfBirth *common.DateAndPlaceOfBirth1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14746,7 +14745,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.PrvtId.DtAndPlcOfBirth = _dtAndPlcOfBirth
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_Othr(_othr []common.GenericPersonIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14774,7 +14773,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.PrvtId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_Id_PrvtId_Othr_SchmeNm(_schmeNm *common.PersonIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14805,7 +14804,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.Id.PrvtId.Othr[0].SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_CtctDtls(_ctctDtls *common.Contact4) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14827,7 +14826,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.CtctDtls = _ctctDtls
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Pty_CtctDtls_Othr(_othr []common.OtherContact1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14852,7 +14851,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Pty.CtctDtls.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt(_agt *common.BranchAndFinancialInstitutionIdentification6) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14871,7 +14870,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt = _agt
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId(_finInstnId common.FinancialInstitutionIdentification18) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14893,7 +14892,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId = _finInstnId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_ClrSysMmbId(_clrSysMmbId *common.ClearingSystemMemberIdentification2) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14915,7 +14914,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.ClrSysMmbId = _clrSysMmbId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_ClrSysMmbId_ClrSysId(_clrSysId *common.ClearingSystemIdentification2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14940,7 +14939,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.ClrSysMmbId.ClrSysId = _clrSysId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14962,7 +14961,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -14987,7 +14986,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15015,7 +15014,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_Othr(_othr *common.GenericFinancialIdentification1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15037,7 +15036,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.Othr = _othr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_FinInstnId_Othr_SchmeNm(_schmeNm *common.FinancialIdentificationSchemeName1Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15062,7 +15061,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.FinInstnId.Othr.SchmeNm = _schmeNm
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId(_brnchId *common.BranchData3) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId(_brnchId *common.BranchData3) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15084,7 +15083,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.BrnchId = _brnchId
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr(_pstlAdr *common.PostalAddress24) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15109,7 +15108,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.BrnchId.PstlAdr = _pstlAdr
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr_AdrTp(_adrTp *common.AddressType3Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15137,7 +15136,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.BrnchId.PstlAdr.AdrTp = _adrTp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_UltmtCdtr_Agt_BrnchId_PstlAdr_AdrTp_Prtry(_prtry *common.GenericIdentification30) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15168,7 +15167,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.UltmtCdtr.Agt.BrnchId.PstlAdr.AdrTp.Prtry = _prtry
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Purp(_purp *common.Purpose2Choice) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Purp(_purp *common.Purpose2Choice) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15184,7 +15183,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Orgnl
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].OrgnlTxRef.Purp = _purp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_SplmtryData(_splmtryData []common.SupplementaryData1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_SplmtryData(_splmtryData []common.SupplementaryData1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15197,7 +15196,7 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Splmt
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].SplmtryData = _splmtryData
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_SplmtryData_Envlp(_envlp common.SupplementaryDataEnvelope1) {
+func (d *Document) With_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_SplmtryData_Envlp(_envlp common.SupplementaryDataEnvelope1) {
 	if len(d.CstmrPmtCxlReq.Undrlyg) == 0 {
 		d.CstmrPmtCxlReq.Undrlyg = append(d.CstmrPmtCxlReq.Undrlyg, UnderlyingTransaction24{})
 	}
@@ -15213,11 +15212,11 @@ func (d *Document) With_Doc_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_Splmt
 	d.CstmrPmtCxlReq.Undrlyg[0].OrgnlPmtInfAndCxl[0].TxInf[0].SplmtryData[0].Envlp = _envlp
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_SplmtryData(_splmtryData []common.SupplementaryData1) {
+func (d *Document) With_CstmrPmtCxlReq_SplmtryData(_splmtryData []common.SupplementaryData1) {
 	d.CstmrPmtCxlReq.SplmtryData = _splmtryData
 }
 
-func (d *Document) With_Doc_CstmrPmtCxlReq_SplmtryData_Envlp(_envlp common.SupplementaryDataEnvelope1) {
+func (d *Document) With_CstmrPmtCxlReq_SplmtryData_Envlp(_envlp common.SupplementaryDataEnvelope1) {
 	if len(d.CstmrPmtCxlReq.SplmtryData) == 0 {
 		d.CstmrPmtCxlReq.SplmtryData = append(d.CstmrPmtCxlReq.SplmtryData, common.SupplementaryData1{})
 	}

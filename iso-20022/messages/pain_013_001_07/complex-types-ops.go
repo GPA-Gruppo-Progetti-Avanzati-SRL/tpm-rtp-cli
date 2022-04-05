@@ -1,14 +1,13 @@
 // Package pain_013_001_07
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pain_013_001_07
 
-// IsValid checks if RegulatoryAuthority2 is valid
-func (s RegulatoryAuthority2) IsValid(optional bool) bool {
+// IsValid checks if ChequeDeliveryMethod1Choice is valid
+func (s ChequeDeliveryMethod1Choice) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.Nm.IsValid(true)
-	valid = valid && s.Ctry.IsValid(true)
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.Prtry.IsValid(true)
 
 	return valid
 }
@@ -42,37 +41,6 @@ func (s CreditorPaymentActivationRequestV07) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if RegulatoryReporting3 is valid
-func (s RegulatoryReporting3) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.DbtCdtRptgInd.IsValid(true)
-	valid = valid && (s.Authrty == nil || (s.Authrty != nil && s.Authrty.IsValid(true)))
-
-	for j := 0; j < len(s.Dtls); j++ {
-		valid = valid && s.Dtls[j].IsValid(true)
-	}
-
-	return valid
-}
-
-// IsValid checks if StructuredRegulatoryReporting3 is valid
-func (s StructuredRegulatoryReporting3) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Tp.IsValid(true)
-	valid = valid && s.Dt.IsValid(true)
-	valid = valid && s.Ctry.IsValid(true)
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && (s.Amt == nil || (s.Amt != nil && s.Amt.IsValid(true)))
-
-	for j := 0; j < len(s.Inf); j++ {
-		valid = valid && s.Inf[j].IsValid(true)
-	}
-
-	return valid
-}
-
 // IsValid checks if PaymentIdentification6 is valid
 func (s PaymentIdentification6) IsValid(optional bool) bool {
 
@@ -84,29 +52,13 @@ func (s PaymentIdentification6) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if Cheque11 is valid
-func (s Cheque11) IsValid(optional bool) bool {
+// IsValid checks if RemittanceLocation7 is valid
+func (s RemittanceLocation7) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.ChqTp.IsValid(true)
-	valid = valid && s.ChqNb.IsValid(true)
-	valid = valid && (s.ChqFr == nil || (s.ChqFr != nil && s.ChqFr.IsValid(true)))
-
-	valid = valid && (s.DlvryMtd == nil || (s.DlvryMtd != nil && s.DlvryMtd.IsValid(true)))
-
-	valid = valid && (s.DlvrTo == nil || (s.DlvrTo != nil && s.DlvrTo.IsValid(true)))
-
-	valid = valid && s.InstrPrty.IsValid(true)
-	valid = valid && s.ChqMtrtyDt.IsValid(true)
-	valid = valid && s.FrmsCd.IsValid(true)
-	for j := 0; j < len(s.MemoFld); j++ {
-		valid = valid && s.MemoFld[j].IsValid(true)
-	}
-
-	valid = valid && s.RgnlClrZone.IsValid(true)
-	valid = valid && s.PrtLctn.IsValid(true)
-	for j := 0; j < len(s.Sgntr); j++ {
-		valid = valid && s.Sgntr[j].IsValid(true)
+	valid = valid && s.RmtId.IsValid(true)
+	for j := 0; j < len(s.RmtLctnDtls); j++ {
+		valid = valid && s.RmtLctnDtls[j].IsValid(true)
 	}
 
 	return valid
@@ -150,6 +102,68 @@ func (s PaymentInstruction31) IsValid(optional bool) bool {
 	}
 	for j := 0; j < len(s.CdtTrfTx); j++ {
 		valid = valid && s.CdtTrfTx[j].IsValid(false)
+	}
+
+	return valid
+}
+
+// IsValid checks if InstructionForCreditorAgent1 is valid
+func (s InstructionForCreditorAgent1) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.InstrInf.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if RegulatoryReporting3 is valid
+func (s RegulatoryReporting3) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.DbtCdtRptgInd.IsValid(true)
+	valid = valid && (s.Authrty == nil || (s.Authrty != nil && s.Authrty.IsValid(true)))
+
+	for j := 0; j < len(s.Dtls); j++ {
+		valid = valid && s.Dtls[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if RegulatoryAuthority2 is valid
+func (s RegulatoryAuthority2) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Nm.IsValid(true)
+	valid = valid && s.Ctry.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if Cheque11 is valid
+func (s Cheque11) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.ChqTp.IsValid(true)
+	valid = valid && s.ChqNb.IsValid(true)
+	valid = valid && (s.ChqFr == nil || (s.ChqFr != nil && s.ChqFr.IsValid(true)))
+
+	valid = valid && (s.DlvryMtd == nil || (s.DlvryMtd != nil && s.DlvryMtd.IsValid(true)))
+
+	valid = valid && (s.DlvrTo == nil || (s.DlvrTo != nil && s.DlvrTo.IsValid(true)))
+
+	valid = valid && s.InstrPrty.IsValid(true)
+	valid = valid && s.ChqMtrtyDt.IsValid(true)
+	valid = valid && s.FrmsCd.IsValid(true)
+	for j := 0; j < len(s.MemoFld); j++ {
+		valid = valid && s.MemoFld[j].IsValid(true)
+	}
+
+	valid = valid && s.RgnlClrZone.IsValid(true)
+	valid = valid && s.PrtLctn.IsValid(true)
+	for j := 0; j < len(s.Sgntr); j++ {
+		valid = valid && s.Sgntr[j].IsValid(true)
 	}
 
 	return valid
@@ -211,12 +225,19 @@ func (s CreditTransferTransaction35) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if InstructionForCreditorAgent1 is valid
-func (s InstructionForCreditorAgent1) IsValid(optional bool) bool {
+// IsValid checks if StructuredRegulatoryReporting3 is valid
+func (s StructuredRegulatoryReporting3) IsValid(optional bool) bool {
 
 	valid := true
+	valid = valid && s.Tp.IsValid(true)
+	valid = valid && s.Dt.IsValid(true)
+	valid = valid && s.Ctry.IsValid(true)
 	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.InstrInf.IsValid(true)
+	valid = valid && (s.Amt == nil || (s.Amt != nil && s.Amt.IsValid(true)))
+
+	for j := 0; j < len(s.Inf); j++ {
+		valid = valid && s.Inf[j].IsValid(true)
+	}
 
 	return valid
 }
@@ -252,28 +273,6 @@ func (s RemittanceLocationData1) IsValid(optional bool) bool {
 	valid = valid && s.Mtd.IsValid(false)
 	valid = valid && s.ElctrncAdr.IsValid(true)
 	valid = valid && (s.PstlAdr == nil || (s.PstlAdr != nil && s.PstlAdr.IsValid(true)))
-
-	return valid
-}
-
-// IsValid checks if RemittanceLocation7 is valid
-func (s RemittanceLocation7) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.RmtId.IsValid(true)
-	for j := 0; j < len(s.RmtLctnDtls); j++ {
-		valid = valid && s.RmtLctnDtls[j].IsValid(true)
-	}
-
-	return valid
-}
-
-// IsValid checks if ChequeDeliveryMethod1Choice is valid
-func (s ChequeDeliveryMethod1Choice) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.Prtry.IsValid(true)
 
 	return valid
 }

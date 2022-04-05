@@ -1,6 +1,5 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pacs_028_001_03
 
 // IsValid checks if PaymentTransaction113 is valid
@@ -29,6 +28,19 @@ func (s PaymentTransaction113) IsValid(optional bool) bool {
 	return valid
 }
 
+// IsValid checks if OriginalGroupInformation27 is valid
+func (s OriginalGroupInformation27) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
+
+	return valid
+}
+
 // IsValid checks if FIToFIPaymentStatusRequestV03 is valid
 func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 
@@ -45,19 +57,6 @@ func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
-
-	return valid
-}
-
-// IsValid checks if OriginalGroupInformation27 is valid
-func (s OriginalGroupInformation27) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
 
 	return valid
 }

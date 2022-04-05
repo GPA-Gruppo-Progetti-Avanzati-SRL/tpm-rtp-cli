@@ -1,34 +1,6 @@
 // Package pain_014_001_07
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 22:58:59.627106 +0200 CEST m=+0.110044876
 package pain_014_001_07
-
-// IsValid checks if StatusReason6Choice is valid
-func (s StatusReason6Choice) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.Cd.IsValid(true)
-	valid = valid && s.Prtry.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if CreditorPaymentActivationRequestStatusReportV07 is valid
-func (s CreditorPaymentActivationRequestStatusReportV07) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.GrpHdr.IsValid(false)
-	valid = valid && s.OrgnlGrpInfAndSts.IsValid(false)
-	for j := 0; j < len(s.OrgnlPmtInfAndSts); j++ {
-		valid = valid && s.OrgnlPmtInfAndSts[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.SplmtryData); j++ {
-		valid = valid && s.SplmtryData[j].IsValid(true)
-	}
-
-	return valid
-}
 
 // IsValid checks if PaymentTransaction104 is valid
 func (s PaymentTransaction104) IsValid(optional bool) bool {
@@ -66,6 +38,44 @@ func (s PaymentTransaction104) IsValid(optional bool) bool {
 	return valid
 }
 
+// IsValid checks if OriginalGroupInformation30 is valid
+func (s OriginalGroupInformation30) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
+	valid = valid && s.GrpSts.IsValid(true)
+	for j := 0; j < len(s.StsRsnInf); j++ {
+		valid = valid && s.StsRsnInf[j].IsValid(true)
+	}
+
+	for j := 0; j < len(s.NbOfTxsPerSts); j++ {
+		valid = valid && s.NbOfTxsPerSts[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if CreditorPaymentActivationRequestStatusReportV07 is valid
+func (s CreditorPaymentActivationRequestStatusReportV07) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.GrpHdr.IsValid(false)
+	valid = valid && s.OrgnlGrpInfAndSts.IsValid(false)
+	for j := 0; j < len(s.OrgnlPmtInfAndSts); j++ {
+		valid = valid && s.OrgnlPmtInfAndSts[j].IsValid(true)
+	}
+
+	for j := 0; j < len(s.SplmtryData); j++ {
+		valid = valid && s.SplmtryData[j].IsValid(true)
+	}
+
+	return valid
+}
+
 // IsValid checks if StatusReasonInformation12 is valid
 func (s StatusReasonInformation12) IsValid(optional bool) bool {
 
@@ -91,40 +101,6 @@ func (s GroupHeader87) IsValid(optional bool) bool {
 	valid = valid && (s.DbtrAgt == nil || (s.DbtrAgt != nil && s.DbtrAgt.IsValid(true)))
 
 	valid = valid && (s.CdtrAgt == nil || (s.CdtrAgt != nil && s.CdtrAgt.IsValid(true)))
-
-	return valid
-}
-
-// IsValid checks if NumberOfTransactionsPerStatus5 is valid
-func (s NumberOfTransactionsPerStatus5) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.DtldNbOfTxs.IsValid(false)
-	valid = valid && s.DtldSts.IsValid(false)
-	valid = valid && s.DtldCtrlSum.IsValid(true)
-
-	return valid
-}
-
-// IsValid checks if OriginalPaymentInstruction31 is valid
-func (s OriginalPaymentInstruction31) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlPmtInfId.IsValid(false)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
-	valid = valid && s.PmtInfSts.IsValid(true)
-	for j := 0; j < len(s.StsRsnInf); j++ {
-		valid = valid && s.StsRsnInf[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.NbOfTxsPerSts); j++ {
-		valid = valid && s.NbOfTxsPerSts[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.TxInfAndSts); j++ {
-		valid = valid && s.TxInfAndSts[j].IsValid(true)
-	}
 
 	return valid
 }
@@ -167,16 +143,14 @@ func (s OriginalTransactionReference29) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if OriginalGroupInformation30 is valid
-func (s OriginalGroupInformation30) IsValid(optional bool) bool {
+// IsValid checks if OriginalPaymentInstruction31 is valid
+func (s OriginalPaymentInstruction31) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlPmtInfId.IsValid(false)
 	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
 	valid = valid && s.OrgnlCtrlSum.IsValid(true)
-	valid = valid && s.GrpSts.IsValid(true)
+	valid = valid && s.PmtInfSts.IsValid(true)
 	for j := 0; j < len(s.StsRsnInf); j++ {
 		valid = valid && s.StsRsnInf[j].IsValid(true)
 	}
@@ -184,6 +158,31 @@ func (s OriginalGroupInformation30) IsValid(optional bool) bool {
 	for j := 0; j < len(s.NbOfTxsPerSts); j++ {
 		valid = valid && s.NbOfTxsPerSts[j].IsValid(true)
 	}
+
+	for j := 0; j < len(s.TxInfAndSts); j++ {
+		valid = valid && s.TxInfAndSts[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if NumberOfTransactionsPerStatus5 is valid
+func (s NumberOfTransactionsPerStatus5) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.DtldNbOfTxs.IsValid(false)
+	valid = valid && s.DtldSts.IsValid(false)
+	valid = valid && s.DtldCtrlSum.IsValid(true)
+
+	return valid
+}
+
+// IsValid checks if StatusReason6Choice is valid
+func (s StatusReason6Choice) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.Cd.IsValid(true)
+	valid = valid && s.Prtry.IsValid(true)
 
 	return valid
 }

@@ -74,15 +74,17 @@ func (p SimpleVisitorPath) ItemPathReference(itemNdx int) string {
 func (p SimpleVisitorPath) Value() string {
 	var sb strings.Builder
 	for ndx, item := range p {
-		if ndx > 0 {
+
+		switch ndx {
+		case 0:
+			// first element is _self of type document
+		case 1:
+			sb.WriteString(item.Name)
+		default:
 			sb.WriteString(".")
+			sb.WriteString(item.Name)
 		}
 
-		n := item.Name
-		if n == "_self" {
-			n = "Doc"
-		}
-		sb.WriteString(n)
 	}
 
 	return sb.String()

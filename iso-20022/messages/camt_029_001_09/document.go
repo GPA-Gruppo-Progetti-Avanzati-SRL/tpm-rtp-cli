@@ -1,6 +1,6 @@
-// Package pain_014_001_07
+// Package camt_029_001_09
 // Do not Edit. This stuff it's been automatically generated.
-package pain_014_001_07
+package camt_029_001_09
 
 import (
 	"bytes"
@@ -9,8 +9,8 @@ import (
 
 // Document type definition
 type Document struct {
-	XMLName                xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:pain.014.001.07 Document"`
-	CdtrPmtActvtnReqStsRpt CreditorPaymentActivationRequestStatusReportV07 `xml:"CdtrPmtActvtnReqStsRpt"`
+	XMLName         xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.09 Document"`
+	RsltnOfInvstgtn ResolutionOfInvestigationV09 `xml:"RsltnOfInvstgtn"`
 }
 
 func (d *Document) ToXML() ([]byte, error) {
@@ -37,7 +37,7 @@ func NewDocumentFromXML(b []byte) (*Document, error) {
 func (s Document) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.CdtrPmtActvtnReqStsRpt.IsValid(false)
+	valid = valid && s.RsltnOfInvstgtn.IsValid(false)
 
 	return valid
 }
