@@ -1,4 +1,9 @@
 {{ define "simple-types-datetime-ops" }}
+
+const (
+    {{ .Name }}Sample = "Value"
+)
+
 {{- if .HasPatternRestriction }}
 var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
 {{ end }}

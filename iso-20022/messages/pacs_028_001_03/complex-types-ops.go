@@ -1,25 +1,12 @@
 // Package pacs_028_001_03
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 08:23:15.82911 +0200 CEST m=+0.108518417
+// Generated at 2022-04-05 15:30:32.624602 +0200 CEST m=+0.108817042
 package pacs_028_001_03
 
 import (
 	"bytes"
 	"encoding/xml"
 )
-
-// IsValid checks if OriginalGroupInformation27 is valid
-func (s OriginalGroupInformation27) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
-
-	return valid
-}
 
 func (d *Document) ToXML() ([]byte, error) {
 	w := &bytes.Buffer{}
@@ -50,6 +37,19 @@ func (s Document) IsValid(optional bool) bool {
 	return valid
 }
 
+// IsValid checks if OriginalGroupInformation27 is valid
+func (s OriginalGroupInformation27) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
+
+	return valid
+}
+
 // IsValid checks if FIToFIPaymentStatusRequestV03 is valid
 func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 
@@ -66,19 +66,6 @@ func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
-
-	return valid
-}
-
-// IsValid checks if GroupHeader91 is valid
-func (s GroupHeader91) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.MsgId.IsValid(false)
-	valid = valid && s.CreDtTm.IsValid(false)
-	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
-
-	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
 
 	return valid
 }
@@ -105,6 +92,19 @@ func (s PaymentTransaction113) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
+
+	return valid
+}
+
+// IsValid checks if GroupHeader91 is valid
+func (s GroupHeader91) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.MsgId.IsValid(false)
+	valid = valid && s.CreDtTm.IsValid(false)
+	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
+
+	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
 
 	return valid
 }

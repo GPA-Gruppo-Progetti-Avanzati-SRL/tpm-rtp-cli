@@ -1,6 +1,6 @@
 // Package xsdt
 // Do not Edit. This stuff it's been automatically generated.
-// Generated at 2022-04-05 08:23:15.82911 +0200 CEST m=+0.108518417
+// Generated at 2022-04-05 15:30:32.624602 +0200 CEST m=+0.108817042
 // The package is taken from github.com/metaleap/go-xsd/types.
 // It's been placed in here but it should not necessarily be...
 // the idea is to transform it in a template to be generated along side the other stuff when the generation is out of the scope of the current project.

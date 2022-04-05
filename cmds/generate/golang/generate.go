@@ -30,6 +30,8 @@ const (
 	RestrictionUtil            = "templates/%s/restriction-util.tmpl"
 	XsDtTypes                  = "templates/%s/xsdt-types.tmpl"
 	XsDtTypesMethods           = "templates/%s/xsdt-types-methods.tmpl"
+	DocumentExample            = "templates/%s/document-example.tmpl"
+	DocumentExampleNode        = "templates/%s/document-example-node.tmpl"
 )
 
 func complexTypesTmplList(version string) []string {
@@ -63,6 +65,14 @@ func simpleTypesOpsTmplList(version string) []string {
 func restrictionUtilTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(RestrictionUtil, version))
+	return s
+}
+
+func documentExampleTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentExample, version))
+	s = append(s, fmt.Sprintf(DocumentExampleNode, version))
+
 	return s
 }
 
@@ -145,6 +155,16 @@ func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, for
 		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"complex-types-ops", "go"}, "."), complexTypesOpsTmplList("v2"), formatCode); err != nil {
 			return err
 		}
+
+		/*
+		 * document example
+		 */
+		if pkgName != "common" {
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{pkgName + "_test", "go"}, "."), documentExampleTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+		}
+
 	} else {
 		fileName := filepath.Join(outFolder, pkgName, strings.Join([]string{"complex-types", "go"}, "."))
 		log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output files")
@@ -230,6 +250,9 @@ func emit(genCtx GenerationContext, outFolder string, generatedFileName string, 
 func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 
 	fMap := template.FuncMap{
+		"getImportForPackage": func(pkgName string) string {
+			return gm.Cfg.PackageImport(pkgName)
+		},
 		"getComplexTypesImports": func(pkgName string) []string {
 			return gm.GetImports(pkgName, true)
 		},
@@ -241,6 +264,37 @@ func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 		},
 		"getSimpleTypes": func(pkgName string) []model.GoTypeDefinition {
 			return gm.GetTypes(pkgName, false)
+		},
+		"treeVisit": func(pkgName string) *model.TreeVisitor {
+			v := &model.TreeVisitor{}
+			_ = gm.VisitDocument(pkgName, v)
+			return v
+		},
+		"mustToFunctionSignature": func(typeName string) string {
+			ndx := strings.Index(typeName, ".")
+			if ndx > 0 {
+				var sb strings.Builder
+				sb.WriteString(typeName[0:ndx])
+				sb.WriteString(".MustTo")
+				sb.WriteString(typeName[ndx+1:])
+				return sb.String()
+			}
+			return "MustTo" + typeName
+		},
+		// dict is to put together a number of params to be passed to a child template.
+		"dict": func(values ...interface{}) (map[string]interface{}, error) {
+			if len(values)%2 != 0 {
+				return nil, errors.New("invalid dict call")
+			}
+			dict := make(map[string]interface{}, len(values)/2)
+			for i := 0; i < len(values); i += 2 {
+				key, ok := values[i].(string)
+				if !ok {
+					return nil, errors.New("dict keys must be strings")
+				}
+				dict[key] = values[i+1]
+			}
+			return dict, nil
 		},
 	}
 

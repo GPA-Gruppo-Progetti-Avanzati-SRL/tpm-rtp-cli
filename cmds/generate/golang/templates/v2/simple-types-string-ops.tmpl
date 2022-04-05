@@ -1,25 +1,29 @@
 {{ define "simple-types-string-ops" }}
-{{- if .HasPatternRestriction }}
-var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
-{{ end }}
-{{- if .HasEnumRestriction }}
-const (
 {{- $typeName := .Name}}
+const (
+    {{ .Name }}Sample = "Value"
+{{- if .HasEnumRestriction }}
 {{- range .Restrictions.Enum }}
    {{ $typeName }}{{ . }} = "{{ . }}"
 {{- end}}
+{{- end}}
+
+{{- if .HasLengthRestriction }}
+    {{ .Name }}Length = {{.Restrictions.Length}}
+    {{ .Name }}MinLength = {{.Restrictions.MinLength}}
+    {{ .Name }}MaxLength = {{.Restrictions.MaxLength}}
+{{- end}}
 )
+
+{{- if .HasEnumRestriction }}
 var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum -}}
    {{- if $i -}}, {{- end -}} {{ $typeName }}{{ $v }} {{- end }} }
 {{ end }}
 
-{{- if .HasLengthRestriction }}
-const (
-    {{ .Name }}Length = {{.Restrictions.Length}}
-    {{ .Name }}MinLength = {{.Restrictions.MinLength}}
-    {{ .Name }}MaxLength = {{.Restrictions.MaxLength}}
-)
-{{- end}}
+{{- if .HasPatternRestriction }}
+var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
+{{ end }}
+
 // IsValid checks if {{ .Name }} of type {{ .Type.Builtin }} is valid
 func (t {{ .Name }}) IsValid(optional bool) bool {
 
@@ -48,7 +52,7 @@ func (t {{ .Name }}) String() string {
 func To{{ .Name }}(s string) ({{ .Name }}, error) {
 
 {{- if .HasEnumRestriction }}
-     if !isEnumRestrictionValid(s, {{ .Name }}EnumRestriction) {
+     if !isEnumRestrictionValid( s, {{ .Name }}EnumRestriction) {
         return "", fmt.Errorf("cannot satisfy enum restriction for %s of type {{ .Name }}", s)
      }
 {{ end }}

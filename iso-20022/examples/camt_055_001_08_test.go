@@ -54,7 +54,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 						OrgnlMsgNmId: common.MustToMax35Text("pain.013.001.07"),
 						OrgnlCreDtTm: common.MustToISODateTime(time.Now()),
 						NbOfTxs:      common.MustToMax15NumericText("1"),
-						CtrlSum:      xsdt.ToDecimal(535.25),
+						CtrlSum:      xsdt.MustToDecimal(535.25),
 					},
 					OrgnlPmtInfAndCxl: []camt_055_001_08.OriginalPaymentInstruction34{
 						{
@@ -89,7 +89,7 @@ func TestDocumentCamt_055_001_08(t *testing.T) {
 										Amt: &common.AmountType4Choice{
 											InstdAmt: &common.ActiveOrHistoricCurrencyAndAmount{
 												Ccy:   common.MustToActiveOrHistoricCurrencyCode("EUR"),
-												Value: xsdt.ToDecimal(535.25),
+												Value: xsdt.MustToDecimal(535.25),
 											},
 										},
 										ReqdExctnDt: &common.DateAndDateTime2Choice{

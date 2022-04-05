@@ -118,7 +118,7 @@ func TestDocumentPain_013_001_07(t *testing.T) {
 							Amt: common.AmountType4Choice{
 								InstdAmt: &common.ActiveOrHistoricCurrencyAndAmount{
 									Ccy:   common.MustToActiveOrHistoricCurrencyCode("EUR"),
-									Value: xsdt.ToDecimal(535.35),
+									Value: xsdt.MustToDecimal(535.35),
 								},
 							},
 							ChrgBr: common.MustToChargeBearerType1Code(common.ChargeBearerType1CodeSLEV),

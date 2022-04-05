@@ -28,7 +28,7 @@ The snippet below provide an example of the type of stuff that is in there (Meth
 
 * Optional properties of complex types are pointers to structs.
 * Mandatory structs are normal structs.
-* Plurals are handled as array of structs.
+* Plurals are handled as array of items (not pointers to).
 
 ```
 // CreditTransferTransaction35 type definition
