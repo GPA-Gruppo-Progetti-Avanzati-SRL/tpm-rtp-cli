@@ -35,6 +35,7 @@ const (
 	DocumentSetComplexOps      = "templates/%s/document-complex-set-ops.tmpl"
 	DocumentSetSimpleOps       = "templates/%s/document-simple-set-ops.tmpl"
 	DocumentGetOps             = "templates/%s/document-get-ops.tmpl"
+	DocumentReadme             = "templates/%s/document-readme.tmpl"
 	DocumentExample            = "templates/%s/document-example.tmpl"
 	DocumentExampleNode        = "templates/%s/document-example-node.tmpl"
 )
@@ -112,6 +113,13 @@ func documentGetOpsTmplList(version string) []string {
 func documentPathsTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(DocumentPaths, version))
+
+	return s
+}
+
+func documentReadmeTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentReadme, version))
 
 	return s
 }
@@ -217,6 +225,10 @@ func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, for
 			}
 
 			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{pkgName + "_test", "go"}, "."), documentExampleTmplList("v2"), formatCode); err != nil {
+				return err
+			}
+
+			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"README", "md"}, "."), documentReadmeTmplList("v2"), false); err != nil {
 				return err
 			}
 		}
@@ -359,6 +371,9 @@ func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 		},
 		"camelize": func(s string) string {
 			return util.Camelize(s)
+		},
+		"_": func(pkgName string) string {
+			return fmt.Sprintf("Dollar: %s", pkgName)
 		},
 	}
 

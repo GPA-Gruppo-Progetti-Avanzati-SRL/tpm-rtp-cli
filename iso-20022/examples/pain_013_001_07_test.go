@@ -182,3 +182,16 @@ func TestDocumentPain_013_001_07(t *testing.T) {
 	defer os.Remove(Example_Pain_013_001_07_2)
 
 }
+
+func TestDocumentPain_013_001_07_SetOps(t *testing.T) {
+	d := pain_013_001_07.Document{}
+	d.With_CdtrPmtActvtnReq_GrpHdr_MsgId(common.MustToMax35Text("pain013-DS01-20220322"))
+
+	b, err := d.ToXML()
+	require.NoError(t, err)
+
+	err = ioutil.WriteFile(Example_Pain_013_001_07_1, b, fs.ModePerm)
+	require.NoError(t, err)
+	defer os.Remove(Example_Pain_013_001_07_1)
+
+}
