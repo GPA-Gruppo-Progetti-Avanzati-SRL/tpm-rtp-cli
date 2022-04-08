@@ -1,0 +1,76 @@
+// Package {{.PackageName}}
+// Do not Edit. This stuff it's been automatically generated.
+package {{.PackageName}}
+
+import (
+    {{- range getComplexTypesImports .PackageName}}
+    "{{ . }}"
+    {{- end}}
+	"errors"
+	"reflect"
+	"fmt"
+)
+
+{{ $packageName := .PackageName }}
+{{ $tree := simpleVisit .PackageName }}
+
+func (d *Document) Set(path string, src interface{}) error {
+
+    /*
+	path = strings.TrimPrefix(path, "/Doc/")
+	path = strings.Replace(path, "*", "", -1)
+	path = strings.Replace(path, "[]", "", -1)
+	path = strings.Replace(path, "/", ".", -1)
+	*/
+
+	v := reflect.ValueOf(d)
+	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	values := make([]interface{}, 1)
+	err := fieldsByTraversal(v, fields, values, true)
+	if err != nil {
+		return err
+	}
+
+	return copy2Dest(path, values[0], src)
+}
+
+/*
+func convertAssignRows(dest, src interface{}) error {
+
+	switch d := dest.(type) {
+	case *common.Max35Text:
+		if d == nil {
+			return errors.New("nil pointer... in unmarshalling Max35Text data")
+		}
+		*d = common.MustToMax35Text(src)
+		return nil
+	}
+	return nil
+}
+*/
+
+func copy2Dest(docPath string, dest, src interface{}) error {
+
+   var err error
+  switch docPath {
+{{- range $tree.Paths}}
+{{ $lastNode := .LastItem }}
+{{- if and (ne $lastNode.Name "_self") (not $lastNode.IsStruct) }}
+  case Path_{{ .Identifier }}:
+        d, _ := dest.(*{{$lastNode.TypeWithPackageTrimmed $packageName}})
+        if d == nil {
+  			return errors.New("nil pointer... in unmarshalling {{$lastNode.TypeWithPackageTrimmed $packageName}} data for" + docPath)
+	    }
+
+  		*d, err = {{$lastNode.NameOfTypeFunction "To" $packageName }}(src)
+  		return err
+{{- end }}
+{{- end }}
+   default:
+        return fmt.Errorf("could not find path to node %s", docPath)
+ }
+
+ return nil
+}
+

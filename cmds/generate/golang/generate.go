@@ -27,17 +27,23 @@ const (
 	TmplSimpleTypesB64Ops      = "templates/%s/simple-types-b64-ops.tmpl"
 	TmplSimpleTypesDateOps     = "templates/%s/simple-types-date-ops.tmpl"
 	TmplSimpleTypesDateTimeOps = "templates/%s/simple-types-datetime-ops.tmpl"
-	RestrictionUtil            = "templates/%s/restriction-util.tmpl"
+	RestrictionUtil            = "templates/%s/util.tmpl"
 	XsDtTypes                  = "templates/%s/xsdt-types.tmpl"
 	XsDtTypesMethods           = "templates/%s/xsdt-types-methods.tmpl"
 	DocumentType               = "templates/%s/document-type.tmpl"
 	DocumentPaths              = "templates/%s/document-paths.tmpl"
-	DocumentSetComplexOps      = "templates/%s/document-complex-set-ops.tmpl"
-	DocumentSetSimpleOps       = "templates/%s/document-simple-set-ops.tmpl"
-	DocumentGetOps             = "templates/%s/document-get-ops.tmpl"
 	DocumentReadme             = "templates/%s/document-readme.tmpl"
 	DocumentExample            = "templates/%s/document-example.tmpl"
 	DocumentExampleNode        = "templates/%s/document-example-node.tmpl"
+	DocumentSetOpsReflective   = "templates/%s/document-set-ops-reflective.tmpl"
+	// DocumentSetComplexOps non reflective templates
+	DocumentSetComplexOps     = "templates/%s/document-complex-set-ops.tmpl"
+	DocumentGetComplexOps     = "templates/%s/document-complex-get-ops.tmpl"
+	DocumentSetSimpleOps      = "templates/%s/document-simple-set-ops.tmpl"
+	DocumentSetSimpleSwitchOp = "templates/%s/document-simple-set-switch-op.tmpl"
+	DocumentGetSimpleOps      = "templates/%s/document-simple-get-ops.tmpl"
+	DocumentGetSimpleSwitchOp = "templates/%s/document-simple-get-switch-op.tmpl"
+	DocumentGetOps            = "templates/%s/document-get-ops.tmpl"
 )
 
 func complexTypesTmplList(version string) []string {
@@ -89,27 +95,6 @@ func documentTypeTmplList(version string) []string {
 	return s
 }
 
-func documentSetComplexOpsTmplList(version string) []string {
-	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(DocumentSetComplexOps, version))
-
-	return s
-}
-
-func documentSetSimpleOpsTmplList(version string) []string {
-	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(DocumentSetSimpleOps, version))
-
-	return s
-}
-
-func documentGetOpsTmplList(version string) []string {
-	s := make([]string, 0, 1)
-	s = append(s, fmt.Sprintf(DocumentGetOps, version))
-
-	return s
-}
-
 func documentPathsTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(DocumentPaths, version))
@@ -124,6 +109,13 @@ func documentReadmeTmplList(version string) []string {
 	return s
 }
 
+func documentSetOpsReflective(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetOpsReflective, version))
+
+	return s
+}
+
 func xsdtTypesTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(XsDtTypes, version))
@@ -134,6 +126,67 @@ func xsdtTypesMethodsTmplList(version string) []string {
 	s := make([]string, 0, 1)
 	s = append(s, fmt.Sprintf(XsDtTypesMethods, version))
 	return s
+}
+
+/*
+ * Non reflective templates
+ */
+
+func documentSetComplexOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetComplexOps, version))
+
+	return s
+}
+
+func documentGetComplexOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentGetComplexOps, version))
+
+	return s
+}
+
+func documentSetSimpleOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetSimpleOps, version))
+
+	return s
+}
+
+func documentSimpleSetSwitchOpTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentSetSimpleSwitchOp, version))
+
+	return s
+}
+
+func documentGetSimpleOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentGetSimpleOps, version))
+
+	return s
+}
+
+func documentGetOpsTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentGetOps, version))
+
+	return s
+}
+
+func documentSimpleGetSwitchOpTmplList(version string) []string {
+	s := make([]string, 0, 1)
+	s = append(s, fmt.Sprintf(DocumentGetSimpleSwitchOp, version))
+
+	return s
+}
+
+type EmitStep struct {
+	outFolder   string
+	outFileName string
+	templates   []string
+	formatCode  bool
+	disabled    bool
 }
 
 type GenerationContext struct {
@@ -185,96 +238,161 @@ func emitXSDT(genCtx GenerationContext, outFolder string, formatCode bool) error
 }
 
 func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, formatCode bool) error {
+
+	var emits []EmitStep
+
 	/*
 	 * complex-types for message
 	 */
 	genCtx.PackageName = pkgName
 
+	emits = []EmitStep{
+		{
+			outFolder:   filepath.Join(outFolder, pkgName),
+			outFileName: strings.Join([]string{"complex-types", "go"}, "."),
+			templates:   complexTypesTmplList("v2"),
+			formatCode:  formatCode,
+		},
+		{
+			outFolder:   filepath.Join(outFolder, pkgName),
+			outFileName: strings.Join([]string{"complex-types-ops", "go"}, "."),
+			templates:   complexTypesOpsTmplList("v2"),
+			formatCode:  formatCode,
+		},
+	}
+
+	if pkgName != "common" {
+		emits = append(emits,
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document", "go"}, "."),
+				templates:   documentTypeTmplList("v2"),
+				formatCode:  formatCode,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-paths", "go"}, "."),
+				templates:   documentPathsTmplList("v2"),
+				formatCode:  formatCode,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-set-ops", "go"}, "."),
+				templates:   documentSetOpsReflective("v2"),
+				formatCode:  formatCode,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{pkgName + "_test", "go"}, "."),
+				templates:   documentExampleTmplList("v2"),
+				formatCode:  formatCode,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: "README.md",
+				templates:   documentReadmeTmplList("v2"),
+				formatCode:  false,
+			},
+
+			// Non reflective
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-complex-set-ops", "go"}, "."),
+				templates:   documentSetComplexOpsTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-complex-get-ops", "go"}, "."),
+				templates:   documentGetComplexOpsTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-simple-set-ops", "go"}, "."),
+				templates:   documentSetSimpleOpsTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-simple-set-switch-op", "go"}, "."),
+				templates:   documentSimpleSetSwitchOpTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-simple-get-ops", "go"}, "."),
+				templates:   documentGetSimpleOpsTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+			EmitStep{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"document-simple-get-switch-op", "go"}, "."),
+				templates:   documentSimpleGetSwitchOpTmplList("v2"),
+				formatCode:  formatCode,
+				disabled:    true,
+			},
+		)
+	}
+
 	countComplexTypes := genCtx.Model.CountTypes(pkgName, true)
-	if countComplexTypes > 0 {
-		log.Info().Int("num-types", countComplexTypes).Str("pkg", pkgName).Msg("generation of complex types")
-		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"complex-types", "go"}, "."), complexTypesTmplList("v2"), formatCode); err != nil {
-			return err
-		}
-
-		/*
-		 * complex-types ops for message
-		 */
-		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"complex-types-ops", "go"}, "."), complexTypesOpsTmplList("v2"), formatCode); err != nil {
-			return err
-		}
-
-		/*
-		 * document example
-		 */
-		if pkgName != "common" {
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document", "go"}, "."), documentTypeTmplList("v2"), formatCode); err != nil {
+	log.Info().Int("num-types", countComplexTypes).Str("pkg", pkgName).Msg("generation of complex types")
+	for _, s := range emits {
+		if countComplexTypes > 0 && !s.disabled {
+			if err := emit(genCtx, s.outFolder, s.outFileName, s.templates, s.formatCode); err != nil {
 				return err
 			}
-
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-paths", "go"}, "."), documentPathsTmplList("v2"), formatCode); err != nil {
-				return err
-			}
-
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-complex-set-ops", "go"}, "."), documentSetComplexOpsTmplList("v2"), formatCode); err != nil {
-				return err
-			}
-
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"document-simple-set-ops", "go"}, "."), documentSetSimpleOpsTmplList("v2"), formatCode); err != nil {
-				return err
-			}
-
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{pkgName + "_test", "go"}, "."), documentExampleTmplList("v2"), formatCode); err != nil {
-				return err
-			}
-
-			if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"README", "md"}, "."), documentReadmeTmplList("v2"), false); err != nil {
-				return err
+		} else {
+			fileName := filepath.Join(s.outFolder, s.outFileName)
+			log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output files")
+			err := os.Remove(fileName)
+			if err != nil {
+				log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
 			}
 		}
+	}
 
-	} else {
-		fileName := filepath.Join(outFolder, pkgName, strings.Join([]string{"complex-types", "go"}, "."))
-		log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output files")
-		_ = os.Remove(fileName)
-
-		fileName = filepath.Join(outFolder, pkgName, strings.Join([]string{"complex-types-ops", "go"}, "."))
-		log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output file")
-		_ = os.Remove(fileName)
+	emits = []EmitStep{
+		{
+			outFolder:   filepath.Join(outFolder, pkgName),
+			outFileName: strings.Join([]string{"simple-types", "go"}, "."),
+			templates:   simpleTypesTmplList("v2"),
+			formatCode:  formatCode,
+		},
+		{
+			outFolder:   filepath.Join(outFolder, pkgName),
+			outFileName: strings.Join([]string{"simple-types-ops", "go"}, "."),
+			templates:   simpleTypesOpsTmplList("v2"),
+			formatCode:  formatCode,
+		},
+		{
+			outFolder:   filepath.Join(outFolder, pkgName),
+			outFileName: strings.Join([]string{"util", "go"}, "."),
+			templates:   restrictionUtilTmplList("v2"),
+			formatCode:  formatCode,
+		},
 	}
 
 	countSimpleTypes := genCtx.Model.CountTypes(pkgName, false)
-	if countSimpleTypes > 0 {
-		log.Info().Int("num-types", countSimpleTypes).Str("pkg", pkgName).Msg("generation of simple types")
-		/*
-		 * simple-types for message
-		 */
-		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"simple-types", "go"}, "."), simpleTypesTmplList("v2"), formatCode); err != nil {
-			return err
+	log.Info().Int("num-types", countSimpleTypes).Str("pkg", pkgName).Msg("generation of simple types")
+	for _, s := range emits {
+		if countSimpleTypes > 0 {
+			if err := emit(genCtx, s.outFolder, s.outFileName, s.templates, s.formatCode); err != nil {
+				return err
+			}
+		} else {
+			fileName := filepath.Join(s.outFolder, s.outFileName)
+			log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no simple types found, clearing output files")
+			err := os.Remove(fileName)
+			if err != nil {
+				log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
+			}
 		}
-
-		/*
-		 * simple-types ops for message
-		 */
-		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"simple-types-ops", "go"}, "."), simpleTypesOpsTmplList("v2"), formatCode); err != nil {
-			return err
-		}
-
-		/*
-		 * restriction util for simple types
-		 */
-		if err := emit(genCtx, filepath.Join(outFolder, pkgName), strings.Join([]string{"restriction-util", "go"}, "."), restrictionUtilTmplList("v2"), formatCode); err != nil {
-			return err
-		}
-
-	} else {
-		fileName := filepath.Join(outFolder, pkgName, strings.Join([]string{"simple-types", "go"}, "."))
-		log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no simple types found, clearing output files")
-		_ = os.Remove(fileName)
-
-		fileName = filepath.Join(outFolder, pkgName, strings.Join([]string{"simple-types-ops", "go"}, "."))
-		log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no simple types found, clearing output file")
-		_ = os.Remove(fileName)
 	}
 
 	return nil

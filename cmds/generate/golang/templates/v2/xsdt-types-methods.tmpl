@@ -12,7 +12,10 @@ import (
  * Boolean
  */
 
-const BooleanSample = false
+const (
+   BooleanSample = false
+   BooleanZero = false
+)
 
 func (me Boolean) IsValid(optional bool) bool {
 	return true
@@ -53,7 +56,10 @@ func MustToBoolean(intf interface{}) Boolean {
  * AnyType
  */
 
-const AnyTypeSample = "xsdt.AnyType"
+const (
+   AnyTypeSample = "xsdt.AnyType"
+   AnyTypeZero = ""
+)
 
 func (me AnyType) IsValid(optional bool) bool {
 	return true
@@ -81,7 +87,10 @@ func MustToAnyType(intf interface{}) AnyType {
  * Decimal
  */
 
-const DecimalSample = "100.00"
+const (
+   DecimalSample = "100.00"
+   DecimalZero = ""
+)
 
 func (me Decimal) IsValid(optional bool) bool {
 	return true
@@ -98,7 +107,8 @@ func ToDecimal(intf interface{}) (Decimal, error) {
 		d = fmt.Sprintf("%v", v)
 	case string:
 		d = v
-
+	case Decimal:
+		return v, nil
 	default:
 		return "", fmt.Errorf("not a boolean %v", intf)
 	}
@@ -119,7 +129,10 @@ func MustToDecimal(intf interface{}) Decimal {
  * String
  */
 
-const StringSample = "xsdt.String"
+const (
+   StringSample = "string value"
+   StringZero = ""
+)
 
 func (me String) IsValid(optional bool) bool {
 	return true

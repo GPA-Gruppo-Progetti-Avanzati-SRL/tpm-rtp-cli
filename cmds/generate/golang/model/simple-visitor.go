@@ -25,6 +25,30 @@ func (si SimpleVisitedItem) TypeWithPackageTrimmed(currentPackage string) string
 	return n
 }
 
+// NameOfTypeFunction returns the package if it is specified and doesn't match the one passed as param.
+// optionally you can set the flag to add a trailing dot in the string
+func (si SimpleVisitedItem) NameOfTypeFunction(functNamePrefix string, currentPackage string) string {
+
+	var sb strings.Builder
+
+	p := ""
+	n := si.Type
+	ndx := strings.Index(n, ".")
+	if ndx > 0 {
+		p = si.Type[0:ndx]
+		n = si.Type[ndx+1:]
+	}
+
+	if p != currentPackage {
+		sb.WriteString(p)
+		sb.WriteString(".")
+	}
+
+	sb.WriteString(functNamePrefix)
+	sb.WriteString(n)
+	return sb.String()
+}
+
 func (si SimpleVisitedItem) String() string {
 	modifier := ""
 	if si.IsPtr {
@@ -42,8 +66,12 @@ func (si SimpleVisitedItem) String() string {
 type SimpleVisitorPath []SimpleVisitedItem
 
 func (p SimpleVisitorPath) Identifier() string {
-	v := p.Value()
-	return strings.Replace(v, ".", "_", -1)
+	v := strings.TrimPrefix(p.Value(), "/Doc/")
+	v = strings.Replace(v, ".", "_", -1)
+	v = strings.Replace(v, "/", "_", -1)
+	v = strings.Replace(v, "*", "", -1)
+	v = strings.Replace(v, "[]", "", -1)
+	return v
 }
 
 func (p SimpleVisitorPath) ItemPathReference(itemNdx int) string {
@@ -78,7 +106,16 @@ func (p SimpleVisitorPath) Value() string {
 		switch ndx {
 		case 0:
 			// first element is _self of type document
+			// sb.WriteString("/Doc")
 		case 1:
+			/*
+				if item.IsPtr {
+					sb.WriteString("*")
+				}
+				if item.IsArray {
+					sb.WriteString("[]")
+				}
+			*/
 			sb.WriteString(item.Name)
 		default:
 			sb.WriteString(".")

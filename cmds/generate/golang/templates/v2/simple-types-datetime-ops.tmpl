@@ -2,6 +2,7 @@
 
 const (
     {{ .Name }}Sample = "Value"
+    {{ .Name }}Zero = ""
 )
 
 {{- if .HasPatternRestriction }}
@@ -40,6 +41,10 @@ func To{{ .Name }}(tm interface{}) ({{ .Name }}, error) {
 	switch typedTm := tm.(type) {
 	case time.Time:
 		return {{ .Name }}(typedTm.Format(time.RFC3339)), nil
+	case string:
+		return {{ .Name }}(typedTm), nil
+	case {{ .Name }}:
+        return typedTm, nil
 	}
 
 	return "", fmt.Errorf("cannot convert %v to {{ .Name }}", tm)

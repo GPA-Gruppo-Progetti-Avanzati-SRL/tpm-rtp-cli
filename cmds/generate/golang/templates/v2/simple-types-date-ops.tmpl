@@ -1,6 +1,7 @@
 {{ define "simple-types-date-ops" }}
 const (
     {{ .Name }}Sample = "Value"
+    {{ .Name }}Zero = ""
 )
 {{- if .HasPatternRestriction }}
 var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.String}}`)
@@ -38,6 +39,10 @@ func To{{ .Name }}(tm interface{}) ({{ .Name }}, error) {
 	switch typedTm := tm.(type) {
 	case time.Time:
 		return {{ .Name }}(typedTm.Format("2006-01-02")), nil
+	case string:
+		return {{ .Name }}(typedTm), nil
+	case {{ .Name }}:
+        return typedTm, nil
 	}
 
 	return "", fmt.Errorf("cannot convert %v to {{ .Name }}", tm)
