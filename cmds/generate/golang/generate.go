@@ -461,6 +461,11 @@ func getTemplateUtilityFunctions(gm *model.GoModel) template.FuncMap {
 			_ = gm.VisitDocument(pkgName, v)
 			return v
 		},
+		"typesVisit": func(pkgName string) *model.TypeVisitor {
+			v := &model.TypeVisitor{}
+			_ = gm.VisitDocument(pkgName, v)
+			return v
+		},
 		"mustToFunctionSignature": func(typeName string) string {
 			ndx := strings.Index(typeName, ".")
 			if ndx > 0 {

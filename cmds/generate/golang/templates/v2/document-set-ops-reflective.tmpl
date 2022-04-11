@@ -12,7 +12,6 @@ import (
 )
 
 {{ $packageName := .PackageName }}
-{{ $tree := simpleVisit .PackageName }}
 
 func (d *Document) Set(path string, src interface{}) error {
 
@@ -50,25 +49,24 @@ func convertAssignRows(dest, src interface{}) error {
 }
 */
 
+{{ $types := typesVisit .PackageName }}
 func copy2Dest(docPath string, dest, src interface{}) error {
 
-   var err error
-  switch docPath {
-{{- range $tree.Paths}}
-{{ $lastNode := .LastItem }}
-{{- if and (ne $lastNode.Name "_self") (not $lastNode.IsStruct) }}
-  case Path_{{ .Identifier }}:
-        d, _ := dest.(*{{$lastNode.TypeWithPackageTrimmed $packageName}})
-        if d == nil {
-  			return errors.New("nil pointer... in unmarshalling {{$lastNode.TypeWithPackageTrimmed $packageName}} data for" + docPath)
+	var err error
+	switch typedDest := dest.(type) {
+{{- range $nm, $tp := $types.Types}}
+{{- if not $tp.IsStruct }}
+  case *{{$tp.TypeWithPackageTrimmed $packageName}}:
+        if typedDest == nil {
+  			return errors.New("nil pointer... in unmarshalling {{$tp.TypeWithPackageTrimmed $packageName}} data for" + docPath)
 	    }
 
-  		*d, err = {{$lastNode.NameOfTypeFunction "To" $packageName }}(src)
+  		*typedDest, err = {{$tp.NameOfTypeFunction "To" $packageName }}(src)
   		return err
 {{- end }}
 {{- end }}
    default:
-        return fmt.Errorf("could not find path to node %s", docPath)
+        return fmt.Errorf("could not find the type to node %s of type %v", docPath, dest)
  }
 
  return nil

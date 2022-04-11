@@ -3,7 +3,6 @@
 package common
 
 import (
-	"fmt"
 	"reflect"
 	"regexp"
 	"runtime"
@@ -243,7 +242,7 @@ func FieldByIndexes(v reflect.Value, indexes []int) reflect.Value {
 			if v.Kind() == reflect.Slice {
 				if v.Len() == 0 {
 					alloc := reflect.New(Deref(v.Type().Elem()))
-					fmt.Println(alloc.Kind(), alloc.Type(), v.Kind(), v.Type().Elem().Kind())
+					// fmt.Println(alloc.Kind(), alloc.Type(), v.Kind(), v.Type().Elem().Kind())
 					v.Set(reflect.Append(v, alloc.Elem()))
 				}
 

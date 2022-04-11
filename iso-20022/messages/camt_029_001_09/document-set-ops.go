@@ -1,6 +1,6 @@
-// Package pain_014_001_07
+// Package camt_029_001_09
 // Do not Edit. This stuff it's been automatically generated.
-package pain_014_001_07
+package camt_029_001_09
 
 import (
 	"errors"
@@ -85,6 +85,27 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToBICFIDec2014Identifier(src)
 		return err
+	case *common.CancellationIndividualStatus1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.CancellationIndividualStatus1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToCancellationIndividualStatus1Code(src)
+		return err
+	case *common.ChargeBearerType1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ChargeBearerType1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToChargeBearerType1Code(src)
+		return err
+	case *common.ClearingChannel2Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ClearingChannel2Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToClearingChannel2Code(src)
+		return err
 	case *common.CountryCode:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.CountryCode data for" + docPath)
@@ -113,6 +134,13 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToDocumentType6Code(src)
 		return err
+	case *common.Exact2NumericText:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.Exact2NumericText data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExact2NumericText(src)
+		return err
 	case *common.Exact4AlphaNumericText:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.Exact4AlphaNumericText data for" + docPath)
@@ -134,12 +162,33 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalCashAccountType1Code(src)
 		return err
+	case *common.ExternalCashClearingSystem1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalCashClearingSystem1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalCashClearingSystem1Code(src)
+		return err
 	case *common.ExternalCategoryPurpose1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalCategoryPurpose1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToExternalCategoryPurpose1Code(src)
+		return err
+	case *common.ExternalChargeType1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalChargeType1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalChargeType1Code(src)
+		return err
+	case *common.ExternalClaimNonReceiptRejection1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalClaimNonReceiptRejection1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalClaimNonReceiptRejection1Code(src)
 		return err
 	case *common.ExternalClearingSystemIdentification1Code:
 		if typedDest == nil {
@@ -155,26 +204,12 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalDiscountAmountType1Code(src)
 		return err
-	case *common.ExternalDocumentFormat1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalDocumentFormat1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalDocumentFormat1Code(src)
-		return err
 	case *common.ExternalDocumentLineType1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalDocumentLineType1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToExternalDocumentLineType1Code(src)
-		return err
-	case *common.ExternalDocumentType1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalDocumentType1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalDocumentType1Code(src)
 		return err
 	case *common.ExternalFinancialInstitutionIdentification1Code:
 		if typedDest == nil {
@@ -190,12 +225,26 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalGarnishmentType1Code(src)
 		return err
+	case *common.ExternalInvestigationExecutionConfirmation1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalInvestigationExecutionConfirmation1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalInvestigationExecutionConfirmation1Code(src)
+		return err
 	case *common.ExternalLocalInstrument1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalLocalInstrument1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToExternalLocalInstrument1Code(src)
+		return err
+	case *common.ExternalMandateSetupReason1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalMandateSetupReason1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalMandateSetupReason1Code(src)
 		return err
 	case *common.ExternalOrganisationIdentification1Code:
 		if typedDest == nil {
@@ -204,19 +253,26 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalOrganisationIdentification1Code(src)
 		return err
-	case *common.ExternalPaymentGroupStatus1Code:
+	case *common.ExternalPaymentCancellationRejection1Code:
 		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentGroupStatus1Code data for" + docPath)
+			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentCancellationRejection1Code data for" + docPath)
 		}
 
-		*typedDest, err = common.ToExternalPaymentGroupStatus1Code(src)
+		*typedDest, err = common.ToExternalPaymentCancellationRejection1Code(src)
 		return err
-	case *common.ExternalPaymentTransactionStatus1Code:
+	case *common.ExternalPaymentCompensationReason1Code:
 		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentTransactionStatus1Code data for" + docPath)
+			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentCompensationReason1Code data for" + docPath)
 		}
 
-		*typedDest, err = common.ToExternalPaymentTransactionStatus1Code(src)
+		*typedDest, err = common.ToExternalPaymentCompensationReason1Code(src)
+		return err
+	case *common.ExternalPaymentModificationRejection1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentModificationRejection1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalPaymentModificationRejection1Code(src)
 		return err
 	case *common.ExternalPersonIdentification1Code:
 		if typedDest == nil {
@@ -232,6 +288,13 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalProxyAccountType1Code(src)
 		return err
+	case *common.ExternalPurpose1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalPurpose1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalPurpose1Code(src)
+		return err
 	case *common.ExternalServiceLevel1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalServiceLevel1Code data for" + docPath)
@@ -239,19 +302,26 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalServiceLevel1Code(src)
 		return err
-	case *common.ExternalStatusReason1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalStatusReason1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalStatusReason1Code(src)
-		return err
 	case *common.ExternalTaxAmountType1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalTaxAmountType1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToExternalTaxAmountType1Code(src)
+		return err
+	case *common.Frequency6Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.Frequency6Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToFrequency6Code(src)
+		return err
+	case *common.GroupCancellationStatus1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.GroupCancellationStatus1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToGroupCancellationStatus1Code(src)
 		return err
 	case *common.IBAN2007Identifier:
 		if typedDest == nil {
@@ -281,19 +351,19 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToLEIIdentifier(src)
 		return err
+	case *common.Max1025Text:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.Max1025Text data for" + docPath)
+		}
+
+		*typedDest, err = common.ToMax1025Text(src)
+		return err
 	case *common.Max105Text:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.Max105Text data for" + docPath)
 		}
 
 		*typedDest, err = common.ToMax105Text(src)
-		return err
-	case *common.Max10MbBinary:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.Max10MbBinary data for" + docPath)
-		}
-
-		*typedDest, err = common.ToMax10MbBinary(src)
 		return err
 	case *common.Max128Text:
 		if typedDest == nil {
@@ -400,12 +470,33 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToPriority2Code(src)
 		return err
+	case *common.SequenceType3Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.SequenceType3Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToSequenceType3Code(src)
+		return err
+	case *common.SettlementMethod1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.SettlementMethod1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToSettlementMethod1Code(src)
+		return err
 	case *common.TaxRecordPeriod1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.TaxRecordPeriod1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToTaxRecordPeriod1Code(src)
+		return err
+	case *common.TransactionIndividualStatus1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.TransactionIndividualStatus1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToTransactionIndividualStatus1Code(src)
 		return err
 	case *common.UUIDv4Identifier:
 		if typedDest == nil {
@@ -434,13 +525,6 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 		}
 
 		*typedDest, err = xsdt.ToDecimal(src)
-		return err
-	case *xsdt.String:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling xsdt.String data for" + docPath)
-		}
-
-		*typedDest, err = xsdt.ToString(src)
 		return err
 	default:
 		return fmt.Errorf("could not find the type to node %s of type %v", docPath, dest)
