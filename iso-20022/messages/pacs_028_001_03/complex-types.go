@@ -7,6 +7,15 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
 
+// OriginalGroupInformation27 type definition
+type OriginalGroupInformation27 struct {
+	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
+	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
+	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
+}
+
 // FIToFIPaymentStatusRequestV03 type definition
 type FIToFIPaymentStatusRequestV03 struct {
 	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
@@ -37,13 +46,4 @@ type GroupHeader91 struct {
 	CreDtTm  common.ISODateTime                                   `xml:"CreDtTm"`
 	InstgAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstgAgt,omitempty"`
 	InstdAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
-}
-
-// OriginalGroupInformation27 type definition
-type OriginalGroupInformation27 struct {
-	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
-	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
-	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
 }

@@ -1,6 +1,6 @@
-// Package pain_014_001_07
+// Package pain_013_001_07
 // Do not Edit. This stuff it's been automatically generated.
-package pain_014_001_07
+package pain_013_001_07
 
 import (
 	"errors"
@@ -11,13 +11,6 @@ import (
 )
 
 func (d *Document) Set(path string, src interface{}) error {
-
-	/*
-		path = strings.TrimPrefix(path, "/Doc/")
-		path = strings.Replace(path, "*", "", -1)
-		path = strings.Replace(path, "[]", "", -1)
-		path = strings.Replace(path, "/", ".", -1)
-	*/
 
 	v := reflect.ValueOf(d)
 	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
@@ -31,20 +24,28 @@ func (d *Document) Set(path string, src interface{}) error {
 	return copy2Dest(path, values[0], src)
 }
 
-/*
-func convertAssignRows(dest, src interface{}) error {
+func (d *Document) Get(path string) (interface{}, error) {
 
-	switch d := dest.(type) {
-	case *common.Max35Text:
-		if d == nil {
-			return errors.New("nil pointer... in unmarshalling Max35Text data")
-		}
-		*d = common.MustToMax35Text(src)
-		return nil
+	v := reflect.ValueOf(d)
+	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	values := make([]interface{}, 1)
+	err := fieldsByTraversal(v, fields, values, true)
+	if err != nil {
+		return nil, err
 	}
-	return nil
+
+	/*
+		rv := reflect.ValueOf(values[0])
+		fmt.Println("Indirect type is:", reflect.Indirect(rv), reflect.Indirect(rv).Type(), rv.Kind(), rv.Elem(), rv.Elem().Type()) // prints main.CustomStruct
+
+		if tv, ok := values[0].(*common.Max35Text); ok {
+			return *tv, nil
+		}
+	*/
+
+	return deref(path, values[0])
 }
-*/
 
 func copy2Dest(docPath string, dest, src interface{}) error {
 
@@ -84,6 +85,27 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 		}
 
 		*typedDest, err = common.ToBICFIDec2014Identifier(src)
+		return err
+	case *common.ChargeBearerType1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ChargeBearerType1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToChargeBearerType1Code(src)
+		return err
+	case *common.ChequeDelivery1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ChequeDelivery1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToChequeDelivery1Code(src)
+		return err
+	case *common.ChequeType2Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ChequeType2Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToChequeType2Code(src)
 		return err
 	case *common.CountryCode:
 		if typedDest == nil {
@@ -204,20 +226,6 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalOrganisationIdentification1Code(src)
 		return err
-	case *common.ExternalPaymentGroupStatus1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentGroupStatus1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalPaymentGroupStatus1Code(src)
-		return err
-	case *common.ExternalPaymentTransactionStatus1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalPaymentTransactionStatus1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalPaymentTransactionStatus1Code(src)
-		return err
 	case *common.ExternalPersonIdentification1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalPersonIdentification1Code data for" + docPath)
@@ -232,19 +240,19 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToExternalProxyAccountType1Code(src)
 		return err
+	case *common.ExternalPurpose1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.ExternalPurpose1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToExternalPurpose1Code(src)
+		return err
 	case *common.ExternalServiceLevel1Code:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.ExternalServiceLevel1Code data for" + docPath)
 		}
 
 		*typedDest, err = common.ToExternalServiceLevel1Code(src)
-		return err
-	case *common.ExternalStatusReason1Code:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.ExternalStatusReason1Code data for" + docPath)
-		}
-
-		*typedDest, err = common.ToExternalStatusReason1Code(src)
 		return err
 	case *common.ExternalTaxAmountType1Code:
 		if typedDest == nil {
@@ -274,6 +282,13 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToISODateTime(src)
 		return err
+	case *common.Instruction3Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.Instruction3Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToInstruction3Code(src)
+		return err
 	case *common.LEIIdentifier:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.LEIIdentifier data for" + docPath)
@@ -281,19 +296,19 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToLEIIdentifier(src)
 		return err
-	case *common.Max105Text:
-		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.Max105Text data for" + docPath)
-		}
-
-		*typedDest, err = common.ToMax105Text(src)
-		return err
 	case *common.Max10MbBinary:
 		if typedDest == nil {
 			return errors.New("nil pointer... in unmarshalling common.Max10MbBinary data for" + docPath)
 		}
 
 		*typedDest, err = common.ToMax10MbBinary(src)
+		return err
+	case *common.Max10Text:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.Max10Text data for" + docPath)
+		}
+
+		*typedDest, err = common.ToMax10Text(src)
 		return err
 	case *common.Max128Text:
 		if typedDest == nil {
@@ -372,12 +387,12 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 		*typedDest, err = common.ToNamePrefix2Code(src)
 		return err
-	case *common.PaymentMethod4Code:
+	case *common.PaymentMethod7Code:
 		if typedDest == nil {
-			return errors.New("nil pointer... in unmarshalling common.PaymentMethod4Code data for" + docPath)
+			return errors.New("nil pointer... in unmarshalling common.PaymentMethod7Code data for" + docPath)
 		}
 
-		*typedDest, err = common.ToPaymentMethod4Code(src)
+		*typedDest, err = common.ToPaymentMethod7Code(src)
 		return err
 	case *common.PhoneNumber:
 		if typedDest == nil {
@@ -399,6 +414,20 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 		}
 
 		*typedDest, err = common.ToPriority2Code(src)
+		return err
+	case *common.RegulatoryReportingType1Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.RegulatoryReportingType1Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToRegulatoryReportingType1Code(src)
+		return err
+	case *common.RemittanceLocationMethod2Code:
+		if typedDest == nil {
+			return errors.New("nil pointer... in unmarshalling common.RemittanceLocationMethod2Code data for" + docPath)
+		}
+
+		*typedDest, err = common.ToRemittanceLocationMethod2Code(src)
 		return err
 	case *common.TaxRecordPeriod1Code:
 		if typedDest == nil {
@@ -446,5 +475,135 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 		return fmt.Errorf("could not find the type to node %s of type %v", docPath, dest)
 	}
 
-	return nil
+}
+
+func deref(docPath string, val interface{}) (interface{}, error) {
+
+	var err error
+	switch tv := val.(type) {
+	case *common.ActiveCurrencyCode:
+		return *tv, nil
+	case *common.ActiveOrHistoricCurrencyCode:
+		return *tv, nil
+	case *common.AddressType2Code:
+		return *tv, nil
+	case *common.AnyBICDec2014Identifier:
+		return *tv, nil
+	case *common.BICFIDec2014Identifier:
+		return *tv, nil
+	case *common.ChargeBearerType1Code:
+		return *tv, nil
+	case *common.ChequeDelivery1Code:
+		return *tv, nil
+	case *common.ChequeType2Code:
+		return *tv, nil
+	case *common.CountryCode:
+		return *tv, nil
+	case *common.CreditDebitCode:
+		return *tv, nil
+	case *common.DocumentType3Code:
+		return *tv, nil
+	case *common.DocumentType6Code:
+		return *tv, nil
+	case *common.Exact4AlphaNumericText:
+		return *tv, nil
+	case *common.ExternalAccountIdentification1Code:
+		return *tv, nil
+	case *common.ExternalCashAccountType1Code:
+		return *tv, nil
+	case *common.ExternalCategoryPurpose1Code:
+		return *tv, nil
+	case *common.ExternalClearingSystemIdentification1Code:
+		return *tv, nil
+	case *common.ExternalDiscountAmountType1Code:
+		return *tv, nil
+	case *common.ExternalDocumentFormat1Code:
+		return *tv, nil
+	case *common.ExternalDocumentLineType1Code:
+		return *tv, nil
+	case *common.ExternalDocumentType1Code:
+		return *tv, nil
+	case *common.ExternalFinancialInstitutionIdentification1Code:
+		return *tv, nil
+	case *common.ExternalGarnishmentType1Code:
+		return *tv, nil
+	case *common.ExternalLocalInstrument1Code:
+		return *tv, nil
+	case *common.ExternalOrganisationIdentification1Code:
+		return *tv, nil
+	case *common.ExternalPersonIdentification1Code:
+		return *tv, nil
+	case *common.ExternalProxyAccountType1Code:
+		return *tv, nil
+	case *common.ExternalPurpose1Code:
+		return *tv, nil
+	case *common.ExternalServiceLevel1Code:
+		return *tv, nil
+	case *common.ExternalTaxAmountType1Code:
+		return *tv, nil
+	case *common.IBAN2007Identifier:
+		return *tv, nil
+	case *common.ISODate:
+		return *tv, nil
+	case *common.ISODateTime:
+		return *tv, nil
+	case *common.Instruction3Code:
+		return *tv, nil
+	case *common.LEIIdentifier:
+		return *tv, nil
+	case *common.Max10MbBinary:
+		return *tv, nil
+	case *common.Max10Text:
+		return *tv, nil
+	case *common.Max128Text:
+		return *tv, nil
+	case *common.Max140Text:
+		return *tv, nil
+	case *common.Max15NumericText:
+		return *tv, nil
+	case *common.Max16Text:
+		return *tv, nil
+	case *common.Max2048Text:
+		return *tv, nil
+	case *common.Max34Text:
+		return *tv, nil
+	case *common.Max350Text:
+		return *tv, nil
+	case *common.Max35Text:
+		return *tv, nil
+	case *common.Max4Text:
+		return *tv, nil
+	case *common.Max70Text:
+		return *tv, nil
+	case *common.NamePrefix2Code:
+		return *tv, nil
+	case *common.PaymentMethod7Code:
+		return *tv, nil
+	case *common.PhoneNumber:
+		return *tv, nil
+	case *common.PreferredContactMethod1Code:
+		return *tv, nil
+	case *common.Priority2Code:
+		return *tv, nil
+	case *common.RegulatoryReportingType1Code:
+		return *tv, nil
+	case *common.RemittanceLocationMethod2Code:
+		return *tv, nil
+	case *common.TaxRecordPeriod1Code:
+		return *tv, nil
+	case *common.UUIDv4Identifier:
+		return *tv, nil
+	case *xsdt.AnyType:
+		return *tv, nil
+	case *xsdt.Boolean:
+		return *tv, nil
+	case *xsdt.Decimal:
+		return *tv, nil
+	case *xsdt.String:
+		return *tv, nil
+	default:
+		err = fmt.Errorf("could not find the type to node %s of type %v", docPath, val)
+	}
+
+	return val, err
 }

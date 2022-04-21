@@ -253,8 +253,9 @@ func TestMain(m *testing.M) {
 												},
 											},
 											Rsn: &camt_055_001_08.CancellationReason33Choice{
-												Cd: common.MustToExternalCancellationReason1Code("error in previous invoice's amount"),
+												Cd: common.MustToExternalCancellationReason1Code("AM09"),
 											},
+											AddtlInf: []common.Max105Text{common.MustToMax105Text("error in previous invoice's amount")},
 										},
 									},
 									OrgnlTxRef: &common.OriginalTransactionReference28{

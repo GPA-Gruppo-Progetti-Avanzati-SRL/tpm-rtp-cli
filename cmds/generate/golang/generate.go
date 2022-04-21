@@ -35,7 +35,7 @@ const (
 	DocumentReadme             = "templates/%s/document-readme.tmpl"
 	DocumentExample            = "templates/%s/document-example.tmpl"
 	DocumentExampleNode        = "templates/%s/document-example-node.tmpl"
-	DocumentSetOpsReflective   = "templates/%s/document-set-ops-reflective.tmpl"
+	DocumentSetOpsReflective   = "templates/%s/document-ops-reflective.tmpl"
 	// DocumentSetComplexOps non reflective templates
 	DocumentSetComplexOps     = "templates/%s/document-complex-set-ops.tmpl"
 	DocumentGetComplexOps     = "templates/%s/document-complex-get-ops.tmpl"
@@ -277,7 +277,7 @@ func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, for
 			},
 			EmitStep{
 				outFolder:   filepath.Join(outFolder, pkgName),
-				outFileName: strings.Join([]string{"document-set-ops", "go"}, "."),
+				outFileName: strings.Join([]string{"document-ops", "go"}, "."),
 				templates:   documentSetOpsReflective("v2"),
 				formatCode:  formatCode,
 			},
@@ -348,53 +348,56 @@ func emitPackage(pkgName string, genCtx GenerationContext, outFolder string, for
 				return err
 			}
 		} else {
-			fileName := filepath.Join(s.outFolder, s.outFileName)
-			log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output files")
-			err := os.Remove(fileName)
-			if err != nil {
-				log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
+			if !s.disabled {
+				fileName := filepath.Join(s.outFolder, s.outFileName)
+				log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no complex types found, clearing output files")
+				err := os.Remove(fileName)
+				if err != nil {
+					log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
+				}
 			}
 		}
 	}
 
-	emits = []EmitStep{
-		{
-			outFolder:   filepath.Join(outFolder, pkgName),
-			outFileName: strings.Join([]string{"simple-types", "go"}, "."),
-			templates:   simpleTypesTmplList("v2"),
-			formatCode:  formatCode,
-		},
-		{
-			outFolder:   filepath.Join(outFolder, pkgName),
-			outFileName: strings.Join([]string{"simple-types-ops", "go"}, "."),
-			templates:   simpleTypesOpsTmplList("v2"),
-			formatCode:  formatCode,
-		},
-		{
-			outFolder:   filepath.Join(outFolder, pkgName),
-			outFileName: strings.Join([]string{"util", "go"}, "."),
-			templates:   restrictionUtilTmplList("v2"),
-			formatCode:  formatCode,
-		},
-	}
+	if pkgName == "common" {
+		emits = []EmitStep{
+			{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"simple-types", "go"}, "."),
+				templates:   simpleTypesTmplList("v2"),
+				formatCode:  formatCode,
+			},
+			{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"simple-types-ops", "go"}, "."),
+				templates:   simpleTypesOpsTmplList("v2"),
+				formatCode:  formatCode,
+			},
+			{
+				outFolder:   filepath.Join(outFolder, pkgName),
+				outFileName: strings.Join([]string{"util", "go"}, "."),
+				templates:   restrictionUtilTmplList("v2"),
+				formatCode:  formatCode,
+			},
+		}
 
-	countSimpleTypes := genCtx.Model.CountTypes(pkgName, false)
-	log.Info().Int("num-types", countSimpleTypes).Str("pkg", pkgName).Msg("generation of simple types")
-	for _, s := range emits {
-		if countSimpleTypes > 0 {
-			if err := emit(genCtx, s.outFolder, s.outFileName, s.templates, s.formatCode); err != nil {
-				return err
-			}
-		} else {
-			fileName := filepath.Join(s.outFolder, s.outFileName)
-			log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no simple types found, clearing output files")
-			err := os.Remove(fileName)
-			if err != nil {
-				log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
+		countSimpleTypes := genCtx.Model.CountTypes(pkgName, false)
+		log.Info().Int("num-types", countSimpleTypes).Str("pkg", pkgName).Msg("generation of simple types")
+		for _, s := range emits {
+			if countSimpleTypes > 0 {
+				if err := emit(genCtx, s.outFolder, s.outFileName, s.templates, s.formatCode); err != nil {
+					return err
+				}
+			} else {
+				fileName := filepath.Join(s.outFolder, s.outFileName)
+				log.Info().Str("file", fileName).Str("pkg", pkgName).Msg("no simple types found, clearing output files")
+				err := os.Remove(fileName)
+				if err != nil {
+					log.Warn().Err(err).Str("file", fileName).Msg("error deleting unwanted file")
+				}
 			}
 		}
 	}
-
 	return nil
 }
 

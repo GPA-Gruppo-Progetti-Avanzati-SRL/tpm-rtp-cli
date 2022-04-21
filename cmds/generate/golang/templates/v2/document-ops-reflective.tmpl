@@ -15,13 +15,6 @@ import (
 
 func (d *Document) Set(path string, src interface{}) error {
 
-    /*
-	path = strings.TrimPrefix(path, "/Doc/")
-	path = strings.Replace(path, "*", "", -1)
-	path = strings.Replace(path, "[]", "", -1)
-	path = strings.Replace(path, "/", ".", -1)
-	*/
-
 	v := reflect.ValueOf(d)
 	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
 
@@ -34,20 +27,28 @@ func (d *Document) Set(path string, src interface{}) error {
 	return copy2Dest(path, values[0], src)
 }
 
-/*
-func convertAssignRows(dest, src interface{}) error {
+func (d *Document) Get(path string) (interface{}, error) {
 
-	switch d := dest.(type) {
-	case *common.Max35Text:
-		if d == nil {
-			return errors.New("nil pointer... in unmarshalling Max35Text data")
-		}
-		*d = common.MustToMax35Text(src)
-		return nil
+	v := reflect.ValueOf(d)
+	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	values := make([]interface{}, 1)
+	err := fieldsByTraversal(v, fields, values, true)
+	if err != nil {
+		return nil, err
 	}
-	return nil
+
+	/*
+		rv := reflect.ValueOf(values[0])
+		fmt.Println("Indirect type is:", reflect.Indirect(rv), reflect.Indirect(rv).Type(), rv.Kind(), rv.Elem(), rv.Elem().Type()) // prints main.CustomStruct
+
+		if tv, ok := values[0].(*common.Max35Text); ok {
+			return *tv, nil
+		}
+	*/
+
+	return deref(path, values[0])
 }
-*/
 
 {{ $types := typesVisit .PackageName }}
 func copy2Dest(docPath string, dest, src interface{}) error {
@@ -69,6 +70,21 @@ func copy2Dest(docPath string, dest, src interface{}) error {
         return fmt.Errorf("could not find the type to node %s of type %v", docPath, dest)
  }
 
- return nil
 }
 
+func deref(docPath string, val interface{}) (interface{}, error) {
+
+    var err error
+	switch tv := val.(type) {
+{{- range $nm, $tp := $types.Types}}
+{{- if not $tp.IsStruct }}
+  case *{{$tp.TypeWithPackageTrimmed $packageName}}:
+        return *tv, nil
+{{- end }}
+{{- end }}
+   default:
+        err = fmt.Errorf("could not find the type to node %s of type %v", docPath, val)
+ }
+
+ return val, err
+}

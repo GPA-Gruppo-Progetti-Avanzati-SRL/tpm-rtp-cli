@@ -3,7 +3,9 @@ package model
 import (
 	"aqwari.net/xml/xsd"
 	"fmt"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/cmds/generate/registry"
+	"github.com/rs/zerolog/log"
 	"strings"
 )
 
@@ -110,6 +112,37 @@ func (gs GoTypeDefinition) HasAnyRestriction() bool {
 	}
 
 	return false
+}
+
+func (gs GoTypeDefinition) GenerateSampleValue() string {
+
+	s := "unrestricted-string"
+	if gs.HasDecimalRestriction() {
+		log.Warn().Interface("restriction", gs.Restrictions).Msg("unsupported decimal restriction")
+	}
+
+	if gs.HasLengthRestriction() {
+		l := gs.Restrictions.Length
+		if l == 0 {
+			l = gs.Restrictions.MinLength + (gs.Restrictions.MaxLength-gs.Restrictions.MinLength)/2
+		}
+
+		s = util.GenerateStringOfLength(l)
+	}
+
+	if gs.HasEnumRestriction() {
+		s = gs.Restrictions.Enum[len(gs.Restrictions.Enum)/2]
+	}
+
+	if gs.HasPatternRestriction() {
+		var err error
+		s, err = util.GenerateStringOfPattern(gs.Restrictions.Pattern.String(), -1)
+		if err != nil {
+			log.Warn().Err(err).Str("pattern", gs.Restrictions.Pattern.String()).Msg("error of pattern")
+		}
+	}
+
+	return s
 }
 
 type GoType struct {

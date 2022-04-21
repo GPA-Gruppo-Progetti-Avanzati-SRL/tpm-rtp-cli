@@ -172,7 +172,10 @@ func TestDocumentPain_013_001_07_SetOps(t *testing.T) {
 
 func TestDocumentPain_013_001_07_SetOp(t *testing.T) {
 	d := pain_013_001_07.NewDocument()
-	d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, common.MustToMax35Text("pain013-DS01-20220322"))
+	err := d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, common.MustToMax35Text("pain013-DS01-20220322"))
+	require.NoError(t, err)
+	err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, common.MustToMax35Text("123456789"))
+	require.NoError(t, err)
 
 	b, err := d.ToXML()
 	require.NoError(t, err)
@@ -180,4 +183,39 @@ func TestDocumentPain_013_001_07_SetOp(t *testing.T) {
 	err = ioutil.WriteFile(Example_Pain_013_001_07_1, b, fs.ModePerm)
 	require.NoError(t, err)
 	defer os.Remove(Example_Pain_013_001_07_1)
+
+	v, err := d.Get(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId)
+	require.NoError(t, err)
+	t.Logf("%s --> %v of %T", pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, v, v)
+
+	v, err = d.Get(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id)
+	require.NoError(t, err)
+	t.Logf("%s --> %v of %T", pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, v, v)
+
+	// properties not set.
+	v, err = d.Get(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm)
+	require.NoError(t, err)
+	t.Logf("%s --> %v of %T", pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm, v, v)
+
+	v, err = d.Get(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm)
+	require.NoError(t, err)
+	t.Logf("%s --> %v of %T", pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_PstlAdr_AdrTp, v, v)
+
+	b1, err := d.ToXML()
+	require.NoError(t, err)
+
+	err = ioutil.WriteFile(Example_Pain_013_001_07_2, b1, fs.ModePerm)
+	require.NoError(t, err)
+	defer os.Remove(Example_Pain_013_001_07_2)
+
+	require.Equal(t, len(b), len(b1), "size of arrays are different")
+	numOfDiffs := 0
+	for i := 0; i < len(b); i++ {
+		if b[i] != b1[i] {
+			numOfDiffs++
+		}
+	}
+
+	// The difference might also due to the use of time.Now() function
+	require.Equal(t, numOfDiffs, 0, "number of diffs in project")
 }

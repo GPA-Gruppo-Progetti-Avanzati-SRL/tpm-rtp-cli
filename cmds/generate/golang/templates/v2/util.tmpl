@@ -11,15 +11,32 @@ import (
 )
 
 func isLengthRestrictionValid(s string, length, minLength, maxLength int) bool {
+	if length > 0 && len(s) != length {
+		return false
+	}
+
+	if minLength > 0 && len(s) < minLength {
+		return false
+	}
+
+	if maxLength > 0 && len(s) > maxLength {
+		return false
+	}
+
 	return true
 }
 
 func isEnumRestrictionValid(s string, enums []string) bool {
-	return true
+	for _, e := range enums {
+		if s == e  {
+			return true
+		}
+	}
+	return false
 }
 
 func isPatternRestrictionValid(s string, rexp *regexp.Regexp) bool {
-	return true
+	return rexp.MatchString(s)
 }
 
 func generateSampleDataWithLengthRestriction(length, minLength, maxLength int) string {

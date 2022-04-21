@@ -12,7 +12,7 @@ I hope you will find this stuff edible to get life easier down the road consider
 * arrays are a matter of the schema where plurality gets in the way,
 * pointers are a fact of life when generating empty structs is not an option
 * those messages can have a number of nodes ranging from 3000 up to 8500 (considering leaves and intermediate)
-* real cases in general set a very few number of nodes: might be in the range of 30 or 40 leaves: more intermediate nodes than leaves as to speak. As such these trees are pretty sparse.
+* real life cases set a very few number of nodes: might be in the range of 30 or 40 leaves: more intermediate nodes than leaves as to speak. As such these trees are pretty sparse.
 * the code to map some data to a message can be very much specific and the code can result very much hard-coded as to speak.
 
 ### Layout
@@ -36,8 +36,7 @@ The folder contains artefacts produced by the generator and other stuff. More pr
 The folders are named after the message in a go-frienly way (i.e. `pain.013.001.07` gets to `pain_013_001_07`). 
 Each folder contains a number of files. The size and the complexity of the messages and the size of the generated stuff has forced to distribute code on various files.
 
-* document.go, document-paths.go, document-complex-set-ops.go, document-simple-set-ops.go: they contain the document structure definition and the document level commands. They are considered below in a dedicated paragraph.
-  (note: in the repo not every file for every message have been committed due to size and amangeability).
+* document.go, document-paths.go, document-set-ops.go: they contain the document structure definition and the document level methods. They are considered below in a dedicated paragraph.
 * complex-types.go: contains the declaration of structures not shared and specific to the message (at tleast in the context of the messages considered)
 * complex-types-ops.go: contains the methods of the structures.
 * <message-id>_test.go (where message-id stands for `pain_013_001_07` etc..): this file contains a literal sample of the document with sample values, it is meant to provide an overview of the message and to 
@@ -139,41 +138,23 @@ In here a brief explanation of what is in the document* files that are found in 
 
 * document.go: it is the structure of the document and a few methods. Previously put in the `complex-types.go` has been extracted since the Document is the root of the thing and is easier to find.
 * document-paths.go: it is a set of constants with each one constant to each different path from the root to each node (not just the leaves).
-* document-complex-set-ops.go, document-simple-set-ops.go: they contain a set function for setting each individual node of the document. These functions are methods of the Document struct and are named
-after the path of each node from the root of the document. They are two files because of size: the complex contains function where the parameter is of struct or array type whereas the simple contain
-functions that address only the leaves of the tree.
-
-These are few consts from the pain.013.001.07 stuff. What are them used for? Nothing at the moment but of course there is a plan.
+* document-set-ops.goo: they contain a set function for setting each individual leaf node of the document by providing the path to the leaf by means of a string and a value. The consts in the document-paths.go can be used as the first parameter
+of the document set function. The document set function use a bit of reflection for traversing the tree. The method has yet some limitations in handling arrays. In my current use case that's less than an issue but is clearly an open point.
 
 ```
-	Path_Doc                                    = "Doc"
-	Path_Doc_CdtrPmtActvtnReq                   = "Doc.CdtrPmtActvtnReq"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr            = "Doc.CdtrPmtActvtnReq.GrpHdr"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr_MsgId      = "Doc.CdtrPmtActvtnReq.GrpHdr.MsgId"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr_CreDtTm    = "Doc.CdtrPmtActvtnReq.GrpHdr.CreDtTm"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr_NbOfTxs    = "Doc.CdtrPmtActvtnReq.GrpHdr.NbOfTxs"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr_CtrlSum    = "Doc.CdtrPmtActvtnReq.GrpHdr.CtrlSum"
-	Path_Doc_CdtrPmtActvtnReq_GrpHdr_InitgPty   = "Doc.CdtrPmtActvtnReq.GrpHdr.InitgPty"
+	Path_CdtrPmtActvtnReq                                                                                            = "CdtrPmtActvtnReq"
+	Path_CdtrPmtActvtnReq_GrpHdr                                                                                     = "CdtrPmtActvtnReq.GrpHdr"
+	Path_CdtrPmtActvtnReq_GrpHdr_MsgId                                                                               = "CdtrPmtActvtnReq.GrpHdr.MsgId"
+	Path_CdtrPmtActvtnReq_GrpHdr_CreDtTm                                                                             = "CdtrPmtActvtnReq.GrpHdr.CreDtTm"
+	Path_CdtrPmtActvtnReq_GrpHdr_NbOfTxs                                                                             = "CdtrPmtActvtnReq.GrpHdr.NbOfTxs"
+	Path_CdtrPmtActvtnReq_GrpHdr_CtrlSum                                                                             = "CdtrPmtActvtnReq.GrpHdr.CtrlSum"
+	Path_CdtrPmtActvtnReq_GrpHdr_InitgPty                                                                            = "CdtrPmtActvtnReq.GrpHdr.InitgPty"
+	Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm                                                                         = "CdtrPmtActvtnReq.GrpHdr.InitgPty.Nm"
+	Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_PstlAdr                                                                    = "CdtrPmtActvtnReq.GrpHdr.InitgPty.PstlAdr"
+	Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_PstlAdr_AdrTp                                                              = "CdtrPmtActvtnReq.GrpHdr.InitgPty.PstlAdr.AdrTp"
 ```
 
-Examples of functions that can be found in the document-complex-set-ops.go and document-simple-set-ops.go files. As you can note, the code takes care of handling
-pointers and arrays. We might want to set that specific node down the hierarchy without worrying of checks of `nil` arrays and `nil` pointers.
-If we didn't have pointers and arrays the stuff was a lot simpler.
 
-```
-func (d *Document) With_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_SchmeNm(_schmeNm *common.OrganisationIdentificationSchemeName1Choice) {
-	if d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id == nil {
-		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id = &common.Party38Choice{}
-	}
-	if d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId == nil {
-		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId = &common.OrganisationIdentification29{}
-	}
-	if len(d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr) == 0 {
-		d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr = append(d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr, common.GenericOrganisationIdentification1{})
-	}
-	d.CdtrPmtActvtnReq.GrpHdr.InitgPty.Id.OrgId.Othr[0].SchmeNm = _schmeNm
-}
-```
 
 #### iso-20022 common folder
 The folder contains declaration of simple types and complex types shared between the messages. Files have been split in declarations and methods.
@@ -182,7 +163,7 @@ The folder contains declaration of simple types and complex types shared between
 * complex-types-ops.go: contains the methods of shared complex types.
 * simple-types.go: contains the declaration of shared simple types.
 * complex-types-ops.go: contains the methods of shared simple types.
-* restriction-util.go: a few functions referenced by other files and with bridge scope for some external custom utility projects. The idea is to limit external dependencies 
+* util.go: a few functions referenced by other files and with bridge scope for some external custom utility projects. The idea is to limit external dependencies 
 to be easily managed.
 
 Below a snippet of the generation of a simple string type with enum restriction (Methods and structure might change over time but pretty much this is the idea). 
@@ -403,41 +384,41 @@ This second example shows the approach of using document apis for setting the va
 This second formulation is more convenient if you have a mapping issue and cannot layout the document as a whole single literal as in the example above.
 
 ```
-d := pain_013_001_07.Document{}
-d.With_CdtrPmtActvtnReq_GrpHdr_MsgId(common.MustToMax35Text("pain013-DS01-20220322"))
-d.With_CdtrPmtActvtnReq_GrpHdr_CreDtTm(common.MustToISODateTime(time.Now()))
-d.With_CdtrPmtActvtnReq_GrpHdr_NbOfTxs(common.MustToMax15NumericText("1"))
-d.With_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm(common.MustToMax140Text("Poste Italiane"))
-d.With_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_Id(common.MustToMax35Text("01114601006"))
-d.With_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_Issr(common.MustToMax35Text("POSTE ITALIANE"))
-d.With_CdtrPmtActvtnReq_PmtInf_PmtInfId(common.MustToMax35Text("Fatt2022-000001-2022-03-22-11:50:45"))
-d.With_CdtrPmtActvtnReq_PmtInf_PmtMtd(common.MustToPaymentMethod7Code(common.PaymentMethod7CodeTRF))
-d.With_CdtrPmtActvtnReq_PmtInf_PmtTpInf_SvcLvl_Cd(common.MustToExternalServiceLevel1Code("SRTP"))
-d.With_CdtrPmtActvtnReq_PmtInf_PmtTpInf_LclInstrm_Prtry(common.MustToMax35Text("NOTPROVIDED"))
-d.With_CdtrPmtActvtnReq_PmtInf_PmtTpInf_CtgyPurp_Cd(common.MustToExternalCategoryPurpose1Code("OTHR"))
-d.With_CdtrPmtActvtnReq_PmtInf_ReqdExctnDt_Dt(common.MustToISODate(time.Now()))
-d.With_CdtrPmtActvtnReq_PmtInf_XpryDt_Dt(common.MustToISODate(time.Now()))
-d.With_CdtrPmtActvtnReq_PmtInf_Dbtr_Nm(common.MustToMax140Text("LoremIpsumSPA"))
-d.With_CdtrPmtActvtnReq_PmtInf_Dbtr_PstlAdr_AdrLine([]common.Max70Text{common.MustToMax70Text("ViaLoremIpsum 30 Roma")})
-d.With_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id(common.MustToMax35Text("123456789"))
-d.With_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_SchmeNm_Cd(common.MustToExternalPersonIdentification1Code("POID"))
-d.With_CdtrPmtActvtnReq_PmtInf_DbtrAcct_Id_IBAN(common.MustToIBAN2007Identifier("IT60X0760111101000000123456"))
-d.With_CdtrPmtActvtnReq_PmtInf_DbtrAgt_FinInstnId_BICFI(common.MustToBICFIDec2014Identifier("BPPIITRRXXX"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtId_EndToEndId(common.MustToMax35Text("fatt2022-000001"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_SvcLvl_Cd(common.MustToExternalServiceLevel1Code("SRTP"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_LclInstrm_Prtry(common.MustToMax35Text("NOTPROVIDED"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_CtgyPurp_Cd(common.MustToExternalCategoryPurpose1Code("OTHR"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_AmtModAllwd(false)
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_EarlyPmtAllwd(false)
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_GrntedPmtReqd(false)
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Amt_InstdAmt_Ccy(common.MustToActiveOrHistoricCurrencyCode("EUR"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Amt_InstdAmt_Value(xsdt.MustToDecimal(535.35))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_ChrgBr(common.MustToChargeBearerType1Code(common.ChargeBearerType1CodeSLEV))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_CdtrAgt_FinInstnId_BICFI(common.MustToBICFIDec2014Identifier("BPPIITRRXXX"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Nm(common.MustToMax140Text("AFC Poste Italiane"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_PstlAdr_AdrLine([]common.Max70Text{common.MustToMax70Text("Via Del Creditore 75 Roma")})
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id(common.MustToMax35Text("0468651441"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd(common.MustToExternalOrganisationIdentification1Code("BOID"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_CdtrAcct_Id_IBAN(common.MustToIBAN2007Identifier("IT60X0760111101000004545561"))
-d.With_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_RmtInf_Ustrd([]common.Max140Text{common.MustToMax140Text("AT41/fatt2022-000001/AT05/pagamento fattura")})
+d := pain_013_001_07.NewDocument()
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, common.MustToMax35Text("pain013-DS01-20220322"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_CreDtTm, common.MustToISODateTime(time.Now()))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_NbOfTxs, common.MustToMax15NumericText("1"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Nm, common.MustToMax140Text(NameOfInitiatingParty))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_Id, common.MustToMax35Text(InitiatingPartyOrgId))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_InitgPty_Id_OrgId_Othr_Issr, common.MustToMax35Text(InitiatingPartyOrgIssr))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_PmtInfId, common.MustToMax35Text(PaymentInstructionId))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_PmtMtd, common.MustToPaymentMethod7Code(common.PaymentMethod7CodeTRF))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_PmtTpInf_SvcLvl_Cd, common.MustToExternalServiceLevel1Code("SRTP"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_PmtTpInf_LclInstrm_Prtry, common.MustToMax35Text("NOTPROVIDED"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_PmtTpInf_CtgyPurp_Cd, common.MustToExternalCategoryPurpose1Code("OTHR"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_ReqdExctnDt_Dt, common.MustToISODate(time.Now()))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_XpryDt_Dt, common.MustToISODate(time.Now()))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Nm, common.MustToMax140Text(DebitorName))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_PstlAdr_AdrLine, common.MustToMax70Text(DebitorAddress))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, common.MustToMax35Text("123456789"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_SchmeNm_Cd, common.MustToExternalPersonIdentification1Code("POID"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_DbtrAcct_Id_IBAN, common.MustToIBAN2007Identifier(DebitorIBAN))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_DbtrAgt_FinInstnId_BICFI, common.MustToBICFIDec2014Identifier(DebitorAgentBIC))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtId_EndToEndId, common.MustToMax35Text(InvoiceNumber))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_SvcLvl_Cd, common.MustToExternalServiceLevel1Code("SRTP"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_LclInstrm_Prtry, common.MustToMax35Text("NOTPROVIDED"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_CtgyPurp_Cd, common.MustToExternalCategoryPurpose1Code("OTHR"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_AmtModAllwd, false)
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_EarlyPmtAllwd, false)
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtCond_GrntedPmtReqd, false)
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Amt_InstdAmt_Ccy, common.MustToActiveOrHistoricCurrencyCode("EUR"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Amt_InstdAmt_Value, xsdt.MustToDecimal(535.35))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_ChrgBr, common.MustToChargeBearerType1Code(common.ChargeBearerType1CodeSLEV))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_CdtrAgt_FinInstnId_BICFI, common.MustToBICFIDec2014Identifier(CreditorAgentBIC))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Nm, common.MustToMax140Text(CreditorName))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_PstlAdr_AdrLine, common.MustToMax70Text(CreditorAddress))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id, common.MustToMax35Text(CreditorOrgId))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd, common.MustToExternalOrganisationIdentification1Code("BOID"))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_CdtrAcct_Id_IBAN, common.MustToIBAN2007Identifier(CreditorIBAN))
+err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_RmtInf_Ustrd, common.MustToMax140Text(RemittanceInfo))
 ```

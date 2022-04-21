@@ -12,13 +12,6 @@ import (
 
 func (d *Document) Set(path string, src interface{}) error {
 
-	/*
-		path = strings.TrimPrefix(path, "/Doc/")
-		path = strings.Replace(path, "*", "", -1)
-		path = strings.Replace(path, "[]", "", -1)
-		path = strings.Replace(path, "/", ".", -1)
-	*/
-
 	v := reflect.ValueOf(d)
 	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
 
@@ -31,20 +24,28 @@ func (d *Document) Set(path string, src interface{}) error {
 	return copy2Dest(path, values[0], src)
 }
 
-/*
-func convertAssignRows(dest, src interface{}) error {
+func (d *Document) Get(path string) (interface{}, error) {
 
-	switch d := dest.(type) {
-	case *common.Max35Text:
-		if d == nil {
-			return errors.New("nil pointer... in unmarshalling Max35Text data")
-		}
-		*d = common.MustToMax35Text(src)
-		return nil
+	v := reflect.ValueOf(d)
+	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	values := make([]interface{}, 1)
+	err := fieldsByTraversal(v, fields, values, true)
+	if err != nil {
+		return nil, err
 	}
-	return nil
+
+	/*
+		rv := reflect.ValueOf(values[0])
+		fmt.Println("Indirect type is:", reflect.Indirect(rv), reflect.Indirect(rv).Type(), rv.Kind(), rv.Elem(), rv.Elem().Type()) // prints main.CustomStruct
+
+		if tv, ok := values[0].(*common.Max35Text); ok {
+			return *tv, nil
+		}
+	*/
+
+	return deref(path, values[0])
 }
-*/
 
 func copy2Dest(docPath string, dest, src interface{}) error {
 
@@ -460,5 +461,131 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 		return fmt.Errorf("could not find the type to node %s of type %v", docPath, dest)
 	}
 
-	return nil
+}
+
+func deref(docPath string, val interface{}) (interface{}, error) {
+
+	var err error
+	switch tv := val.(type) {
+	case *common.ActiveOrHistoricCurrencyCode:
+		return *tv, nil
+	case *common.AddressType2Code:
+		return *tv, nil
+	case *common.AnyBICDec2014Identifier:
+		return *tv, nil
+	case *common.BICFIDec2014Identifier:
+		return *tv, nil
+	case *common.ClearingChannel2Code:
+		return *tv, nil
+	case *common.CountryCode:
+		return *tv, nil
+	case *common.CreditDebitCode:
+		return *tv, nil
+	case *common.DocumentType3Code:
+		return *tv, nil
+	case *common.DocumentType6Code:
+		return *tv, nil
+	case *common.Exact2NumericText:
+		return *tv, nil
+	case *common.Exact4AlphaNumericText:
+		return *tv, nil
+	case *common.ExternalAccountIdentification1Code:
+		return *tv, nil
+	case *common.ExternalCancellationReason1Code:
+		return *tv, nil
+	case *common.ExternalCashAccountType1Code:
+		return *tv, nil
+	case *common.ExternalCashClearingSystem1Code:
+		return *tv, nil
+	case *common.ExternalCategoryPurpose1Code:
+		return *tv, nil
+	case *common.ExternalClearingSystemIdentification1Code:
+		return *tv, nil
+	case *common.ExternalDiscountAmountType1Code:
+		return *tv, nil
+	case *common.ExternalDocumentLineType1Code:
+		return *tv, nil
+	case *common.ExternalFinancialInstitutionIdentification1Code:
+		return *tv, nil
+	case *common.ExternalGarnishmentType1Code:
+		return *tv, nil
+	case *common.ExternalLocalInstrument1Code:
+		return *tv, nil
+	case *common.ExternalMandateSetupReason1Code:
+		return *tv, nil
+	case *common.ExternalOrganisationIdentification1Code:
+		return *tv, nil
+	case *common.ExternalPersonIdentification1Code:
+		return *tv, nil
+	case *common.ExternalProxyAccountType1Code:
+		return *tv, nil
+	case *common.ExternalPurpose1Code:
+		return *tv, nil
+	case *common.ExternalServiceLevel1Code:
+		return *tv, nil
+	case *common.ExternalTaxAmountType1Code:
+		return *tv, nil
+	case *common.Frequency6Code:
+		return *tv, nil
+	case *common.IBAN2007Identifier:
+		return *tv, nil
+	case *common.ISODate:
+		return *tv, nil
+	case *common.ISODateTime:
+		return *tv, nil
+	case *common.LEIIdentifier:
+		return *tv, nil
+	case *common.Max1025Text:
+		return *tv, nil
+	case *common.Max105Text:
+		return *tv, nil
+	case *common.Max128Text:
+		return *tv, nil
+	case *common.Max140Text:
+		return *tv, nil
+	case *common.Max15NumericText:
+		return *tv, nil
+	case *common.Max16Text:
+		return *tv, nil
+	case *common.Max2048Text:
+		return *tv, nil
+	case *common.Max34Text:
+		return *tv, nil
+	case *common.Max350Text:
+		return *tv, nil
+	case *common.Max35Text:
+		return *tv, nil
+	case *common.Max4Text:
+		return *tv, nil
+	case *common.Max70Text:
+		return *tv, nil
+	case *common.NamePrefix2Code:
+		return *tv, nil
+	case *common.PaymentMethod4Code:
+		return *tv, nil
+	case *common.PhoneNumber:
+		return *tv, nil
+	case *common.PreferredContactMethod1Code:
+		return *tv, nil
+	case *common.Priority2Code:
+		return *tv, nil
+	case *common.SequenceType3Code:
+		return *tv, nil
+	case *common.SettlementMethod1Code:
+		return *tv, nil
+	case *common.TaxRecordPeriod1Code:
+		return *tv, nil
+	case *common.UUIDv4Identifier:
+		return *tv, nil
+	case *xsdt.AnyType:
+		return *tv, nil
+	case *xsdt.Boolean:
+		return *tv, nil
+	case *xsdt.Decimal:
+		return *tv, nil
+	default:
+		err = fmt.Errorf("could not find the type to node %s of type %v", docPath, val)
+	}
+
+	return val, err
 }

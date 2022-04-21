@@ -54,28 +54,28 @@ func NewDocumentFromXML(b []byte) (*Document, error) {
 
 
 // IsValid checks if {{ .Name }} is valid
-func (s {{ .Name }}) IsValid(optional bool) bool {
+func (d {{ .Name }}) IsValid(optional bool) bool {
 
     valid := true
     {{- range .Attrs}}
         {{- if .Array}}
            {{- if not .Optional }}
-              if len(s.{{.Name}}) == 0 {
+              if len(d.{{.Name}}) == 0 {
                  valid = false
               }
           {{- end }}
-          for j := 0; j < len(s.{{.Name}}); j++ {
-              valid = valid && s.{{.Name}}[j].IsValid({{.Optional}})
+          for j := 0; j < len(d.{{.Name}}); j++ {
+              valid = valid && d.{{.Name}}[j].IsValid({{.Optional}})
           }
         {{else}}
 {{- if .IsPtr }}
 {{- if .Optional }}
-         valid = valid && (s.{{ .Name }} == nil || (s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})))
+         valid = valid && (d.{{ .Name }} == nil || (d.{{ .Name }} != nil && d.{{ .Name }}.IsValid({{.Optional}})))
 {{ else }}
-         valid = valid && s.{{ .Name }} != nil && s.{{ .Name }}.IsValid({{.Optional}})
+         valid = valid && d.{{ .Name }} != nil && d.{{ .Name }}.IsValid({{.Optional}})
 {{ end }}
 {{ else }}
-          valid = valid && s.{{ .Name }}.IsValid({{.Optional}})
+          valid = valid && d.{{ .Name }}.IsValid({{.Optional}})
 {{- end }}
         {{- end}}
     {{- end }}

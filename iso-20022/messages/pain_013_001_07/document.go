@@ -48,10 +48,10 @@ func NewDocumentFromXML(b []byte) (*Document, error) {
 }
 
 // IsValid checks if Document is valid
-func (s Document) IsValid(optional bool) bool {
+func (d Document) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && s.CdtrPmtActvtnReq.IsValid(false)
+	valid = valid && d.CdtrPmtActvtnReq.IsValid(false)
 
 	return valid
 }

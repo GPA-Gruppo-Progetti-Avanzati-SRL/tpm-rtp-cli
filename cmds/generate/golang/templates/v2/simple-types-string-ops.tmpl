@@ -2,7 +2,7 @@
 {{- $typeName := .Name}}
 const (
     {{ .Name }}Zero = ""
-    {{ .Name }}Sample = "Value"
+    {{ .Name }}Sample = "{{ .GenerateSampleValue }}"
 {{- if .HasEnumRestriction }}
 {{- range .Restrictions.Enum }}
    {{ $typeName }}{{ . }} = "{{ . }}"
@@ -91,21 +91,4 @@ func MustTo{{ .Name }}(s interface{}) {{ .Name }} {
     return v
 }
 
-// {{ .Name }}Example method for generation of valid sample data
-func {{ .Name }}Example() {{ .Name }} {
-
-{{- if .HasAnyRestriction }}
-{{- if .HasEnumRestriction }}
-        return {{ .Name }}(generateSampleDataWithEnumRestriction({{ .Name }}EnumRestriction))
-{{ end }}
-{{- if .HasLengthRestriction }}
-        return {{ .Name }}(generateSampleDataWithLengthRestriction({{ .Name }}Length,  {{ .Name }}MinLength, {{ .Name }}MaxLength))
-{{ end }}
-{{- if .HasPatternRestriction }}
-        return {{ .Name }}(generateSampleDataWithPatternRestriction({{ .Name }}PatternRestriction))
-{{ end }}
-{{- else }}
-    return {{ .Name }}("non-restricted-example")
-{{ end }}
-}
 {{ end }}
