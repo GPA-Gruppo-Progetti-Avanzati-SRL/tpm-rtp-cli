@@ -33,6 +33,10 @@ func (pvr *Resolver) ResolveVar(s string) string {
 	case "$.":
 		v, err := pvr.doc.Get(strings.TrimPrefix(s, "$."))
 		if err == nil {
+			if v == nil {
+				return ""
+			}
+
 			return fmt.Sprintf("%v", v)
 		}
 
