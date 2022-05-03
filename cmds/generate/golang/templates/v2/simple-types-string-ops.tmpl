@@ -29,6 +29,11 @@ var {{ .Name }}PatternRestriction = regexp.MustCompile(`{{.Restrictions.Pattern.
 func (t {{ .Name }}) IsValid(optional bool) bool {
 
      valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
+
+     if optional && t == {{ .Name }}Zero {
+     	 return valid
+     }
+
 {{- if .HasEnumRestriction }}
      valid = valid && isEnumRestrictionValid(t.String(), {{ .Name }}EnumRestriction)
 {{ end }}

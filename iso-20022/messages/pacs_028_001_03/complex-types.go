@@ -7,6 +7,14 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
 
+// FIToFIPaymentStatusRequestV03 type definition
+type FIToFIPaymentStatusRequestV03 struct {
+	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
+	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
+	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
+	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
+}
+
 // OriginalGroupInformation27 type definition
 type OriginalGroupInformation27 struct {
 	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
@@ -14,14 +22,6 @@ type OriginalGroupInformation27 struct {
 	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
 	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
 	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
-}
-
-// FIToFIPaymentStatusRequestV03 type definition
-type FIToFIPaymentStatusRequestV03 struct {
-	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
-	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
-	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
-	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
 }
 
 // PaymentTransaction113 type definition

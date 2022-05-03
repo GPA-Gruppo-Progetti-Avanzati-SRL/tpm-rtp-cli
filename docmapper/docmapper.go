@@ -2,19 +2,15 @@ package docmapper
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/vars"
+	"github.com/PaesslerAG/gval"
 	"github.com/rs/zerolog/log"
-	"strings"
 )
 
-var builtins = FuncMap{
-	"nop":       func(s string) string { return s },
-	"trimSpace": func(s string) string { return strings.TrimSpace(s) },
-}
+func NewMapperClass(msgName, docClass string, opts ...Option) (MappingClass, error) {
 
-func NewMapperClass(opts ...Option) (MappingClass, error) {
-
-	mc := MappingClass{FuncMap: builtins}
+	mc := MappingClass{MsgName: msgName, Name: docClass, FuncMap: GetFuncMap()}
 	for _, o := range opts {
 		_ = o(&mc)
 	}
@@ -24,7 +20,7 @@ func NewMapperClass(opts ...Option) (MappingClass, error) {
 
 func NewMapperClassFromYAML(data []byte, opts ...Option) (MappingClass, error) {
 
-	mc := MappingClass{FuncMap: builtins}
+	mc := MappingClass{FuncMap: GetFuncMap()}
 	for _, o := range opts {
 		_ = o(&mc)
 	}
@@ -40,18 +36,18 @@ func NewMapperClassFromYAML(data []byte, opts ...Option) (MappingClass, error) {
 func WithFuncMap(funcMap FuncMap) Option {
 	return func(mc *MappingClass) error {
 		if funcMap != nil {
-			m := make(map[string]MappingFunction)
+			m := make(FuncMap)
 			for n, v := range funcMap {
 				m[n] = v
 			}
 
-			for n, v := range builtins {
+			for n, v := range GetFuncMap() {
 				m[n] = v
 			}
 
 			mc.FuncMap = m
 		} else {
-			mc.FuncMap = builtins
+			mc.FuncMap = GetFuncMap()
 		}
 
 		return nil
@@ -98,10 +94,23 @@ func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver
 		return err
 	}
 
+	if mr.IsExpr {
+		exprVal, err := gval.Evaluate(s, funcs)
+		if err != nil {
+			log.Error().Err(err).Str("expr", s).Msg("error in expression evaluation")
+		}
+
+		s = fmt.Sprintf("%v", exprVal)
+	}
+
 	if mr.MapFunc != "" {
 		f, ok := funcs[mr.MapFunc]
 		if ok {
-			s = f(s)
+			if fun, ok := f.(func(string) string); ok {
+				s = fun(s)
+			} else {
+				log.Warn().Str("func-name", mr.MapFunc).Msg("mapping function name found but not applicable")
+			}
 		} else {
 			log.Warn().Str("func-name", mr.MapFunc).Msg("cannot find function map")
 		}

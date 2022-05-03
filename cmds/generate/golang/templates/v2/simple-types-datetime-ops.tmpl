@@ -15,6 +15,10 @@ var {{ .Name }}EnumRestriction = []string{ {{ range $i, $v := .Restrictions.Enum
 func (t {{ .Name }}) IsValid(optional bool) bool {
 
      valid := xsdt.{{ .Type.Builtin }}(t).IsValid(optional)
+     if optional && t == {{ .Name }}Zero {
+       	 return valid
+     }
+
 {{- if .HasEnumRestriction }}
      valid = valid && applyEnumRestriction(t.String(), {{ .Name }}EnumRestriction)
 {{ end }}
