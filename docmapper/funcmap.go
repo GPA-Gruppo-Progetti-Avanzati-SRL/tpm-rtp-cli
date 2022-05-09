@@ -13,6 +13,7 @@ func GetFuncMap() map[string]interface{} {
 		"rtpId":     funcs.RtpId,
 		"uuid":      funcs.NewUUID,
 		"objId":     funcs.NewObjectId,
+		"decimal":   funcs.Decimal,
 		"nop":       func(s string) string { return s },
 		"trimSpace": func(s string) string { return strings.TrimSpace(s) },
 	}
@@ -24,6 +25,7 @@ var expressionSmell = []string{
 	"now",
 	"rtpId",
 	"uuid",
+	"decimal",
 	">",
 	"<",
 	"(",
