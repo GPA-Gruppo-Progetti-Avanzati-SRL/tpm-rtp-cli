@@ -27,6 +27,14 @@ func NewDocument() Document {
 	return d
 }
 
+func (d *Document) WithMapper() {
+
+	if d.mapper == nil {
+		d.mapper = mapper()
+	}
+
+}
+
 func (d *Document) ToXML() ([]byte, error) {
 	w := &bytes.Buffer{}
 	w.Write([]byte(xml.Header))
