@@ -15,11 +15,12 @@ import (
 const (
 	Iso20022MsgName = "camt.029.001.09"
 
+	// IG 2.0 Pag. 348 (DS-10b), 380 (DS-12, DS-13 positive), 411 (DS-12, DS-13 negative), 520 (DS-16, DS-17 status update)
 	RTPStatusRejectedCancellationRequest = "RJCR" // applies to: DS10b, DS13 (negative)
 	RTPStatusCancelledAsPerRequest       = "CNCL" // applies to: DS12, DS13 (positive)
 
 	RTPRejectCancellationReasonAlreadyCancelledRTP                = "ACLR" // applies to: DS10b, DS13
-	RTPRejectCancellationReasonAlreadyExpiredRTP                  = "AEXR" // applies to: DS10b, DS13, DS17 (camt)
+	RTPRejectCancellationReasonAlreadyExpiredRTP                  = "AEXR" // applies to: DS10b, DS13, DS17
 	RTPRejectCancellationReasonAlreadyRefusedRTP                  = "ARFR" // applies to: DS10b, DS13,
 	RTPRejectCancellationReasonAlreadyRejectedRTP                 = "ARJR" // applies to: DS10b, DS13
 	RTPRejectCancellationReasonPaymentAlreadyTransmittedExecution = "PATE" // applies to: DS10b, DS13
@@ -30,6 +31,75 @@ const (
 	RTPRfCStatusUpdateNeverReceived        = "RCNR" // applies to: DS17
 	RTPRfCStatusUpdateReceivedAndProcessed = "RCPR" // applies to: DS17
 )
+
+type StsRsnCodeDescription struct {
+	Code        string
+	Description string
+}
+
+var StsRsnCodeDescriptionRegistry = map[string]StsRsnCodeDescription{
+	RTPStatusRejectedCancellationRequest: {
+		Code:        RTPStatusRejectedCancellationRequest,
+		Description: "Rejected Cancellation Request",
+	},
+	RTPStatusCancelledAsPerRequest: {
+		Code:        RTPStatusCancelledAsPerRequest,
+		Description: "Cancelled as per request",
+	},
+	RTPRejectCancellationReasonAlreadyRefusedRTP: {
+		Code:        RTPRejectCancellationReasonAlreadyRefusedRTP,
+		Description: "Already Refused",
+	},
+	RTPRejectCancellationReasonAlreadyCancelledRTP: {
+		Code:        RTPRejectCancellationReasonAlreadyCancelledRTP,
+		Description: "Request-to-pay has already been cancelled",
+	},
+	RTPRejectCancellationReasonAlreadyExpiredRTP: {
+		Code:        RTPRejectCancellationReasonAlreadyExpiredRTP,
+		Description: "Already Expired",
+	},
+	RTPRejectCancellationReasonAlreadyRejectedRTP: {
+		Code:        RTPRejectCancellationReasonAlreadyRejectedRTP,
+		Description: "Already Rejected",
+	},
+	RTPRejectCancellationReasonPaymentAlreadyTransmittedExecution: {
+		Code:        RTPRejectCancellationReasonPaymentAlreadyTransmittedExecution,
+		Description: "Payment related to the request-to-pay has already been transmitted for execution",
+	},
+	RTPRejectReasonRegulatoryReason: {
+		Code:        RTPRejectReasonRegulatoryReason,
+		Description: "Regulatory Reason",
+	},
+	RTPRejectCancellationReasonUnknownRTP: {
+		Code:        RTPRejectCancellationReasonUnknownRTP,
+		Description: "Request-to-pay is unknown",
+	},
+	RTPRfCStatusUpdateAlreadyRejected: {
+		Code:        RTPRfCStatusUpdateAlreadyRejected,
+		Description: "Already Rejected",
+	},
+	RTPRfCStatusUpdateNeverReceived: {
+		Code:        RTPRfCStatusUpdateNeverReceived,
+		Description: "Never received",
+	},
+	RTPRfCStatusUpdateReceivedAndProcessed: {
+		Code:        RTPRfCStatusUpdateReceivedAndProcessed,
+		Description: "Already Processed",
+	},
+}
+
+func LookupStsRsnText(cd string, rsn string) string {
+
+	if s, ok := StsRsnCodeDescriptionRegistry[rsn]; ok {
+		return s.Description
+	}
+
+	if s, ok := StsRsnCodeDescriptionRegistry[cd]; ok {
+		return s.Description
+	}
+
+	return ""
+}
 
 // Document type definition
 type Document struct {

@@ -7,14 +7,6 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
 
-// FIToFIPaymentStatusRequestV03 type definition
-type FIToFIPaymentStatusRequestV03 struct {
-	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
-	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
-	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
-	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
-}
-
 // PaymentTransaction113 type definition
 type PaymentTransaction113 struct {
 	StsReqId        common.Max35Text                                     `xml:"StsReqId,omitempty"`
@@ -31,6 +23,15 @@ type PaymentTransaction113 struct {
 	SplmtryData     []common.SupplementaryData1                          `xml:"SplmtryData,omitempty"`
 }
 
+// OriginalGroupInformation27 type definition
+type OriginalGroupInformation27 struct {
+	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
+	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
+	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
+}
+
 // GroupHeader91 type definition
 type GroupHeader91 struct {
 	MsgId    common.Max35Text                                     `xml:"MsgId"`
@@ -39,11 +40,10 @@ type GroupHeader91 struct {
 	InstdAgt *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
 }
 
-// OriginalGroupInformation27 type definition
-type OriginalGroupInformation27 struct {
-	OrgnlMsgId   common.Max35Text        `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text        `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime      `xml:"OrgnlCreDtTm,omitempty"`
-	OrgnlNbOfTxs common.Max15NumericText `xml:"OrgnlNbOfTxs,omitempty"`
-	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
+// FIToFIPaymentStatusRequestV03 type definition
+type FIToFIPaymentStatusRequestV03 struct {
+	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
+	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
+	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
+	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
 }

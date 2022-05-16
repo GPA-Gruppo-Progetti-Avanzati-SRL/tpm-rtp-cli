@@ -15,6 +15,7 @@ import (
 const (
 	Iso20022MsgName = "pain.014.001.07"
 
+	// IG 2.0 Pag. 64 (DS-04a), 109 (DS-04b+), 159 (DS-05, DS-06), 203 (DS-08, DS-09 positive), 257 (DS-08, DS-09 negative), 495 (DS-17)
 	RTPStatusRejected            = "RJCT" // applies to: DS04, DS08, DS09 (negative)
 	RTPStatusTechnicallyAccepted = "ACTC" // applies to: DS05, DS06
 	RTPStatusAccepted            = "ACCP" // applies to: DS08, DS09 (positive)
@@ -49,6 +50,147 @@ const (
 	RTPRejectReasonUnknownCreditor                       = "UCRD" // applies to: DS08, DS09
 
 )
+
+type StsRsnCodeDescription struct {
+	Code        string
+	Description string
+}
+
+var StsRsnCodeDescriptionRegistry = map[string]StsRsnCodeDescription{
+	RTPStatusRejected: {
+		Code:        RTPStatusRejected,
+		Description: "Rejected",
+	},
+	RTPStatusTechnicallyAccepted: {
+		Code:        RTPStatusTechnicallyAccepted,
+		Description: "Technically Accepted",
+	},
+	RTPStatusAccepted: {
+		Code:        RTPStatusAccepted,
+		Description: "Accepted",
+	},
+	RTPStatusAcceptedWithChange: {
+		Code:        RTPStatusAcceptedWithChange,
+		Description: "Accepted With Change",
+	},
+	RTPStatusReasonAlreadyExpiredRTP: {
+		Code:        RTPStatusReasonAlreadyExpiredRTP,
+		Description: "Already Expired",
+	},
+	RTPStatusReasonAlreadyAcceptedRTP: {
+		Code:        RTPStatusReasonAlreadyAcceptedRTP,
+		Description: "Already Accepted",
+	},
+	RTPStatusReasonAlreadyRefusedRTP: {
+		Code:        RTPStatusReasonAlreadyRefusedRTP,
+		Description: "Already Refused",
+	},
+	RTPStatusReasonAlreadyRejectedRTP: {
+		Code:        RTPStatusReasonAlreadyRejectedRTP,
+		Description: "Already Rejected",
+	},
+	RTPStatusReasonInitialRTPNeverReceived: {
+		Code:        RTPStatusReasonInitialRTPNeverReceived,
+		Description: "Initial RTP Never Received",
+	},
+	RTPStatusReasonRTPReceivedCanBeProcessed: {
+		Code:        RTPStatusReasonRTPReceivedCanBeProcessed,
+		Description: "RTP Received Can Be Processed",
+	},
+	RTPRejectReasonInvalidDebtorAccountNumber: {
+		Code:        RTPRejectReasonInvalidDebtorAccountNumber,
+		Description: "Invalid Debtor Account Number",
+	},
+	RTPRejectReasonNotAllowedCurrency: {
+		Code:        RTPRejectReasonNotAllowedCurrency,
+		Description: "Not Allowed Currency",
+	},
+	RTPRejectReasonDuplication: {
+		Code:        RTPRejectReasonDuplication,
+		Description: "Duplication",
+	},
+	RTPRejectReasonWrongAmount: {
+		Code:        RTPRejectReasonWrongAmount,
+		Description: "Wrong Amount",
+	},
+	RTPRejectReasonAttachmentsNotSupported: {
+		Code:        RTPRejectReasonAttachmentsNotSupported,
+		Description: "Attachments Not Supported",
+	},
+	RTPRejectReasonInvalidDebtorIdentificationCode: {
+		Code:        RTPRejectReasonInvalidDebtorIdentificationCode,
+		Description: "Invalid Debtor Identification Code",
+	},
+	RTPRejectReasonExpiryDateTooLong: {
+		Code:        RTPRejectReasonExpiryDateTooLong,
+		Description: "Expiry Date Too Long",
+	},
+	RTPRejectReasonExpiryDateTimeReached: {
+		Code:        RTPRejectReasonExpiryDateTimeReached,
+		Description: "Expiry Date Time Reached",
+	},
+	RTPRejectReasonInvalidFileFormat: {
+		Code:        RTPRejectReasonInvalidFileFormat,
+		Description: "Invalid File Format",
+	},
+	RTPRejectReasonFraudulentOrigin: {
+		Code:        RTPRejectReasonFraudulentOrigin,
+		Description: "Fraudulent Origin",
+	},
+	RTPRejectReasonIncorrectExpiryDateTime: {
+		Code:        RTPRejectReasonIncorrectExpiryDateTime,
+		Description: "Incorrect Expiry DateTime",
+	},
+	RTPRejectReasonNotSpecifiedReasonCustomerGenerated: {
+		Code:        RTPRejectReasonNotSpecifiedReasonCustomerGenerated,
+		Description: "Not Specified Reason Customer Generated",
+	},
+	RTPRejectReasonNotSpecifiedReasonAgentGenerated: {
+		Code:        RTPRejectReasonNotSpecifiedReasonAgentGenerated,
+		Description: "Reason has not been specified by agent",
+	},
+	RTPRejectReasonNonAgreedRTP: {
+		Code:        RTPRejectReasonNonAgreedRTP,
+		Description: "Non Agreed RTP",
+	},
+	RTPRejectReasonPayerOrPayerRTPSPNotReachable: {
+		Code:        RTPRejectReasonPayerOrPayerRTPSPNotReachable,
+		Description: "Payer Or Payer RTPSP Not Reachable",
+	},
+	RTPRejectReasonTypeOfPaymentInstrumentNotSupported: {
+		Code:        RTPRejectReasonTypeOfPaymentInstrumentNotSupported,
+		Description: "Type Of Payment Instrument Not Supported",
+	},
+	RTPRejectReasonRegulatoryReason: {
+		Code:        RTPRejectReasonRegulatoryReason,
+		Description: "Regulatory Reason",
+	},
+	RTPRejectReasonRTPNotSupportedForDebtor: {
+		Code:        RTPRejectReasonRTPNotSupportedForDebtor,
+		Description: "RTP Not Supported ForDebtor",
+	},
+	RTPRejectReasonRTPServiceProviderIdentifierIncorrect: {
+		Code:        RTPRejectReasonRTPServiceProviderIdentifierIncorrect,
+		Description: "RTP Service Provider Identifier Incorrect",
+	},
+	RTPRejectReasonUnknownCreditor: {
+		Code:        RTPRejectReasonUnknownCreditor,
+		Description: "Unknown creditor",
+	},
+}
+
+func LookupStsRsnText(cd string, rsn string) string {
+
+	if s, ok := StsRsnCodeDescriptionRegistry[rsn]; ok {
+		return s.Description
+	}
+
+	if s, ok := StsRsnCodeDescriptionRegistry[cd]; ok {
+		return s.Description
+	}
+
+	return ""
+}
 
 // Document type definition
 type Document struct {

@@ -16,6 +16,11 @@ const (
 	Iso20022MsgName = "pacs.028.001.03"
 )
 
+type StsRsnCodeDescription struct {
+	Code        string
+	Description string
+}
+
 // Document type definition
 type Document struct {
 	XMLName         xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03 Document"`
