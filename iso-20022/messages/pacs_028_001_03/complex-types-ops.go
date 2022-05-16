@@ -2,19 +2,6 @@
 // Do not Edit. This stuff it's been automatically generated.
 package pacs_028_001_03
 
-// IsValid checks if GroupHeader91 is valid
-func (s GroupHeader91) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.MsgId.IsValid(false)
-	valid = valid && s.CreDtTm.IsValid(false)
-	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
-
-	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
-
-	return valid
-}
-
 // IsValid checks if FIToFIPaymentStatusRequestV03 is valid
 func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 
@@ -31,19 +18,6 @@ func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
-
-	return valid
-}
-
-// IsValid checks if OriginalGroupInformation27 is valid
-func (s OriginalGroupInformation27) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
-	valid = valid && s.OrgnlCtrlSum.IsValid(true)
 
 	return valid
 }
@@ -70,6 +44,32 @@ func (s PaymentTransaction113) IsValid(optional bool) bool {
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)
 	}
+
+	return valid
+}
+
+// IsValid checks if GroupHeader91 is valid
+func (s GroupHeader91) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.MsgId.IsValid(false)
+	valid = valid && s.CreDtTm.IsValid(false)
+	valid = valid && (s.InstgAgt == nil || (s.InstgAgt != nil && s.InstgAgt.IsValid(true)))
+
+	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
+
+	return valid
+}
+
+// IsValid checks if OriginalGroupInformation27 is valid
+func (s OriginalGroupInformation27) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.OrgnlNbOfTxs.IsValid(true)
+	valid = valid && s.OrgnlCtrlSum.IsValid(true)
 
 	return valid
 }

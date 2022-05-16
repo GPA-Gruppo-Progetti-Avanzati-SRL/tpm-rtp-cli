@@ -12,6 +12,10 @@ import (
 	"sync"
 )
 
+const (
+    Iso20022MsgName = "{{.MsgName}}"
+)
+
 {{ $msgName := .MsgName }}
 {{- range getComplexTypes .PackageName}}
 {{ if eq .Name "Document" }}

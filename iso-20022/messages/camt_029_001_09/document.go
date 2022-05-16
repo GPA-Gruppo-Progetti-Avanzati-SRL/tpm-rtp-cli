@@ -12,6 +12,10 @@ import (
 	"sync"
 )
 
+const (
+	Iso20022MsgName = "camt.029.001.09"
+)
+
 // Document type definition
 type Document struct {
 	XMLName         xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.09 Document"`
