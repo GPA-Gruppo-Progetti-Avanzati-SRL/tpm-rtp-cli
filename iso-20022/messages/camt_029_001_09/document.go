@@ -14,6 +14,21 @@ import (
 
 const (
 	Iso20022MsgName = "camt.029.001.09"
+
+	RTPStatusRejectedCancellationRequest = "RJCR" // applies to: DS10b, DS13 (negative)
+	RTPStatusCancelledAsPerRequest       = "CNCL" // applies to: DS12, DS13 (positive)
+
+	RTPRejectCancellationReasonAlreadyCancelledRTP                = "ACLR" // applies to: DS10b, DS13
+	RTPRejectCancellationReasonAlreadyExpiredRTP                  = "AEXR" // applies to: DS10b, DS13, DS17 (camt)
+	RTPRejectCancellationReasonAlreadyRefusedRTP                  = "ARFR" // applies to: DS10b, DS13,
+	RTPRejectCancellationReasonAlreadyRejectedRTP                 = "ARJR" // applies to: DS10b, DS13
+	RTPRejectCancellationReasonPaymentAlreadyTransmittedExecution = "PATE" // applies to: DS10b, DS13
+	RTPRejectReasonRegulatoryReason                               = "RR04" // applies to: DS04, DS10b, DS13
+	RTPRejectCancellationReasonUnknownRTP                         = "URTP" // applies to: DS10b, DS13
+
+	RTPRfCStatusUpdateAlreadyRejected      = "RCAR" // applies to: DS17
+	RTPRfCStatusUpdateNeverReceived        = "RCNR" // applies to: DS17
+	RTPRfCStatusUpdateReceivedAndProcessed = "RCPR" // applies to: DS17
 )
 
 // Document type definition

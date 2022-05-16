@@ -14,6 +14,40 @@ import (
 
 const (
 	Iso20022MsgName = "pain.014.001.07"
+
+	RTPStatusRejected            = "RJCT" // applies to: DS04, DS08, DS09 (negative)
+	RTPStatusTechnicallyAccepted = "ACTC" // applies to: DS05, DS06
+	RTPStatusAccepted            = "ACCP" // applies to: DS08, DS09 (positive)
+	RTPStatusAcceptedWithChange  = "ACWC" // applies to: DS08, DS09 (positive)
+
+	RTPStatusReasonAlreadyExpiredRTP         = "AEXR" // applies to: DS17 StatusUpdate pain.014
+	RTPStatusReasonAlreadyAcceptedRTP        = "ALAC" // applies to: DS17 StatusUpdate pain.014
+	RTPStatusReasonAlreadyRefusedRTP         = "ARFR" // applies to: DS17 StatusUpdate pain.014
+	RTPStatusReasonAlreadyRejectedRTP        = "ARJR" // applies to: DS17 StatusUpdate pain.014
+	RTPStatusReasonInitialRTPNeverReceived   = "IRNR" // applies to: DS17 StatusUpdate pain.014
+	RTPStatusReasonRTPReceivedCanBeProcessed = "REPR" // applies to: DS17 StatusUpdate pain.014
+
+	RTPRejectReasonInvalidDebtorAccountNumber            = "AC02" // applies to: DS04
+	RTPRejectReasonNotAllowedCurrency                    = "AM03" // applies to: DS04, DS08, DS09
+	RTPRejectReasonDuplication                           = "AM05" // applies to: DS04, DS08, DS09
+	RTPRejectReasonWrongAmount                           = "AM09" // applies to: DS08, DS09
+	RTPRejectReasonAttachmentsNotSupported               = "ATNS" // applies to: DS04
+	RTPRejectReasonInvalidDebtorIdentificationCode       = "BE16" // applies to: DS04
+	RTPRejectReasonExpiryDateTooLong                     = "EDTL" // applies to: DS04
+	RTPRejectReasonExpiryDateTimeReached                 = "EDTR" // applies to: DS04
+	RTPRejectReasonInvalidFileFormat                     = "FF01" // applies to: DS04
+	RTPRejectReasonFraudulentOrigin                      = "FRAD" // applies to: DS04
+	RTPRejectReasonIncorrectExpiryDateTime               = "IEDT" // applies to: DS08, DS09
+	RTPRejectReasonNotSpecifiedReasonCustomerGenerated   = "MS02" // applies to: DS08, DS09
+	RTPRejectReasonNotSpecifiedReasonAgentGenerated      = "MS03" // applies to: DS04
+	RTPRejectReasonNonAgreedRTP                          = "NOAR" // applies to: DS08, DS09
+	RTPRejectReasonPayerOrPayerRTPSPNotReachable         = "NRCH" // applies to: DS04
+	RTPRejectReasonTypeOfPaymentInstrumentNotSupported   = "PINS" // applies to: DS04
+	RTPRejectReasonRegulatoryReason                      = "RR04" // applies to: DS04, DS10b, DS13
+	RTPRejectReasonRTPNotSupportedForDebtor              = "RTNS" // applies to: DS04
+	RTPRejectReasonRTPServiceProviderIdentifierIncorrect = "SPII" // applies to: DS04
+	RTPRejectReasonUnknownCreditor                       = "UCRD" // applies to: DS08, DS09
+
 )
 
 // Document type definition
