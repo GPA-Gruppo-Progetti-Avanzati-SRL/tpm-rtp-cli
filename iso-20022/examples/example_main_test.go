@@ -11,22 +11,22 @@ import (
 )
 
 const (
-	NameOfInitiatingParty  = "AcmeCorp"
-	InitiatingPartyOrgId   = "01114601006"
-	InitiatingPartyOrgIssr = "Acme CORP"
-	PaymentInstructionId   = "Fatt2022-000001-2022-03-22-11:50:45"
-	DebitorName            = "LoremIpsumSPA"
-	DebitorAddress         = "ViaLoremIpsum 30 Roma"
-	DebitorIBAN            = "IT60X0760111101000000123456"
-	DebitorAgentBIC        = "BPPIITRRXXX"
-	InvoiceNumber          = "fatt2022-000001"
-	CreditorName           = "AFC Poste Italiane"
-	CreditorAgentBIC       = "BPPIITRRXXX"
-	CreditorAddress        = "Via Del Creditore 75 Roma"
-	CreditorOrgId          = "0468651441"
-	CreditorIBAN           = "IT60X0760111101000004545561"
-	RemittanceInfo         = "AT41/fatt2022-000001/AT05/pagamento fattura"
-
+	NameOfInitiatingParty        = "AcmeCorp"
+	InitiatingPartyOrgId         = "01114601006"
+	InitiatingPartyOrgIssr       = "Acme CORP"
+	PaymentInstructionId         = "Fatt2022-000001-2022-03-22-11:50:45"
+	DebitorName                  = "LoremIpsumSPA"
+	DebitorAddress               = "ViaLoremIpsum 30 Roma"
+	DebitorIBAN                  = "IT60X0760111101000000123456"
+	DebitorAgentBIC              = "BPPIITRRXXX"
+	InvoiceNumber                = "fatt2022-000001"
+	CreditorName                 = "AFC Poste Italiane"
+	CreditorAgentBIC             = "BPPIITRRXXX"
+	CreditorAddress              = "Via Del Creditore 75 Roma"
+	CreditorOrgId                = "0468651441"
+	CreditorIBAN                 = "IT60X0760111101000004545561"
+	RemittanceInfo               = "AT41/fatt2022-000001/AT05/pagamento fattura"
+	RemittanceInfoAT87           = "AT87/testo libero"
 	AssignerName                 = "AFC Poste Italiane"
 	AssignmentId                 = "str12345"
 	AssignerOrgId                = "0468651441"
@@ -179,6 +179,7 @@ func TestMain(m *testing.M) {
 							RmtInf: &common.RemittanceInformation16{
 								Ustrd: []common.Max140Text{
 									common.MustToMax140Text(RemittanceInfo),
+									common.MustToMax140Text(RemittanceInfoAT87),
 								},
 							},
 						},

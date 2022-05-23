@@ -252,18 +252,19 @@ func (m *Mapper) TraversalsByNameFunc(t reflect.Type, names []string, fn func(in
 // FieldByIndexes returns a value for the field given by the struct traversal
 // for the given value.
 func FieldByIndexes(v reflect.Value, indexes []int) reflect.Value {
-	for _, i := range indexes {
-		v = reflect.Indirect(v).Field(i)
+	for i, ndx := range indexes {
+		v = reflect.Indirect(v).Field(ndx)
 
 		if UseChangedCode {
 			if v.Kind() == reflect.Slice {
-				if v.Len() == 0 {
+				// if the element is an array of length 0 or the array is a leaf (that is the array is of simple type)
+				// append a new element to support array modes
+				if v.Len() == 0 || i == len(indexes)-1 {
 					alloc := reflect.New(Deref(v.Type().Elem()))
 					// fmt.Println(alloc.Kind(), alloc.Type(), v.Kind(), v.Type().Elem().Kind())
 					v.Set(reflect.Append(v, alloc.Elem()))
 				}
-
-				v = v.Index(0)
+				v = v.Index(v.Len() - 1)
 			}
 		}
 

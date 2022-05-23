@@ -26,7 +26,7 @@ var sample = []byte(`
       "payee-company-name":"PPAY",
       "payee-iban":"IT90U0760103200001042598423",
       "payee-name":"Postepay S.p.A",
-      "payee-id ":"06874351007",
+      "payee-id":"06874351007",
       "payee-e2e-rtp-ref":"0000008121000020",
       "payee-psp-bic":"BPPIITRRXXX",
       "payer-id":"0000032551150363",
@@ -36,6 +36,8 @@ var sample = []byte(`
       "pmt-req-exec-date":"2021-01-26",
       "pmt-instrument":"NOT PROVIDED",
       "rtp-timestamp":"2022-04-06 17:27:06"
+      ,"rmt-inf": "pagamento fattura"
+      ,"rmt-inf-87": "pagamento fattura 2"
    }
 `)
 

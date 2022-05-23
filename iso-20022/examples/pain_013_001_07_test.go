@@ -108,6 +108,8 @@ func TestDocumentPain_013_001_07_SetOps(t *testing.T) {
 	require.NoError(t, err)
 	err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_RmtInf_Ustrd, common.MustToMax140Text(RemittanceInfo))
 	require.NoError(t, err)
+	err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_RmtInf_Ustrd, common.MustToMax140Text(RemittanceInfoAT87))
+	require.NoError(t, err)
 
 	b, err := d.ToXML()
 	require.NoError(t, err)

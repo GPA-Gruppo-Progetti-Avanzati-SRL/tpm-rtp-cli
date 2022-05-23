@@ -88,6 +88,11 @@ func Gen_AFC_DS10_Camt055_001_08(fn string) error {
 			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlId,
 		},
 		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlInstrId",
+			SourceValue: `{$.payee-e2e-rtp-ref}`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlInstrId,
+		},
+		{
 			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlEndToEndId",
 			SourceValue: `{$.payee-e2e-rtp-ref}`,
 

@@ -89,6 +89,36 @@ func (mc *MappingClass) Map(sourceDoc MappableDocument, targetDoc MappableDocume
 }
 
 func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver *Resolver) error {
+
+	if mr.Guard != "" {
+
+		guardExpr := false
+		if isExpression(mr.Guard) {
+			guardExpr = true
+		}
+
+		s, err := varResolver.ResolveVariables(mr.Guard, varResolver.SimpleVariableReference, resolver.ResolveVar, true)
+		if err != nil {
+			return err
+		}
+
+		if guardExpr {
+			exprVal, err := gval.Evaluate(s, funcs)
+			if err != nil {
+				log.Error().Err(err).Str("expr", s).Msg("error in expression evaluation")
+			}
+
+			b, ok := exprVal.(bool)
+			if !ok || !b {
+				return nil
+			}
+		} else {
+			if s == "" {
+				return nil
+			}
+		}
+	}
+
 	s, err := varResolver.ResolveVariables(mr.SourceValue, varResolver.SimpleVariableReference, resolver.ResolveVar, true)
 	if err != nil {
 		return err

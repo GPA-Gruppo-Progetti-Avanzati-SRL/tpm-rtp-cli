@@ -6,6 +6,7 @@ type MappingRule struct {
 	Name        string `mapstructure:"name,omitempty" yaml:"name,omitempty" json:"name,omitempty"`
 	SourceValue string `mapstructure:"source-value,omitempty yaml:"source-value,omitempty" json:"source-value,omitempty"`
 	IsExpr      bool   `mapstructure:"is-expr,omitempty" yaml:"is-expr,omitempty" json:"is-expr,omitempty"`
+	Guard       string `mapstructure:"guard,omitempty" yaml:"guard,omitempty" json:"guard,omitempty"`
 	MapFunc     string `mapstructure:"map-func,omitempty" yaml:"map-func,omitempty" json:"map-func,omitempty"`
 	TargetPath  string `mapstructure:"target-path,omitempty" yaml:"target-path,omitempty" json:"target-path,omitempty"`
 }

@@ -122,6 +122,12 @@ func Gen_AFC_DS01_Pain013_001_07(fn string) error {
 			TargetPath: pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtId_EndToEndId,
 		},
 		{
+			Name:        "PmtInf_CdtTrfTx_PmtId_InstrId",
+			SourceValue: "{$.payee-e2e-rtp-ref}",
+
+			TargetPath: pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtId_InstrId,
+		},
+		{
 			Name:        "PmtInf_CdtTrfTx_PmtTpInf_SvcLvl_Cd",
 			SourceValue: "SRTP",
 			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_PmtTpInf_SvcLvl_Cd,

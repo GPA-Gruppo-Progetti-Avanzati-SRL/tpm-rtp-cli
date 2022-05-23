@@ -17,7 +17,7 @@ rules:
     sourcevalue: '{$.payer-psp-id}'
     target-path: CstmrPmtCxlReq.Assgnmt.Assgne.Agt.FinInstnId.BICFI
   - name: Assgnmt_CreDtTm
-    sourcevalue: now("RFC3339")
+    sourcevalue: now()
     target-path: CstmrPmtCxlReq.Assgnmt.CreDtTm
   - name: Undrlyg_OrgnlGrpInfAndCxl_GrpCxlId
     sourcevalue: '{$.payee-company-name}-DS10-" + objId()'
@@ -35,7 +35,7 @@ rules:
     sourcevalue: "1"
     target-path: CstmrPmtCxlReq.Undrlyg.OrgnlGrpInfAndCxl.NbOfTxs
   - name: Undrlyg_OrgnlGrpInfAndCxl_CtrlSum
-    sourcevalue: 'decimal("{$.amount}")'
+    sourcevalue: '{$.amount}'
     target-path: CstmrPmtCxlReq.Undrlyg.OrgnlGrpInfAndCxl.CtrlSum
   - name: Undrlyg_OrgnlPmtInfAndCxl_OrgnlPmtInfId
     sourcevalue: '"F/{$.payee-e2e-rtp-ref}/P/" + rtpId()'
@@ -43,6 +43,9 @@ rules:
   - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_CxlId
     sourcevalue: '{$.payee-company-name}-DS10-" + objId()'
     target-path: CstmrPmtCxlReq.Undrlyg.OrgnlPmtInfAndCxl.TxInf.CxlId
+  - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlInstrId
+    sourcevalue: '{$.payee-e2e-rtp-ref}'
+    target-path: CstmrPmtCxlReq.Undrlyg.OrgnlPmtInfAndCxl.TxInf.OrgnlInstrId
   - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlEndToEndId
     sourcevalue: '{$.payee-e2e-rtp-ref}'
     target-path: CstmrPmtCxlReq.Undrlyg.OrgnlPmtInfAndCxl.TxInf.OrgnlEndToEndId

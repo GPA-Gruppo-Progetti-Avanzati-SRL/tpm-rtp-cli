@@ -58,6 +58,9 @@ rules:
   - name: PmtInf_CdtTrfTx_PmtId_EndToEndId
     sourcevalue: '{$.payee-e2e-rtp-ref}'
     target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.PmtId.EndToEndId
+  - name: PmtInf_CdtTrfTx_PmtId_InstrId
+    sourcevalue: '{$.payee-e2e-rtp-ref}'
+    target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.PmtId.InstrId
   - name: PmtInf_CdtTrfTx_PmtTpInf_SvcLvl_Cd
     sourcevalue: SRTP
     target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.PmtTpInf.SvcLvl.Cd
@@ -104,5 +107,14 @@ rules:
     sourcevalue: '{$.payee-iban}'
     target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.CdtrAcct.Id.IBAN
   - name: PmtInf_CdtTrfTx_RmtInf_Ustrd
-    sourcevalue: AT41/{$.payee-e2e-rtp-ref}/AT05/pagamento fattura
+    guard: '"{$.rmt-inf}" == ""'
+    sourcevalue: 'AT41/{$.payee-e2e-rtp-ref}'
+    target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.RmtInf.Ustrd
+  - name: PmtInf_CdtTrfTx_RmtInf_Ustrd
+    guard: '"{$.rmt-inf}" != ""'
+    sourcevalue: 'AT41/{$.payee-e2e-rtp-ref}/AT05/{$.rmt-inf}'
+    target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.RmtInf.Ustrd
+  - name: PmtInf_CdtTrfTx_RmtInf_Ustrd
+    guard: '{$.rmt-inf-87}'
+    sourcevalue: 'AT87/{$.rmt-inf-87}'
     target-path: CdtrPmtActvtnReq.PmtInf.CdtTrfTx.RmtInf.Ustrd
