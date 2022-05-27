@@ -16,14 +16,6 @@ type OriginalGroupInformation27 struct {
 	OrgnlCtrlSum xsdt.Decimal            `xml:"OrgnlCtrlSum,omitempty"`
 }
 
-// FIToFIPaymentStatusRequestV03 type definition
-type FIToFIPaymentStatusRequestV03 struct {
-	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
-	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
-	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
-	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
-}
-
 // GroupHeader91 type definition
 type GroupHeader91 struct {
 	MsgId    common.Max35Text                                     `xml:"MsgId"`
@@ -46,4 +38,12 @@ type PaymentTransaction113 struct {
 	InstdAgt        *common.BranchAndFinancialInstitutionIdentification6 `xml:"InstdAgt,omitempty"`
 	OrgnlTxRef      *common.OriginalTransactionReference28               `xml:"OrgnlTxRef,omitempty"`
 	SplmtryData     []common.SupplementaryData1                          `xml:"SplmtryData,omitempty"`
+}
+
+// FIToFIPaymentStatusRequestV03 type definition
+type FIToFIPaymentStatusRequestV03 struct {
+	GrpHdr      GroupHeader91                `xml:"GrpHdr"`
+	OrgnlGrpInf []OriginalGroupInformation27 `xml:"OrgnlGrpInf,omitempty"`
+	TxInf       []PaymentTransaction113      `xml:"TxInf,omitempty"`
+	SplmtryData []common.SupplementaryData1  `xml:"SplmtryData,omitempty"`
 }

@@ -59,9 +59,9 @@ func (d *Document) ToXML() ([]byte, error) {
 }
 
 func NewDocumentFromXML(b []byte) (*Document, error) {
-	d := &Document{}
-	err := xml.Unmarshal(b, d)
-	return d, err
+	d := NewDocument()
+	err := xml.Unmarshal(b, &d)
+	return &d, err
 }
 
 // IsValid checks if Document is valid

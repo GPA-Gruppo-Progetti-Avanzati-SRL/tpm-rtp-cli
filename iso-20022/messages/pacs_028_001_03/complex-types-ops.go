@@ -15,26 +15,6 @@ func (s OriginalGroupInformation27) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if FIToFIPaymentStatusRequestV03 is valid
-func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.GrpHdr.IsValid(false)
-	for j := 0; j < len(s.OrgnlGrpInf); j++ {
-		valid = valid && s.OrgnlGrpInf[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.TxInf); j++ {
-		valid = valid && s.TxInf[j].IsValid(true)
-	}
-
-	for j := 0; j < len(s.SplmtryData); j++ {
-		valid = valid && s.SplmtryData[j].IsValid(true)
-	}
-
-	return valid
-}
-
 // IsValid checks if GroupHeader91 is valid
 func (s GroupHeader91) IsValid(optional bool) bool {
 
@@ -66,6 +46,26 @@ func (s PaymentTransaction113) IsValid(optional bool) bool {
 	valid = valid && (s.InstdAgt == nil || (s.InstdAgt != nil && s.InstdAgt.IsValid(true)))
 
 	valid = valid && (s.OrgnlTxRef == nil || (s.OrgnlTxRef != nil && s.OrgnlTxRef.IsValid(true)))
+
+	for j := 0; j < len(s.SplmtryData); j++ {
+		valid = valid && s.SplmtryData[j].IsValid(true)
+	}
+
+	return valid
+}
+
+// IsValid checks if FIToFIPaymentStatusRequestV03 is valid
+func (s FIToFIPaymentStatusRequestV03) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && s.GrpHdr.IsValid(false)
+	for j := 0; j < len(s.OrgnlGrpInf); j++ {
+		valid = valid && s.OrgnlGrpInf[j].IsValid(true)
+	}
+
+	for j := 0; j < len(s.TxInf); j++ {
+		valid = valid && s.TxInf[j].IsValid(true)
+	}
 
 	for j := 0; j < len(s.SplmtryData); j++ {
 		valid = valid && s.SplmtryData[j].IsValid(true)

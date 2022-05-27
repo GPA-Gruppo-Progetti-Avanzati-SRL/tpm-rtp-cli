@@ -17,26 +17,6 @@ func (s PaymentCancellationReason5) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if OriginalGroupHeader15 is valid
-func (s OriginalGroupHeader15) IsValid(optional bool) bool {
-
-	valid := true
-	valid = valid && s.GrpCxlId.IsValid(true)
-	valid = valid && (s.Case == nil || (s.Case != nil && s.Case.IsValid(true)))
-
-	valid = valid && s.OrgnlMsgId.IsValid(false)
-	valid = valid && s.OrgnlMsgNmId.IsValid(false)
-	valid = valid && s.OrgnlCreDtTm.IsValid(true)
-	valid = valid && s.NbOfTxs.IsValid(true)
-	valid = valid && s.CtrlSum.IsValid(true)
-	valid = valid && s.GrpCxl.IsValid(true)
-	for j := 0; j < len(s.CxlRsnInf); j++ {
-		valid = valid && s.CxlRsnInf[j].IsValid(true)
-	}
-
-	return valid
-}
-
 // IsValid checks if ControlData1 is valid
 func (s ControlData1) IsValid(optional bool) bool {
 
@@ -99,6 +79,19 @@ func (s PaymentTransaction109) IsValid(optional bool) bool {
 	return valid
 }
 
+// IsValid checks if UnderlyingTransaction24 is valid
+func (s UnderlyingTransaction24) IsValid(optional bool) bool {
+
+	valid := true
+	valid = valid && (s.OrgnlGrpInfAndCxl == nil || (s.OrgnlGrpInfAndCxl != nil && s.OrgnlGrpInfAndCxl.IsValid(true)))
+
+	for j := 0; j < len(s.OrgnlPmtInfAndCxl); j++ {
+		valid = valid && s.OrgnlPmtInfAndCxl[j].IsValid(true)
+	}
+
+	return valid
+}
+
 // IsValid checks if CustomerPaymentCancellationRequestV08 is valid
 func (s CustomerPaymentCancellationRequestV08) IsValid(optional bool) bool {
 
@@ -122,14 +115,21 @@ func (s CustomerPaymentCancellationRequestV08) IsValid(optional bool) bool {
 	return valid
 }
 
-// IsValid checks if UnderlyingTransaction24 is valid
-func (s UnderlyingTransaction24) IsValid(optional bool) bool {
+// IsValid checks if OriginalGroupHeader15 is valid
+func (s OriginalGroupHeader15) IsValid(optional bool) bool {
 
 	valid := true
-	valid = valid && (s.OrgnlGrpInfAndCxl == nil || (s.OrgnlGrpInfAndCxl != nil && s.OrgnlGrpInfAndCxl.IsValid(true)))
+	valid = valid && s.GrpCxlId.IsValid(true)
+	valid = valid && (s.Case == nil || (s.Case != nil && s.Case.IsValid(true)))
 
-	for j := 0; j < len(s.OrgnlPmtInfAndCxl); j++ {
-		valid = valid && s.OrgnlPmtInfAndCxl[j].IsValid(true)
+	valid = valid && s.OrgnlMsgId.IsValid(false)
+	valid = valid && s.OrgnlMsgNmId.IsValid(false)
+	valid = valid && s.OrgnlCreDtTm.IsValid(true)
+	valid = valid && s.NbOfTxs.IsValid(true)
+	valid = valid && s.CtrlSum.IsValid(true)
+	valid = valid && s.GrpCxl.IsValid(true)
+	for j := 0; j < len(s.CxlRsnInf); j++ {
+		valid = valid && s.CxlRsnInf[j].IsValid(true)
 	}
 
 	return valid

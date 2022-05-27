@@ -14,19 +14,6 @@ type PaymentCancellationReason5 struct {
 	AddtlInf []common.Max105Text            `xml:"AddtlInf,omitempty"`
 }
 
-// OriginalGroupHeader15 type definition
-type OriginalGroupHeader15 struct {
-	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
-	Case         *common.Case5                `xml:"Case,omitempty"`
-	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
-	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
-	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
-	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
-	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
-}
-
 // ControlData1 type definition
 type ControlData1 struct {
 	NbOfTxs common.Max15NumericText `xml:"NbOfTxs"`
@@ -61,6 +48,12 @@ type PaymentTransaction109 struct {
 	SplmtryData       []common.SupplementaryData1               `xml:"SplmtryData,omitempty"`
 }
 
+// UnderlyingTransaction24 type definition
+type UnderlyingTransaction24 struct {
+	OrgnlGrpInfAndCxl *OriginalGroupHeader15         `xml:"OrgnlGrpInfAndCxl,omitempty"`
+	OrgnlPmtInfAndCxl []OriginalPaymentInstruction34 `xml:"OrgnlPmtInfAndCxl,omitempty"`
+}
+
 // CustomerPaymentCancellationRequestV08 type definition
 type CustomerPaymentCancellationRequestV08 struct {
 	Assgnmt     common.CaseAssignment5      `xml:"Assgnmt"`
@@ -70,10 +63,17 @@ type CustomerPaymentCancellationRequestV08 struct {
 	SplmtryData []common.SupplementaryData1 `xml:"SplmtryData,omitempty"`
 }
 
-// UnderlyingTransaction24 type definition
-type UnderlyingTransaction24 struct {
-	OrgnlGrpInfAndCxl *OriginalGroupHeader15         `xml:"OrgnlGrpInfAndCxl,omitempty"`
-	OrgnlPmtInfAndCxl []OriginalPaymentInstruction34 `xml:"OrgnlPmtInfAndCxl,omitempty"`
+// OriginalGroupHeader15 type definition
+type OriginalGroupHeader15 struct {
+	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
+	Case         *common.Case5                `xml:"Case,omitempty"`
+	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
+	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
+	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
+	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
+	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
 }
 
 // CancellationReason33Choice type definition
