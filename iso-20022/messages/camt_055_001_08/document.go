@@ -16,11 +16,6 @@ const (
 	Iso20022MsgName = "camt.055.001.08"
 )
 
-type StsRsnCodeDescription struct {
-	Code        string
-	Description string
-}
-
 // Document type definition
 type Document struct {
 	XMLName        xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.08 Document"`
