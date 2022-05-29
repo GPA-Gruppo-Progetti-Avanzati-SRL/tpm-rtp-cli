@@ -7,7 +7,6 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/docmapper"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/pain_013_001_07"
-	jsoniter "github.com/json-iterator/go"
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v3"
 	"io/fs"
@@ -133,7 +132,7 @@ func TestPain013Doc2Map(t *testing.T) {
 	require.NoError(t, err)
 	t.Log(string(b1))
 
-	b, err := jsoniter.MarshalIndent(m, "", " ")
+	b, err := json.MarshalIndent(m, "", " ")
 	require.NoError(t, err)
 
 	t.Log(string(b))

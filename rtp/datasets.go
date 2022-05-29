@@ -1,5 +1,10 @@
 package rtp
 
+import (
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
+	"github.com/rs/zerolog/log"
+)
+
 const (
 	DataSetDS01 = "DS01"
 	DataSetDS02 = "DS02"
@@ -238,6 +243,20 @@ func LookupStsCdRsnText(dataset string, cd string, rsn string) string {
 	if s, ok := StsRsnCodeDescriptionRegistry[cd]; ok {
 		return s.Description
 	}
+	return ""
+}
 
-	return "UKN:" + cd
+func IsTransactionStatusValidForDataset(ds string, txSts string) bool {
+
+	var rc bool
+	switch ds {
+	case DataSetDS05:
+		if util.StringArrayContains(ds05AcceptedTransactionStatus, txSts) {
+			rc = true
+		}
+	default:
+		log.Error().Str("dataset", ds).Msg("unsupported dataset")
+	}
+
+	return rc
 }
