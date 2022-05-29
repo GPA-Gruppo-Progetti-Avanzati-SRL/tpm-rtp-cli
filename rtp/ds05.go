@@ -1,5 +1,5 @@
 package rtp
 
-var ds05AcceptedTransactionStatus = []string{
+var listOfDS05ValidTransactionStatus = []string{
 	StatusTechnicallyAccepted,
 }
