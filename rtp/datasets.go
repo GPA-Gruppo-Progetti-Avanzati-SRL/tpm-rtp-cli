@@ -33,7 +33,9 @@ const (
 
 	// IG 2.0 Pag. 64 (DS-04a), 109 (DS-04b+), 159 (DS-05, DS-06), 203 (DS-08, DS-09 positive), 257 (DS-08, DS-09 negative), 495 (DS-17)
 
-	StatusZero                = "RCRE" // Non ISO. Represent a non status.
+	StatusZero            = "RCRE" // Non ISO. Represent a non status.
+	RTPRejectInvalidState = "ISTS" // Non Iso20022 Represent an invalid transition.
+
 	StatusRejected            = "RJCT" // applies to: DS04, DS08, DS09 (negative)
 	StatusTechnicallyAccepted = "ACTC" // applies to: DS05, DS06
 	StatusAccepted            = "ACCP" // applies to: DS08, DS09 (positive)
@@ -88,6 +90,10 @@ var StsRsnCodeDescriptionRegistry = map[string]StsRsnCodeDescription{
 	StatusZero: {
 		Code:        StatusZero,
 		Description: "Created",
+	},
+	RTPRejectInvalidState: {
+		Code:        RTPRejectInvalidState,
+		Description: "Invalid state",
 	},
 	StatusRejected: {
 		Code:        StatusRejected,
