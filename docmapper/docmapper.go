@@ -71,7 +71,7 @@ func (mc *MappingClass) GetResolver(opts ...ResolverOption) (*Resolver, error) {
 	return r, nil
 }
 
-func (mc *MappingClass) Map(sourceDoc MappableDocument, targetDoc MappableDocument) error {
+func (mc *MappingClass) Map(sourceDoc MappableDocument, targetDoc MappableDocument, verbose bool) error {
 
 	resolver, err := mc.GetResolver(WithMappableDoc(sourceDoc))
 	if err != nil {
@@ -79,7 +79,7 @@ func (mc *MappingClass) Map(sourceDoc MappableDocument, targetDoc MappableDocume
 	}
 
 	for _, r := range mc.Rules {
-		err := r.apply(targetDoc, mc.FuncMap, resolver)
+		err := r.apply(targetDoc, mc.FuncMap, resolver, verbose)
 		if err != nil {
 			return err
 		}
@@ -88,8 +88,11 @@ func (mc *MappingClass) Map(sourceDoc MappableDocument, targetDoc MappableDocume
 	return nil
 }
 
-func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver *Resolver) error {
+func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver *Resolver, verbose bool) error {
 
+	if verbose {
+		log.Trace().Str("name", mr.Name).Str("guard", mr.Guard).Str("map-func", mr.MapFunc).Str("source-value", mr.SourceValue).Str("target-path", mr.TargetPath).Bool("is-expr", mr.IsExpr).Str("", mr.Name).Msg("mapping rule")
+	}
 	if mr.Guard != "" {
 
 		guardExpr := false
@@ -144,6 +147,10 @@ func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver
 		} else {
 			log.Warn().Str("func-name", mr.MapFunc).Msg("cannot find function map")
 		}
+	}
+
+	if verbose {
+		log.Trace().Str("name", mr.Name).Str("output", s).Str("target-path", mr.TargetPath).Msg("mapping rule evaluated")
 	}
 
 	if s != "" {
