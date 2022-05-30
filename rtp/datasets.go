@@ -351,7 +351,7 @@ var listOfFinalTransactionStatus = []string{
 }
 
 func IsStatusFinal(txSts string) bool {
-	return util.StringArrayContains(listOfDS05ValidTransactionStatus, txSts)
+	return util.StringArrayContains(listOfFinalTransactionStatus, txSts)
 }
 
 func NextStatus(dataset string, current Status, event Status) (Status, bool) {
