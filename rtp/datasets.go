@@ -12,6 +12,18 @@ type Status struct {
 	RfCInProgress bool   `yaml:"rfc-in-progress,omitempty" mapstructure:"rfc-in-progress,omitempty" json:"rfc-in-progress,omitempty"`
 }
 
+func (st *Status) IsFinal() bool {
+	return IsStatusFinal(st.Code)
+}
+
+func (st *Status) GetText(dataset string) string {
+	return LookupStsCdRsnText(dataset, st.Code, st.ReasonCode)
+}
+
+func (st *Status) ShowInfo() {
+	log.Trace().Str("tx-sts", st.Code).Str("rsn", st.ReasonCode).Str("text", st.Text).Msg("status info")
+}
+
 const (
 	DataSetDS01 = "DS01"
 	DataSetDS02 = "DS02"
