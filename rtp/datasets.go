@@ -16,8 +16,9 @@ func (st *Status) IsFinal() bool {
 	return IsStatusFinal(st.Code)
 }
 
-func (st *Status) GetText(dataset string) string {
-	return LookupStsCdRsnText(dataset, st.Code, st.ReasonCode)
+func (st *Status) UpdateText(dataset string) string {
+	st.Text = LookupStsCdRsnText(dataset, st.Code, st.ReasonCode)
+	return st.Text
 }
 
 func (st *Status) ShowInfo() {
@@ -427,5 +428,6 @@ func NextStatus(dataset string, current Status, event Status) (Status, bool) {
 
 	}
 
+	_ = st.UpdateText(dataset)
 	return st, rc
 }
