@@ -137,9 +137,12 @@ func TestDocumentPain_013_001_07_SetOps(t *testing.T) {
 
 func TestDocumentPain_013_001_07_SetOp(t *testing.T) {
 	d := pain_013_001_07.NewDocument()
+
 	err := d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, common.MustToMax35Text("pain013-DS01-20220322"))
 	require.NoError(t, err)
-	err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, common.MustToMax35Text("123456789"))
+	err = d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, common.MustToMax35Text("first-id"))
+	require.NoError(t, err)
+	err = d.Set("CdtrPmtActvtnReq.PmtInf.Dbtr.Id.PrvtId.Othr[+].Id", common.MustToMax35Text("second-id"))
 	require.NoError(t, err)
 
 	b, err := d.ToXML()
@@ -183,4 +186,19 @@ func TestDocumentPain_013_001_07_SetOp(t *testing.T) {
 
 	// The difference might also due to the use of time.Now() function
 	require.Equal(t, numOfDiffs, 0, "number of diffs in project")
+}
+
+func TestDocumentPain_013_001_07_GetOp(t *testing.T) {
+	d := pain_013_001_07.NewDocument()
+
+	err := d.Set(pain_013_001_07.Path_CdtrPmtActvtnReq_GrpHdr_MsgId, common.MustToMax35Text("pain013-DS01-20220322"))
+	require.NoError(t, err)
+
+	v, err := d.Get(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id)
+	require.NoError(t, err)
+	t.Log(pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_Dbtr_Id_PrvtId_Othr_Id, v)
+
+	b, err := d.ToXML()
+	require.NoError(t, err)
+	t.Log(b)
 }

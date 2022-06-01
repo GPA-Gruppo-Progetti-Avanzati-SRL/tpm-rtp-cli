@@ -53,7 +53,7 @@ func TestMap2Pain013Doc(t *testing.T) {
 
 	dm := docmapper.Registry["AFC-DS01-pain.013.001.07"]
 	d := pain_013_001_07.NewDocument()
-	err = dm.Map(m, &d)
+	err = dm.Map(m, &d, true)
 	require.NoError(t, err)
 
 	t.Log("is document valid? --> ", d.IsValid(false))
@@ -125,7 +125,7 @@ func TestPain013Doc2Map(t *testing.T) {
 
 	m := docmapper.MappableDocMap(make(map[string]interface{}))
 
-	err = dm.Map(&d, m)
+	err = dm.Map(&d, m, true)
 	require.NoError(t, err)
 
 	b1, err := yaml.Marshal(dm)

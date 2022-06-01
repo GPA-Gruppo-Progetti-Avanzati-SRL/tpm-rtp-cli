@@ -188,6 +188,7 @@ func Gen_AFC_DS01_Pain013_001_07(fn string) error {
 			SourceValue: "NO-AdrLine",
 			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_PstlAdr_AdrLine,
 		},
+		// First line in array
 		{
 			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id",
 			SourceValue: "{$.payee-id}",
@@ -196,6 +197,17 @@ func Gen_AFC_DS01_Pain013_001_07(fn string) error {
 		{
 			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd",
 			SourceValue: "BOID",
+			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd,
+		},
+		// Second line in array
+		{
+			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id",
+			SourceValue: "{$.payee-company-name}",
+			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id,
+		},
+		{
+			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd",
+			SourceValue: "BCID",
 			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd,
 		},
 		{

@@ -105,7 +105,7 @@ func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver
 			return err
 		}
 
-		if guardExpr {
+		if guardExpr && s != "" {
 			exprVal, err := gval.Evaluate(s, funcs)
 			if err != nil {
 				log.Error().Err(err).Str("expr", s).Msg("error in expression evaluation")
@@ -127,7 +127,7 @@ func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver
 		return err
 	}
 
-	if mr.IsExpr {
+	if mr.IsExpr && s != "" {
 		exprVal, err := gval.Evaluate(s, funcs)
 		if err != nil {
 			log.Error().Err(err).Str("expr", s).Msg("error in expression evaluation")
@@ -136,7 +136,7 @@ func (mr *MappingRule) apply(targetDoc MappableDocument, funcs FuncMap, resolver
 		s = fmt.Sprintf("%v", exprVal)
 	}
 
-	if mr.MapFunc != "" {
+	if mr.MapFunc != "" && s != "" {
 		f, ok := funcs[mr.MapFunc]
 		if ok {
 			if fun, ok := f.(func(string) string); ok {

@@ -6,6 +6,7 @@ import (
 	"bytes"
 	"encoding/xml"
 	"errors"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/dotnotation"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"reflect"
 	"strings"
@@ -106,7 +107,7 @@ func mapper() *common.Mapper {
 // when iterating over many rows.  Empty traversals will get an interface pointer.
 // Because of the necessity of requesting ptrs or values, it's considered a bit too
 // specialized for inclusion in reflectx itself.
-func fieldsByTraversal(v reflect.Value, traversals [][]int, values []interface{}, ptrs bool) error {
+func fieldsByTraversal(v reflect.Value, traversals [][]int, paths []dotnotation.DotPath, values []interface{}, ptrs bool, readOnly bool) error {
 	v = reflect.Indirect(v)
 	if v.Kind() != reflect.Struct {
 		return errors.New("argument not a struct")
@@ -117,7 +118,18 @@ func fieldsByTraversal(v reflect.Value, traversals [][]int, values []interface{}
 			values[i] = new(interface{})
 			continue
 		}
-		f := common.FieldByIndexes(v, traversal)
+
+		var f reflect.Value
+		var found bool
+		if readOnly {
+			f, found = common.FieldByIndexesAndPathInfoReadOnly(v, traversal, paths[i])
+			if !found {
+				return nil
+			}
+		} else {
+			f = common.FieldByIndexesAndPathInfo(v, traversal, paths[i])
+		}
+
 		if ptrs {
 			values[i] = f.Addr().Interface()
 		} else {

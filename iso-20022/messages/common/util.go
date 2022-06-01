@@ -3,6 +3,7 @@
 package common
 
 import (
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/dotnotation"
 	"reflect"
 	"regexp"
 	"runtime"
@@ -213,7 +214,7 @@ func (m *Mapper) FieldsByName(v reflect.Value, names []string) []reflect.Value {
 // TraversalsByName returns a slice of int slices which represent the struct
 // traversals for each mapped name.  Panics if t is not a struct or Indirectable
 // to a struct.  Returns empty int slice for each name not found.
-func (m *Mapper) TraversalsByName(t reflect.Type, names []string) [][]int {
+func (m *Mapper) TraversalsByName(t reflect.Type, names []dotnotation.DotPath) [][]int {
 	r := make([][]int, 0, len(names))
 	m.TraversalsByNameFunc(t, names, func(_ int, i []int) error {
 		if i == nil {
@@ -230,12 +231,12 @@ func (m *Mapper) TraversalsByName(t reflect.Type, names []string) [][]int {
 // TraversalsByNameFunc traverses the mapped names and calls fn with the index of
 // each name and the struct traversal represented by that name. Panics if t is not
 // a struct or Indirectable to a struct. Returns the first error returned by fn or nil.
-func (m *Mapper) TraversalsByNameFunc(t reflect.Type, names []string, fn func(int, []int) error) error {
+func (m *Mapper) TraversalsByNameFunc(t reflect.Type, names []dotnotation.DotPath, fn func(int, []int) error) error {
 	t = Deref(t)
 	mustBe(t, reflect.Struct)
 	tm := m.TypeMap(t)
 	for i, name := range names {
-		fi, ok := tm.Names[name]
+		fi, ok := tm.Names[name.BasePath]
 		if !ok {
 			if err := fn(i, nil); err != nil {
 				return err
@@ -280,14 +281,57 @@ func FieldByIndexes(v reflect.Value, indexes []int) reflect.Value {
 	return v
 }
 
+// FieldByIndexesAndPathInfo returns a value for the field given by the struct traversal
+// for the given value. The path information extends the handling of slice structures.
+func FieldByIndexesAndPathInfo(v reflect.Value, indexes []int, dotPath dotnotation.DotPath) reflect.Value {
+	for i, ndx := range indexes {
+		v = reflect.Indirect(v).Field(ndx)
+
+		if UseChangedCode {
+			if v.Kind() == reflect.Slice {
+				// if the element is an array of length 0 or the array is a leaf (that is the array is of simple type)
+				// append a new element to support array modes
+				if v.Len() == 0 || i == len(indexes)-1 || dotPath.Elems[i].IndexingType == dotnotation.Add {
+					alloc := reflect.New(Deref(v.Type().Elem()))
+					// fmt.Println(alloc.Kind(), alloc.Type(), v.Kind(), v.Type().Elem().Kind())
+					v.Set(reflect.Append(v, alloc.Elem()))
+				}
+				v = v.Index(v.Len() - 1)
+			}
+		}
+
+		// if this is a pointer and it's nil, allocate a new value and set it
+		if v.Kind() == reflect.Ptr && v.IsNil() {
+			alloc := reflect.New(Deref(v.Type()))
+			v.Set(alloc)
+		}
+		if v.Kind() == reflect.Map && v.IsNil() {
+			v.Set(reflect.MakeMap(v.Type()))
+		}
+	}
+	return v
+}
+
 // FieldByIndexesReadOnly returns a value for a particular struct traversal,
 // but is not concerned with allocating nil pointers because the value is
 // going to be used for reading and not setting.
-func FieldByIndexesReadOnly(v reflect.Value, indexes []int) reflect.Value {
+func FieldByIndexesAndPathInfoReadOnly(v reflect.Value, indexes []int, dotPath dotnotation.DotPath) (reflect.Value, bool) {
 	for _, i := range indexes {
 		v = reflect.Indirect(v).Field(i)
+
+		if v.Kind() == reflect.Ptr && v.IsNil() {
+			return v, false
+		}
+
+		if v.Kind() == reflect.Slice {
+			if v.Len() == 0 {
+				return v, false
+			} else {
+				v = v.Index(v.Len() - 1)
+			}
+		}
 	}
-	return v
+	return v, true
 }
 
 // Deref is Indirect for reflect.Types

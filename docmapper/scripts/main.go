@@ -14,5 +14,10 @@ func main() {
 		log.Error().Err(err).Msg("Creating Camt055")
 	}
 
+	err = Gen_AFC_DS15_Pacs028_001_03("docmapper/defs/AFC-DS15-pacs.028.001.03.yml")
+	if err != nil {
+		log.Error().Err(err).Msg("Creating Pacs028")
+	}
+
 	log.Info().Msg("done")
 }

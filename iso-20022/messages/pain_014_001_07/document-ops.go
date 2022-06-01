@@ -5,6 +5,7 @@ package pain_014_001_07
 import (
 	"errors"
 	"fmt"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/dotnotation"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/common"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 	"reflect"
@@ -13,10 +14,17 @@ import (
 func (d *Document) Set(path string, src interface{}) error {
 
 	v := reflect.ValueOf(d)
-	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	p, err := dotnotation.NewPath(path)
+	if err != nil {
+		return err
+	}
+	paths := []dotnotation.DotPath{p}
+
+	fields := d.mapper.TraversalsByName(v.Type(), paths)
 
 	values := make([]interface{}, 1)
-	err := fieldsByTraversal(v, fields, values, true)
+	err = fieldsByTraversal(v, fields, paths, values, true, false)
 	if err != nil {
 		return err
 	}
@@ -27,10 +35,17 @@ func (d *Document) Set(path string, src interface{}) error {
 func (d *Document) Get(path string) (interface{}, error) {
 
 	v := reflect.ValueOf(d)
-	fields := d.mapper.TraversalsByName(v.Type(), []string{path})
+
+	p, err := dotnotation.NewPath(path)
+	if err != nil {
+		return nil, err
+	}
+	paths := []dotnotation.DotPath{p}
+
+	fields := d.mapper.TraversalsByName(v.Type(), paths)
 
 	values := make([]interface{}, 1)
-	err := fieldsByTraversal(v, fields, values, true)
+	err = fieldsByTraversal(v, fields, paths, values, true, true)
 	if err != nil {
 		return nil, err
 	}

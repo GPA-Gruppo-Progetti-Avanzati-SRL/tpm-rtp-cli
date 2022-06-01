@@ -117,9 +117,15 @@ func (p SimpleVisitorPath) Value() string {
 				}
 			*/
 			sb.WriteString(item.Name)
+			if item.IsArray {
+				sb.WriteString("[]")
+			}
 		default:
 			sb.WriteString(".")
 			sb.WriteString(item.Name)
+			if item.IsArray {
+				sb.WriteString("[]")
+			}
 		}
 
 	}
