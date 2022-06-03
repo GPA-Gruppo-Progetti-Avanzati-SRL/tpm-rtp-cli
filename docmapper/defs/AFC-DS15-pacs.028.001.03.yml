@@ -1,0 +1,98 @@
+name: AFC-DS15-pacs.028.001.03
+msg-name: pacs.028.001.03
+rules:
+  - name: GrpHdr_MsgId
+    sourcevalue: '{$._ids.msg_id}'
+    target-path: FIToFIPmtStsReq.GrpHdr.MsgId
+  - name: GrpHdr_CreDtTm
+    sourcevalue: '{$._ids.cre_dt_tm}'
+    target-path: FIToFIPmtStsReq.GrpHdr.CreDtTm
+  - name: GrpHdr_InstgAgt_FinInstnId_BICFI
+    sourcevalue: '{$.payee-psp-bic}'
+    target-path: FIToFIPmtStsReq.GrpHdr.InstgAgt.FinInstnId.BICFI
+  - name: GrpHdr_InstdAgt_FinInstnId_BICFI
+    sourcevalue: '{$.payer-psp-id}'
+    target-path: FIToFIPmtStsReq.GrpHdr.InstdAgt.FinInstnId.BICFI
+  - name: OrgnlGrpInf_OrgnlMsgId
+    sourcevalue: '{$._org_ids.msg_id}'
+    target-path: FIToFIPmtStsReq.OrgnlGrpInf.OrgnlMsgId
+  - name: OrgnlGrpInf_OrgnlMsgNmId
+    sourcevalue: pain.013.001.07
+    target-path: FIToFIPmtStsReq.OrgnlGrpInf.OrgnlMsgNmId
+  - name: OrgnlGrpInf_OrgnlCtrlSum
+    sourcevalue: decimal("{$.amount}")
+    target-path: FIToFIPmtStsReq.OrgnlGrpInf.OrgnlCtrlSum
+  - name: OrgnlGrpInf_OrgnlNbOfTxs
+    sourcevalue: "1"
+    target-path: FIToFIPmtStsReq.OrgnlGrpInf.OrgnlNbOfTxs
+  - name: OrgnlGrpInf_OrgnlCreDtTm
+    sourcevalue: '{$._org_ids.cre_dt_tm}'
+    target-path: FIToFIPmtStsReq.OrgnlGrpInf.OrgnlCreDtTm
+  - name: TxInf_StsReqId
+    sourcevalue: '{$._ids.lnk_id}'
+    target-path: FIToFIPmtStsReq.TxInf.StsReqId
+  - name: TxInf_OrgnlEndToEndId
+    sourcevalue: '{$.payee-e2e-rtp-ref}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlEndToEndId
+  - name: TxInf_OrgnlInstrId
+    sourcevalue: '{$._org_ids.instr_id}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlInstrId
+  - name: TxInf_InstgAgt_FinInstnId_BICFI
+    sourcevalue: '{$.payee-psp-bic}'
+    target-path: FIToFIPmtStsReq.TxInf.InstgAgt.FinInstnId.BICFI
+  - name: TxInf_InstdAgt_FinInstnId_BICFI
+    sourcevalue: '{$.payer-psp-id}'
+    target-path: FIToFIPmtStsReq.TxInf.InstdAgt.FinInstnId.BICFI
+  - name: TxInf_OrgnlTxRef_Amt_InstdAmt_Value
+    sourcevalue: decimal("{$.amount}")
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Amt.InstdAmt.Value
+  - name: TxInf_OrgnlTxRef_Amt_InstdAmt_Ccy
+    sourcevalue: EUR
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Amt.InstdAmt.Ccy
+  - name: TxInf_OrgnlTxRef_ReqdExctnDt_Dt
+    sourcevalue: '{$.pmt-req-exec-date}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.ReqdExctnDt.Dt
+  - name: TxInf_OrgnlTxRef_PmtTpInf_SvcLvl_Cd
+    sourcevalue: SRTP
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.PmtTpInf.SvcLvl.Cd
+  - name: TxInf_OrgnlTxRef_PmtTpInf_LclInstrm_Prtry
+    sourcevalue: '{$.pmt-instrument}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.PmtTpInf.LclInstrm.Prtry
+  - name: TxInf_OrgnlTxRef_PmtTpInf_CtgyPurp_Cd
+    sourcevalue: OTHR
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.PmtTpInf.CtgyPurp.Cd
+  - name: TxInf_OrgnlTxRef_RmtInf_Ustrd
+    sourcevalue: AT41/{$.payee-e2e-rtp-ref}
+    guard: '"{$.rmt-inf-1}" == ""'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.RmtInf.Ustrd
+  - name: TxInf_OrgnlTxRef_RmtInf_Ustrd
+    sourcevalue: AT41/{$.payee-e2e-rtp-ref}/AT05/{$.rmt-inf-1}
+    guard: '{$.rmt-inf-1}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.RmtInf.Ustrd
+  - name: TxInf_OrgnlTxRef_RmtInf_Ustrd
+    sourcevalue: AT77/{$.rtp-expiry-date}
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.RmtInf.Ustrd
+  - name: TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_Id
+    sourcevalue: '{$.payer-id}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr.Id
+  - name: TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm_Cd
+    sourcevalue: POID
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr.SchmeNm.Cd
+  - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Nm
+    sourcevalue: '{$.payee-name}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Cdtr.Agt.FinInstnId.Nm
+  - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_BICFI
+    sourcevalue: '{$.payee-psp-bic}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Cdtr.Agt.FinInstnId.BICFI
+  - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Id
+    sourcevalue: '{$.payee-id}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Cdtr.Agt.FinInstnId.Othr.Id
+  - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_SchmeNm_Prtry
+    sourcevalue: BOID
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Cdtr.Agt.FinInstnId.Othr.SchmeNm.Prtry
+  - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Issr
+    sourcevalue: '{$.payee-company-name} {$.payee-name}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.Cdtr.Agt.FinInstnId.Othr.Issr
+  - name: TxInf_OrgnlTxRef_CdtrAcct_Id_IBAN
+    sourcevalue: '{$.payee-iban}'
+    target-path: FIToFIPmtStsReq.TxInf.OrgnlTxRef.CdtrAcct.Id.IBAN
