@@ -480,6 +480,10 @@ func copy2Dest(docPath string, dest, src interface{}) error {
 
 func deref(docPath string, val interface{}) (interface{}, error) {
 
+	if val == nil {
+		return nil, nil
+	}
+
 	var err error
 	switch tv := val.(type) {
 	case *common.ActiveOrHistoricCurrencyCode:
