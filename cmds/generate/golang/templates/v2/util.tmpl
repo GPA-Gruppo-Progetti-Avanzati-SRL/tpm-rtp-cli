@@ -317,12 +317,12 @@ func FieldByIndexesAndPathInfo(v reflect.Value, indexes []int, dotPath dotnotati
 // but is not concerned with allocating nil pointers because the value is
 // going to be used for reading and not setting.
 func FieldByIndexesAndPathInfoReadOnly(v reflect.Value, indexes []int, dotPath dotnotation.DotPath) (reflect.Value, bool) {
-	for _, i := range indexes {
-		v = reflect.Indirect(v).Field(i)
+	for i, ndx := range indexes {
+		v = reflect.Indirect(v).Field(ndx)
 
 		if v.Kind() == reflect.Ptr && v.IsNil() {
-        	return v, false
-        }
+			return v, false
+		}
 
 		if v.Kind() == reflect.Slice {
 			if v.Len() == 0 {
