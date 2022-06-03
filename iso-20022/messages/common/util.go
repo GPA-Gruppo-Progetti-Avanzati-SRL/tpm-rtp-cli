@@ -312,7 +312,7 @@ func FieldByIndexesAndPathInfo(v reflect.Value, indexes []int, dotPath dotnotati
 	return v
 }
 
-// FieldByIndexesReadOnly returns a value for a particular struct traversal,
+// FieldByIndexesAndPathInfoReadOnly returns a value for a particular struct traversal,
 // but is not concerned with allocating nil pointers because the value is
 // going to be used for reading and not setting.
 func FieldByIndexesAndPathInfoReadOnly(v reflect.Value, indexes []int, dotPath dotnotation.DotPath) (reflect.Value, bool) {
@@ -327,7 +327,20 @@ func FieldByIndexesAndPathInfoReadOnly(v reflect.Value, indexes []int, dotPath d
 			if v.Len() == 0 {
 				return v, false
 			} else {
-				v = v.Index(v.Len() - 1)
+				targetNdx := 0
+				switch dotPath.Elems[i].IndexingType {
+				case dotnotation.None:
+				case dotnotation.First:
+				case dotnotation.Last:
+					targetNdx = v.Len() - 1
+				case dotnotation.IndexValue:
+					if dotPath.Elems[i].IndexingValue >= v.Len() {
+						targetNdx = v.Len() - 1
+					} else {
+						targetNdx = dotPath.Elems[i].IndexingValue
+					}
+				}
+				v = v.Index(targetNdx)
 			}
 		}
 	}

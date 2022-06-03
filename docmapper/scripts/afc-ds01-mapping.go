@@ -203,7 +203,7 @@ func Gen_AFC_DS01_Pain013_001_07(fn string) error {
 		{
 			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id",
 			SourceValue: "{$.payee-company-name}",
-			TargetPath:  pain_013_001_07.Path_CdtrPmtActvtnReq_PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_Id,
+			TargetPath:  "CdtrPmtActvtnReq.PmtInf[].CdtTrfTx[].Cdtr.Id.OrgId.Othr[+].Id",
 		},
 		{
 			Name:        "PmtInf_CdtTrfTx_Cdtr_Id_OrgId_Othr_SchmeNm_Cd",
