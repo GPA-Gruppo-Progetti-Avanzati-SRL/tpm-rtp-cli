@@ -355,7 +355,7 @@ func IsStatusFinal(txSts string) bool {
 	return util.StringArrayContains(listOfFinalTransactionStatus, txSts)
 }
 
-func NextStatus(dataset string, current Status, event Status) (Status, bool) {
+func RequestToPayNextStatus(dataset string, current Status, event Status) (Status, bool) {
 
 	var rc bool
 	var st = current
@@ -378,51 +378,18 @@ func NextStatus(dataset string, current Status, event Status) (Status, bool) {
 	case DataSetDS12:
 		// This condition refers to the status of the DS10 request....
 		// Different issue when there is the need to propagate to the original rtp status.
-		if current.Code == StatusZero {
+		if !current.IsFinal() {
 			rc = true
 			st = event
 		}
 	case DataSetDS16:
-		switch event.ReasonCode {
-		case StatusReasonAlreadyExpiredRTP:
-			if current.Code == "" || current.Code == StatusTechnicallyAccepted || current.Code == StatusRejected {
+		if !current.IsFinal() {
+			if event.IsFinal() {
 				rc = true
-				if current.Code != StatusRejected {
-					st = Status{Code: StatusRejected, ReasonCode: event.ReasonCode}
-				}
-			}
-		case StatusReasonAlreadyAcceptedRTP:
-			if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted || current.Code == StatusAccepted || current.Code == StatusAcceptedWithChange {
-				rc = true
-				if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted {
-					st = Status{Code: StatusAccepted, ReasonCode: ""}
-				}
-			}
-		case StatusReasonAlreadyRefusedRTP:
-			if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted || current.Code == StatusRejected {
-				rc = true
-				if current.Code != StatusRejected {
-					st = Status{Code: StatusRejected, ReasonCode: ""}
-				}
-			}
-
-		case StatusReasonAlreadyRejectedRTP:
-			if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted || current.Code == StatusRejected {
-				rc = true
-				if current.Code != StatusRejected {
-					st = Status{Code: StatusRejected, ReasonCode: ""}
-				}
-			}
-		case StatusReasonInitialRTPNeverReceived:
-			if current.Code == StatusZero {
-				rc = true
-				st = Status{Code: StatusRejected, ReasonCode: event.ReasonCode}
-			}
-		case StatusReasonRTPReceivedCanBeProcessed:
-			if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted {
-				rc = true
+				st = event
 			}
 		}
+
 	default:
 		log.Error().Str("dataset", dataset).Str("current", current.Code).Str("event", event.Code).Msg("cannot compute wf-status on unrecognized dataset")
 

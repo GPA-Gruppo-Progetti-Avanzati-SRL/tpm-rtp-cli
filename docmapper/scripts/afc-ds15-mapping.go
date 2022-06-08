@@ -154,33 +154,43 @@ func Gen_AFC_DS15_Pacs028_001_03(fn string) error {
 			SourceValue: "POID",
 			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm_Cd,
 		},
+
+		// In use?
 		{
 			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Nm",
 			SourceValue: "{$.payee-name}",
 			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Nm,
 		},
-		{
-			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_BICFI",
-			SourceValue: "{$.payee-psp-bic}",
-			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_BICFI,
-		},
 
+		// Cdtr FinInstId
 		{
-			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Id",
+			Name:        "TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Nm",
+			SourceValue: "{$.payee-name}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_Nm,
+		},
+		// Cdtr_Agt
+		{
+			Name:        "TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_BICFII",
+			SourceValue: "{$.payee-psp-bic}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_CdtrAgt_FinInstnId_BICFI,
+		},
+		// Cdtr_Pty
+		{
+			Name:        "TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_Id",
 			SourceValue: "{$.payee-id}",
-			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Id,
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_Id,
 		},
 		{
 			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_SchmeNm_Prtry",
 			SourceValue: "BOID",
-			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_SchmeNm_Prtry,
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_SchmeNm_Prtry,
 		},
 		{
 			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Issr",
-			SourceValue: "{$.payee-company-name} {$.payee-name}",
-			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Othr_Issr,
+			SourceValue: "{$.payee-name}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_Issr,
 		},
-
+		// Cdtr_IBAN
 		{
 			Name:        "TxInf_OrgnlTxRef_CdtrAcct_Id_IBAN",
 			SourceValue: "{$.payee-iban}",
