@@ -369,6 +369,7 @@ func RequestToPayNextStatus(dataset string, current Status, event Status) (Statu
 		if current.Code == StatusZero {
 			rc = true
 			st = event
+			st.RfCInProgress = current.RfCInProgress
 		}
 	case DataSetDS08:
 		if current.Code == StatusZero || current.Code == StatusTechnicallyAccepted {
@@ -380,7 +381,14 @@ func RequestToPayNextStatus(dataset string, current Status, event Status) (Statu
 		// Different issue when there is the need to propagate to the original rtp status.
 		if !current.IsFinal() {
 			rc = true
-			st = event
+			if event.Code == StatusCancelledAsPerRequest {
+				st = event
+			} else {
+				if !st.RfCInProgress {
+					log.Warn().Str("dataset", dataset).Msg("dataset on an Rtp with no RfCInProgress flag")
+				}
+				st.RfCInProgress = false
+			}
 		}
 	case DataSetDS16:
 		if !current.IsFinal() {
