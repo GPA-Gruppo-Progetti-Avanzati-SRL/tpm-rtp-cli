@@ -30,6 +30,12 @@ func NewMapperClassFromYAML(data []byte, opts ...Option) (MappingClass, error) {
 		return mc, err
 	}
 
+	for i, r := range mc.Rules {
+		if isExpression(r.SourceValue) {
+			mc.Rules[i].IsExpr = true
+		}
+	}
+
 	return mc, nil
 }
 

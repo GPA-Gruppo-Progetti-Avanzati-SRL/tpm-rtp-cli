@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	aqwari.net/xml v0.0.0-20210331023308-d9421b293817
-	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.35
+	github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common v0.0.40
 	github.com/PaesslerAG/gval v1.1.2
 	github.com/google/uuid v1.3.0
 	github.com/rs/zerolog v1.26.1
