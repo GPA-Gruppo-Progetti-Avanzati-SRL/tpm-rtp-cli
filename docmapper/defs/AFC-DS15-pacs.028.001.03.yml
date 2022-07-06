@@ -31,6 +31,15 @@ rules:
   - name: TxInf_StsReqId
     sourcevalue: '{$._ids.lnk_id}'
     target-path: FIToFIPmtStsReq.TxInf[].StsReqId
+  - name: TxInf_OrgnlGrpInf_OrgnlMsgId
+    sourcevalue: '{$._org_ids.msg_id}'
+    target-path: FIToFIPmtStsReq.TxInf[].OrgnlGrpInf.OrgnlMsgId
+  - name: TxInf_OrgnlGrpInf_OrgnlMsgNmId
+    sourcevalue: pain.013.001.07
+    target-path: FIToFIPmtStsReq.TxInf[].OrgnlGrpInf.OrgnlMsgNmId
+  - name: TxInf_OrgnlGrpInf_OrgnlCreDtTm
+    sourcevalue: '{$._org_ids.cre_dt_tm}'
+    target-path: FIToFIPmtStsReq.TxInf[].OrgnlGrpInf.OrgnlCreDtTm
   - name: TxInf_OrgnlEndToEndId
     sourcevalue: '{$.payee-e2e-rtp-ref}'
     target-path: FIToFIPmtStsReq.TxInf[].OrgnlEndToEndId
@@ -78,6 +87,9 @@ rules:
   - name: TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm_Cd
     sourcevalue: POID
     target-path: FIToFIPmtStsReq.TxInf[].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr[].SchmeNm.Cd
+  - name: TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI
+    sourcevalue: '{$.payer-psp-id}'
+    target-path: FIToFIPmtStsReq.TxInf[].OrgnlTxRef.DbtrAgt.FinInstnId.BICFI
   - name: TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Nm
     sourcevalue: '{$.payee-name}'
     target-path: FIToFIPmtStsReq.TxInf[].OrgnlTxRef.Cdtr.Agt.FinInstnId.Nm
@@ -99,3 +111,6 @@ rules:
   - name: TxInf_OrgnlTxRef_CdtrAcct_Id_IBAN
     sourcevalue: '{$.payee-iban}'
     target-path: FIToFIPmtStsReq.TxInf[].OrgnlTxRef.CdtrAcct.Id.IBAN
+  - name: TxInf_OrgnlTxRef_DbtrAcct_Id_IBAN
+    sourcevalue: '{$.payee-iban}'
+    target-path: FIToFIPmtStsReq.TxInf[].OrgnlTxRef.DbtrAcct.Id.IBAN

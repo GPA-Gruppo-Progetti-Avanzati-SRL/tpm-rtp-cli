@@ -37,6 +37,15 @@ rules:
   - name: Undrlyg_OrgnlGrpInfAndCxl_CtrlSum
     sourcevalue: '{$.amount}'
     target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlGrpInfAndCxl.CtrlSum
+  - name: Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgId
+    sourcevalue: change
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].OrgnlGrpInf.OrgnlMsgId
+  - name: Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlCreDtTm
+    sourcevalue: change
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].OrgnlGrpInf.OrgnlCreDtTm
+  - name: Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgNmId
+    sourcevalue: change
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].OrgnlGrpInf.OrgnlMsgNmId
   - name: Undrlyg_OrgnlPmtInfAndCxl_OrgnlPmtInfId
     sourcevalue: '"F/{$.payee-e2e-rtp-ref}/P/" + rtpId()'
     target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].OrgnlPmtInfId
@@ -82,6 +91,15 @@ rules:
   - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Ustrd
     sourcevalue: AT41/{$.payee-e2e-rtp-ref}/AT05/pagamento fattura
     target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].TxInf[].OrgnlTxRef.RmtInf.Ustrd[]
+  - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_Id
+    sourcevalue: '{$.payee_id}'
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].TxInf[].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr[].Id
+  - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_SchmeNm_Cd
+    sourcevalue: BOID
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].TxInf[].OrgnlTxRef.Dbtr.Pty.Id.PrvtId.Othr[].SchmeNm.Cd
+  - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI
+    sourcevalue: BOID
+    target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].TxInf[].OrgnlTxRef.DbtrAgt.FinInstnId.BICFI
   - name: Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Nm
     sourcevalue: '{$.payee-company-name} {$.payee_name}'
     target-path: CstmrPmtCxlReq.Undrlyg[].OrgnlPmtInfAndCxl[].TxInf[].OrgnlTxRef.Cdtr.Pty.Nm

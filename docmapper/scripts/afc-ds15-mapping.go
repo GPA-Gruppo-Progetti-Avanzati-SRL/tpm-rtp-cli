@@ -72,6 +72,24 @@ func Gen_AFC_DS15_Pacs028_001_03(fn string) error {
 			SourceValue: `{$._ids.lnk_id}`,
 			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_StsReqId,
 		},
+
+		// New Section 2022-06-30
+		{
+			Name:        "TxInf_OrgnlGrpInf_OrgnlMsgId",
+			SourceValue: "{$._org_ids.msg_id}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlGrpInf_OrgnlMsgId,
+		},
+		{
+			Name:        "TxInf_OrgnlGrpInf_OrgnlMsgNmId",
+			SourceValue: "pain.013.001.07",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlGrpInf_OrgnlMsgNmId,
+		},
+		{
+			Name:        "TxInf_OrgnlGrpInf_OrgnlCreDtTm",
+			SourceValue: "{$._org_ids.cre_dt_tm}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlGrpInf_OrgnlCreDtTm,
+		},
+
 		{
 			Name:        "TxInf_OrgnlEndToEndId",
 			SourceValue: "{$.payee-e2e-rtp-ref}",
@@ -155,6 +173,13 @@ func Gen_AFC_DS15_Pacs028_001_03(fn string) error {
 			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm_Cd,
 		},
 
+		// DbtrAgt
+		{
+			Name:        "TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI",
+			SourceValue: "{$.payer-psp-id}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI,
+		},
+
 		// In use?
 		{
 			Name:        "TxInf_OrgnlTxRef_Cdtr_Agt_FinInstnId_Nm",
@@ -195,6 +220,13 @@ func Gen_AFC_DS15_Pacs028_001_03(fn string) error {
 			Name:        "TxInf_OrgnlTxRef_CdtrAcct_Id_IBAN",
 			SourceValue: "{$.payee-iban}",
 			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_CdtrAcct_Id_IBAN,
+		},
+
+		// DbtrAcct IBAN
+		{
+			Name:        "TxInf_OrgnlTxRef_DbtrAcct_Id_IBAN",
+			SourceValue: "{$.payee-iban}",
+			TargetPath:  pacs_028_001_03.Path_FIToFIPmtStsReq_TxInf_OrgnlTxRef_DbtrAcct_Id_IBAN,
 		},
 	}
 

@@ -77,6 +77,25 @@ func Gen_AFC_DS10_Camt055_001_08(fn string) error {
 			SourceValue: `{$.amount}`,
 			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlGrpInfAndCxl_CtrlSum,
 		},
+
+		// BOF NEW
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgId",
+			SourceValue: `change`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgId,
+		},
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlCreDtTm",
+			SourceValue: `change`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlCreDtTm,
+		},
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgNmId",
+			SourceValue: `change`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_OrgnlGrpInf_OrgnlMsgNmId,
+		},
+		// EOF NEW
+
 		{
 			Name:        "Undrlyg_OrgnlPmtInfAndCxl_OrgnlPmtInfId",
 			SourceValue: `"F/{$.payee-e2e-rtp-ref}/P/" + rtpId()`,
@@ -154,6 +173,24 @@ func Gen_AFC_DS10_Camt055_001_08(fn string) error {
 			SourceValue: `AT41/{$.payee-e2e-rtp-ref}/AT05/pagamento fattura`,
 			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_RmtInf_Ustrd,
 		},
+
+		// NEW
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_Id",
+			SourceValue: `{$.payee_id}`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_Id,
+		},
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Id_OrgId_Othr_SchmeNm_Cd",
+			SourceValue: `BOID`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Dbtr_Pty_Id_PrvtId_Othr_SchmeNm_Cd,
+		},
+		{
+			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI",
+			SourceValue: `BOID`,
+			TargetPath:  camt_055_001_08.Path_CstmrPmtCxlReq_Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_DbtrAgt_FinInstnId_BICFI,
+		},
+
 		{
 			Name:        "Undrlyg_OrgnlPmtInfAndCxl_TxInf_OrgnlTxRef_Cdtr_Pty_Nm",
 			SourceValue: `{$.payee-company-name} {$.payee_name}`,
