@@ -2,6 +2,10 @@ package rtp
 
 import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/camt_029_001_09"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/camt_055_001_08"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/pain_013_001_07"
+	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/pain_014_001_07"
 	"github.com/rs/zerolog/log"
 )
 
@@ -405,4 +409,29 @@ func RequestToPayNextStatus(dataset string, current Status, event Status) (Statu
 
 	_ = st.UpdateText(dataset)
 	return st, rc
+}
+
+type DataSetIsoMessageName struct {
+	DataSet string
+	MsgName []string
+}
+
+var DataSetIsoMessageNameRegistry = map[string]DataSetIsoMessageName{
+	DataSetDS02: {DataSet: DataSetDS02, MsgName: []string{pain_013_001_07.Iso20022MsgName}},
+	DataSetDS03: {DataSet: DataSetDS03, MsgName: []string{pain_013_001_07.Iso20022MsgName}},
+	DataSetDS04: {DataSet: DataSetDS04, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS05: {DataSet: DataSetDS05, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS06: {DataSet: DataSetDS06, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS07: {DataSet: DataSetDS07, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS08: {DataSet: DataSetDS08, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS01: {DataSet: DataSetDS01, MsgName: []string{pain_013_001_07.Iso20022MsgName}},
+	DataSetDS09: {DataSet: DataSetDS09, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS10: {DataSet: DataSetDS10, MsgName: []string{camt_055_001_08.Iso20022MsgName}},
+	DataSetDS11: {DataSet: DataSetDS11, MsgName: []string{camt_055_001_08.Iso20022MsgName}},
+	DataSetDS12: {DataSet: DataSetDS12, MsgName: []string{camt_029_001_09.Iso20022MsgName}},
+	DataSetDS13: {DataSet: DataSetDS13, MsgName: []string{camt_029_001_09.Iso20022MsgName}},
+	DataSetDS14: {DataSet: DataSetDS14, MsgName: []string{camt_055_001_08.Iso20022MsgName}},
+	DataSetDS15: {DataSet: DataSetDS15, MsgName: []string{camt_055_001_08.Iso20022MsgName}},
+	DataSetDS16: {DataSet: DataSetDS16, MsgName: []string{pain_014_001_07.Iso20022MsgName}},
+	DataSetDS17: {DataSet: DataSetDS17, MsgName: []string{pain_014_001_07.Iso20022MsgName, camt_029_001_09.Iso20022MsgName}},
 }
