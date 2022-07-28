@@ -3,6 +3,7 @@
 package common
 
 import (
+	"bytes"
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-common/util/dotnotation"
 	"reflect"
 	"regexp"
@@ -10,6 +11,21 @@ import (
 	"strings"
 	"sync"
 )
+
+func ExtractMessageNameFromXMLRawMessage(rawMessage []byte) string {
+
+	messageName := ""
+	ndxStart := bytes.Index(rawMessage, []byte("xmlns=\"urn:iso:std:iso:20022:tech:xsd:"))
+	if ndxStart >= 0 {
+		ndxStart += len("xmlns=\"urn:iso:std:iso:20022:tech:xsd:")
+		ndxEnd := bytes.Index(rawMessage[ndxStart:], []byte("\""))
+		if ndxEnd > 0 {
+			messageName = string(rawMessage[ndxStart : ndxStart+ndxEnd])
+		}
+	}
+
+	return messageName
+}
 
 func isLengthRestrictionValid(s string, length, minLength, maxLength int) bool {
 	if length > 0 && len(s) != length {

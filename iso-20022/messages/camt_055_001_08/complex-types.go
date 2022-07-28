@@ -7,36 +7,17 @@ import (
 	"github.com/GPA-Gruppo-Progetti-Avanzati-SRL/tpm-rtp-cli/iso-20022/messages/xsdt"
 )
 
-// UnderlyingTransaction24 type definition
-type UnderlyingTransaction24 struct {
-	OrgnlGrpInfAndCxl *OriginalGroupHeader15         `xml:"OrgnlGrpInfAndCxl,omitempty"`
-	OrgnlPmtInfAndCxl []OriginalPaymentInstruction34 `xml:"OrgnlPmtInfAndCxl,omitempty"`
-}
-
-// CancellationReason33Choice type definition
-type CancellationReason33Choice struct {
-	Cd    common.ExternalCancellationReason1Code `xml:"Cd,omitempty"`
-	Prtry common.Max35Text                       `xml:"Prtry,omitempty"`
-}
-
-// OriginalGroupHeader15 type definition
-type OriginalGroupHeader15 struct {
-	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
-	Case         *common.Case5                `xml:"Case,omitempty"`
-	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
-	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
-	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
-	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
-	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
-	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
-	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
-}
-
 // PaymentCancellationReason5 type definition
 type PaymentCancellationReason5 struct {
 	Orgtr    *common.PartyIdentification135 `xml:"Orgtr,omitempty"`
 	Rsn      *CancellationReason33Choice    `xml:"Rsn,omitempty"`
 	AddtlInf []common.Max105Text            `xml:"AddtlInf,omitempty"`
+}
+
+// UnderlyingTransaction24 type definition
+type UnderlyingTransaction24 struct {
+	OrgnlGrpInfAndCxl *OriginalGroupHeader15         `xml:"OrgnlGrpInfAndCxl,omitempty"`
+	OrgnlPmtInfAndCxl []OriginalPaymentInstruction34 `xml:"OrgnlPmtInfAndCxl,omitempty"`
 }
 
 // CustomerPaymentCancellationRequestV08 type definition
@@ -46,6 +27,12 @@ type CustomerPaymentCancellationRequestV08 struct {
 	CtrlData    *ControlData1               `xml:"CtrlData,omitempty"`
 	Undrlyg     []UnderlyingTransaction24   `xml:"Undrlyg"`
 	SplmtryData []common.SupplementaryData1 `xml:"SplmtryData,omitempty"`
+}
+
+// CancellationReason33Choice type definition
+type CancellationReason33Choice struct {
+	Cd    common.ExternalCancellationReason1Code `xml:"Cd,omitempty"`
+	Prtry common.Max35Text                       `xml:"Prtry,omitempty"`
 }
 
 // OriginalPaymentInstruction34 type definition
@@ -80,4 +67,17 @@ type PaymentTransaction109 struct {
 type ControlData1 struct {
 	NbOfTxs common.Max15NumericText `xml:"NbOfTxs"`
 	CtrlSum xsdt.Decimal            `xml:"CtrlSum,omitempty"`
+}
+
+// OriginalGroupHeader15 type definition
+type OriginalGroupHeader15 struct {
+	GrpCxlId     common.Max35Text             `xml:"GrpCxlId,omitempty"`
+	Case         *common.Case5                `xml:"Case,omitempty"`
+	OrgnlMsgId   common.Max35Text             `xml:"OrgnlMsgId"`
+	OrgnlMsgNmId common.Max35Text             `xml:"OrgnlMsgNmId"`
+	OrgnlCreDtTm common.ISODateTime           `xml:"OrgnlCreDtTm,omitempty"`
+	NbOfTxs      common.Max15NumericText      `xml:"NbOfTxs,omitempty"`
+	CtrlSum      xsdt.Decimal                 `xml:"CtrlSum,omitempty"`
+	GrpCxl       xsdt.Boolean                 `xml:"GrpCxl,omitempty"`
+	CxlRsnInf    []PaymentCancellationReason5 `xml:"CxlRsnInf,omitempty"`
 }
